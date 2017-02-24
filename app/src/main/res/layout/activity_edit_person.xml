@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/picbackground">
+
+    <LinearLayout
+        android:id="@+id/activity_edit_person"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/txt_editperson"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/font_title"
+            android:textStyle="bold" />
+
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="@string/txt_selectgender"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/font_normal"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/button_male"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/txt_male"
+                android:textSize="@dimen/font_normal" />
+
+            <RadioButton
+                android:id="@+id/button_female"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/txt_female"
+                android:textSize="@dimen/font_normal" />
+
+        </RadioGroup>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:textColorHint="@android:color/black">
+
+            <EditText
+                android:id="@+id/ET_editBirthday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/txt_birthday"
+                android:textSize="@dimen/font_normal" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:textColorHint="@android:color/black">
+
+            <EditText
+                android:id="@+id/ET_editWeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/txt_weight"
+                android:textSize="@dimen/font_normal" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:textColorHint="@android:color/black">
+
+            <EditText
+                android:id="@+id/ET_editHeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/txt_height"
+                android:textSize="@dimen/font_normal" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/BT_editSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:background="#48D1CC"
+            android:text="@string/txt_save"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/font_button"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/manageknee3">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/activity_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/btn_saveknee"
+                android:layout_width="75dp"
+                android:layout_height="95dp"
+                android:layout_gravity="start"
+                android:background="@drawable/recordknee"
+                android:onClick="Oc_menu" />
+
+            <ImageButton
+                android:id="@+id/btn_knowledge"
+                android:layout_width="110dp"
+                android:layout_height="95dp"
+                android:layout_marginLeft="22dp"
+                android:background="@drawable/knowledge"
+                android:onClick="Oc_menu"/>
+
+            <ImageButton
+                android:id="@+id/btn_history"
+                android:layout_width="75dp"
+                android:layout_height="95dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/history"
+                android:onClick="Oc_menu" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>
