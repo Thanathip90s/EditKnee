@@ -21,7 +21,6 @@ public class Menu extends AppCompatActivity {
             case R.id.btn_saveknee:
                 Intent m1 = new Intent(this,Saveknee.class);
                 startActivity(m1);
-                finish();
                 break;
             /*case R.id.btn_knowledge:
                 Intent m2 = new Intent(this,HistoryKnee.class);
@@ -30,7 +29,6 @@ public class Menu extends AppCompatActivity {
             case R.id.btn_history:
                 Intent m3 = new Intent(this,History.class);
                 startActivity(m3);
-                finish();
                 break;
         }
     }

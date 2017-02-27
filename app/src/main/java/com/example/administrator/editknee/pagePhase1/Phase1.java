@@ -47,7 +47,6 @@ public class Phase1 extends AppCompatActivity {
         rv = (RecyclerView) findViewById(R.id.rv);
         rv.setLayoutManager(new LinearLayoutManager(this));
 
-
         //SETUP REALM
         realm = Realm.getDefaultInstance();
         final RealmHelper helper = new RealmHelper(realm);

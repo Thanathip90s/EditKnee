@@ -2,13 +2,26 @@ package com.example.administrator.editknee.pagePerson;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.widget.TextView;
 
 import com.example.administrator.editknee.DBPhase1;
 import com.example.administrator.editknee.DatabaseManager;
 import com.example.administrator.editknee.R;
+import com.example.administrator.editknee.m_Realm.RealmHelper;
+import com.example.administrator.editknee.m_UI.MyAdapter;
+import com.example.administrator.editknee.pagePhase1.Phase1;
+
+import io.realm.Realm;
+import io.realm.RealmChangeListener;
 
 public class HistoryKnee extends AppCompatActivity {
+
+    Realm realm;
+    RealmChangeListener realmChangeListener;
+    MyAdapter adapter;
+    RecyclerView rv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,6 +29,36 @@ public class HistoryKnee extends AppCompatActivity {
         setContentView(R.layout.activity_history_knee);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        //SETUP RV
+        rv = (RecyclerView) findViewById(R.id.rv);
+        rv.setLayoutManager(new LinearLayoutManager(this));
+
+
+        //SETUP REALM
+        realm = Realm.getDefaultInstance();
+        final RealmHelper helper = new RealmHelper(realm);
+
+        //RETRIEVE
+        helper.retrieveFromDB();
+
+        //SETUP ADAPTER
+        adapter = new MyAdapter(this, helper.justRefresh());
+        rv.setAdapter(adapter);
+
+        //DATA CHANGE EVENTS AND REFRESH
+        realmChangeListener = new RealmChangeListener() {
+            @Override
+            public void onChange(Object element) {
+
+                adapter = new MyAdapter(HistoryKnee.this, helper.justRefresh());
+                rv.setAdapter(adapter);
+            }
+        };
+
+        //ADD IT TO REALM
+        realm.addChangeListener(realmChangeListener);
+
 
        /* DatabaseManager databaseManager = new DatabaseManager(this);
         DBPhase1 dbPhase1 = databaseManager.getDBPhase1();

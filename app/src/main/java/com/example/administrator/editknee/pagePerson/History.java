@@ -43,12 +43,10 @@ public class History extends AppCompatActivity {
             case R.id.btn_HistoryKnee:
                 Intent i = new Intent(History.this, HistoryKnee.class);
                 startActivity(i);
-                finish();
                 break;
             case R.id.btn_EditHistory:
                 Intent intent = new Intent(History.this, EditPerson.class);
                 startActivity(intent);
-                finish();
                 break;
         }
     }
