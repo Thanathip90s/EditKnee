@@ -11,7 +11,7 @@ import io.realm.RealmConfiguration;
 
 public class App extends Application {
 
-   /* @Override
+   /*@Override
     public void onCreate() {
         super.onCreate();
 

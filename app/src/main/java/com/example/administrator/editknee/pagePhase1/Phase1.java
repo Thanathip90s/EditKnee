@@ -30,7 +30,7 @@ public class Phase1 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.content_main);
+        setContentView(R.layout.activity_phase1);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -46,6 +46,7 @@ public class Phase1 extends AppCompatActivity {
         //SETUP RV
         rv = (RecyclerView) findViewById(R.id.rv);
         rv.setLayoutManager(new LinearLayoutManager(this));
+
 
         //SETUP REALM
         realm = Realm.getDefaultInstance();

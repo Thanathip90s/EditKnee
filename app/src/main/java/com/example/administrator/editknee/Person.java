@@ -10,7 +10,6 @@ import io.realm.annotations.PrimaryKey;
 public class Person extends RealmObject {
     @PrimaryKey
     String id;
-    String gender1;
     String gender;
     String birthday;
     String weight;
@@ -22,14 +21,6 @@ public class Person extends RealmObject {
 
     public void setId(String id) {
         this.id = id;
-    }
-
-    public String getGender1() {
-        return gender1;
-    }
-
-    public void setGender1(String gender1) {
-        this.gender1 = gender1;
     }
 
     public String getGender() {
