@@ -18,47 +18,12 @@ import io.realm.RealmChangeListener;
 
 public class HistoryKnee extends AppCompatActivity {
 
-    Realm realm;
-    RealmChangeListener realmChangeListener;
-    MyAdapter adapter;
-    RecyclerView rv;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history_knee);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-        //SETUP RV
-        rv = (RecyclerView) findViewById(R.id.rv);
-        rv.setLayoutManager(new LinearLayoutManager(this));
-
-
-        //SETUP REALM
-        realm = Realm.getDefaultInstance();
-        final RealmHelper helper = new RealmHelper(realm);
-
-        //RETRIEVE
-        helper.retrieveFromDB();
-
-        //SETUP ADAPTER
-        adapter = new MyAdapter(this, helper.justRefresh());
-        rv.setAdapter(adapter);
-
-        //DATA CHANGE EVENTS AND REFRESH
-        realmChangeListener = new RealmChangeListener() {
-            @Override
-            public void onChange(Object element) {
-
-                adapter = new MyAdapter(HistoryKnee.this, helper.justRefresh());
-                rv.setAdapter(adapter);
-            }
-        };
-
-        //ADD IT TO REALM
-        realm.addChangeListener(realmChangeListener);
-
 
        /* DatabaseManager databaseManager = new DatabaseManager(this);
         DBPhase1 dbPhase1 = databaseManager.getDBPhase1();
