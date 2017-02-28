@@ -104,7 +104,6 @@ public class Phase1 extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-
         realm.removeChangeListener(realmChangeListener);
         realm.close();
     }
