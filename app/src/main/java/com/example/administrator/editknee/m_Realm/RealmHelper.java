@@ -55,10 +55,7 @@ public class RealmHelper {
         ArrayList<Spacecraft> latest = new ArrayList<>();
         for (Spacecraft s : spacecrafts) {
             latest.add(s);
-
         }
-
         return latest;
     }
-
 }
