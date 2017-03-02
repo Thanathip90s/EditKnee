@@ -20,7 +20,8 @@ import java.util.Date;
 import io.realm.Realm;
 import io.realm.RealmChangeListener;
 
-public class Phase1 extends AppCompatActivity {
+public class
+Phase1 extends AppCompatActivity {
     TextView Date1, Time1;
     Realm realm;
     RealmChangeListener realmChangeListener;

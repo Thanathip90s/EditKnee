@@ -13,7 +13,7 @@ import com.example.administrator.editknee.picPhase3.PicPhase3_5;
 public class Phase3_4 extends AppCompatActivity {
 
     TextView showValue;
-    int counter = 19;
+    int counter = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,11 +27,13 @@ public class Phase3_4 extends AppCompatActivity {
     }
     public void  countIN (View  view){
         counter++;
+        if (counter>=0 && counter<=20)
         showValue.setText(Integer.toString(counter)+" ครั้ง");
     }
 
     public  void  countDE (View view){
         counter--;
+        if (counter>=0 && counter<=20)
         showValue.setText(Integer.toString(counter)+" ครั้ง");
     }
 

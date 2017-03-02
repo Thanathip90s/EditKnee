@@ -16,7 +16,7 @@ public class Phase1_1 extends AppCompatActivity {
 
     EditText note1;
     TextView showValue, number1;
-    int counter = 9;
+    int counter = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,13 +51,15 @@ public class Phase1_1 extends AppCompatActivity {
     }
 
     public void countIN(View view) {
-        for (counter = 0; counter <= 10; counter++)
+        counter++;
+        if (counter >= 0 && counter <= 10)
             showValue.setText(Integer.toString(counter) + " ครั้ง");
     }
 
     public void countDE(View view) {
         counter--;
-        showValue.setText(Integer.toString(counter) + " ครั้ง");
+        if (counter >= 0 && counter <= 10)
+            showValue.setText(Integer.toString(counter) + " ครั้ง");
     }
 }
 
