@@ -10,11 +10,17 @@ import com.example.administrator.editknee.R;
 
 public class MyViewHolder extends RecyclerView.ViewHolder {
 
-    TextView dateTxt,timeTxt;
+    TextView dateTxt,timeTxt,stepTxt1,noteTxt1,stepTxt2,noteTxt2,stepTxt3,noteTxt3;
 
     public MyViewHolder(View itemView) {
         super(itemView);
-        dateTxt= (TextView) itemView.findViewById(R.id.dateTxt1);
-        timeTxt= (TextView) itemView.findViewById(R.id.timeTxt1);
+        dateTxt = (TextView) itemView.findViewById(R.id.dateTxt1);
+        timeTxt = (TextView) itemView.findViewById(R.id.timeTxt1);
+        stepTxt1 = (TextView) itemView.findViewById(R.id.stepTxt1);
+        noteTxt1 = (TextView) itemView.findViewById(R.id.noteTxt1);
+        stepTxt2 = (TextView) itemView.findViewById(R.id.stepTxt2);
+        noteTxt2 = (TextView) itemView.findViewById(R.id.noteTxt2);
+        stepTxt3 = (TextView) itemView.findViewById(R.id.stepTxt3);
+        noteTxt3 = (TextView) itemView.findViewById(R.id.noteTxt3);
     }
 }

@@ -37,6 +37,12 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
 
         holder.dateTxt.setText(s.getDate1());
         holder.timeTxt.setText(s.getTime1());
+        holder.stepTxt1.setText(s.getStepTxt1());
+        holder.noteTxt1.setText(s.getNoteTxt1());
+        holder.stepTxt2.setText(s.getStepTxt2());
+        holder.noteTxt2.setText(s.getNoteTxt2());
+        holder.stepTxt3.setText(s.getStepTxt3());
+        holder.noteTxt3.setText(s.getNoteTxt3());
     }
 
     @Override

@@ -16,9 +16,8 @@ import com.example.administrator.editknee.Person;
 import com.example.administrator.editknee.R;
 
 public class EditPerson extends AppCompatActivity {
-    EditText date;
+    EditText date,birthday,weight,height;
     DatePickerDialog datePickerDialog;
-    EditText birthday,weight,height;
     RadioButton btnMale,btnFemale;
 
     @Override
