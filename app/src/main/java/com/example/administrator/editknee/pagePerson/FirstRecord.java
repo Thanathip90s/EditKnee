@@ -16,21 +16,13 @@ import com.example.administrator.editknee.Person;
 import com.example.administrator.editknee.R;
 
 public class FirstRecord extends AppCompatActivity {
-    EditText date,birthday,weight,height;;
+    EditText date;
     DatePickerDialog datePickerDialog;
-    RadioButton btnMale,btnFemale;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first_record);
-
-        birthday = (EditText)findViewById(R.id.ET_birthday);
-        weight = (EditText)findViewById(R.id.ET_weight);
-        height = (EditText)findViewById(R.id.ET_height);
-        btnMale = (RadioButton)findViewById(R.id.button_male);
-        btnFemale = (RadioButton)findViewById(R.id.button_female);
-
 
         date = (EditText) findViewById(R.id.ET_birthday);
 
@@ -61,8 +53,8 @@ public class FirstRecord extends AppCompatActivity {
 
         DatabaseManager databaseManager = new DatabaseManager(this);
         Person person = databaseManager.getPerson();
-        if (person != null){
-            Intent intent = new Intent(this,Menu.class);
+        if (person != null) {
+            Intent intent = new Intent(this, Menu.class);
             startActivity(intent);
             finish();
         }
@@ -70,40 +62,33 @@ public class FirstRecord extends AppCompatActivity {
         findViewById(R.id.BT_save).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                RadioButton m = (RadioButton) findViewById(R.id.button_male);
-                RadioButton fm = (RadioButton) findViewById(R.id.button_female);
-                EditText bd = (EditText) findViewById(R.id.ET_birthday);
-                EditText we = (EditText) findViewById(R.id.ET_weight);
-                EditText he = (EditText) findViewById(R.id.ET_height);
+                RadioButton male = (RadioButton) findViewById(R.id.button_male);
+                RadioButton female = (RadioButton) findViewById(R.id.button_female);
+                EditText birthday = (EditText) findViewById(R.id.ET_birthday);
+                EditText weight = (EditText) findViewById(R.id.ET_weight);
+                EditText height = (EditText) findViewById(R.id.ET_height);
 
-                //DB operation
                 Person person = new Person();
-                if (m.isChecked() == true) {
+                if (male.isChecked()) {
                     person.setId("1");
-                    person.setGender(btnMale.getText().toString());
+                    person.setGender(male.getText().toString());
                 }
-                if (fm.isChecked() == true){
+                if (female.isChecked()) {
                     person.setId("1");
-                    person.setGender(btnFemale.getText().toString());
+                    person.setGender(female.getText().toString());
                 }
-
-                if (m.isChecked() == false & fm.isChecked() == false) {
+                if (male.isChecked() == false & female.isChecked() == false) {
                     Toast.makeText(getApplicationContext(), "กรุณาเลือกเพศด้วยคะ", Toast.LENGTH_SHORT).show();
                 }
-
-                if (bd.getText().toString().isEmpty()){
-                    bd.setError("กรุณาเลือกวันเกิดด้วยคะ");
+                if (birthday.getText().toString().isEmpty()) {
+                    birthday.setError("กรุณาเลือกวันเกิดด้วยคะ");
                 }
-                if (we.getText().toString().isEmpty()){
-                    we.setError("กรุณากรอกด้วยคะ");
+                if (weight.getText().toString().isEmpty()) {
+                    weight.setError("กรุณากรอกด้วยคะ");
                 }
-                if (he.getText().toString().isEmpty()){
-                    he.setError("กรุณากรอกด้วยคะ");
-                }
-
-                else {
-                    Intent i = new Intent(FirstRecord.this,Menu.class);
-                    startActivity(i);
+                if (height.getText().toString().isEmpty()) {
+                    height.setError("กรุณากรอกด้วยคะ");
+                } else {
                     person.setId("1");
                     person.setBirthday(birthday.getText().toString());
                     person.setWeight(weight.getText().toString());
@@ -111,6 +96,8 @@ public class FirstRecord extends AppCompatActivity {
 
                     DatabaseManager databaseManager = new DatabaseManager(FirstRecord.this);
                     databaseManager.storePerson(person);
+                    Intent i = new Intent(FirstRecord.this, Menu.class);
+                    startActivity(i);
                     finish();
                 }
             }

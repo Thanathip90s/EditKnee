@@ -16,9 +16,8 @@ import com.example.administrator.editknee.Person;
 import com.example.administrator.editknee.R;
 
 public class EditPerson extends AppCompatActivity {
-    EditText date,birthday,weight,height;
+    EditText date;
     DatePickerDialog datePickerDialog;
-    RadioButton btnMale,btnFemale;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,13 +25,6 @@ public class EditPerson extends AppCompatActivity {
         setContentView(R.layout.activity_edit_person);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-        birthday = (EditText)findViewById(R.id.ET_editBirthday);
-        weight = (EditText)findViewById(R.id.ET_editWeight);
-        height = (EditText)findViewById(R.id.ET_editHeight);
-        btnMale = (RadioButton)findViewById(R.id.button_male);
-        btnFemale = (RadioButton)findViewById(R.id.button_female);
-
 
         date = (EditText) findViewById(R.id.ET_editBirthday);
 
@@ -64,38 +56,33 @@ public class EditPerson extends AppCompatActivity {
         findViewById(R.id.BT_editSave).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                RadioButton m = (RadioButton) findViewById(R.id.button_male);
-                RadioButton fm = (RadioButton) findViewById(R.id.button_female);
-                EditText bd = (EditText) findViewById(R.id.ET_editBirthday);
-                EditText we = (EditText) findViewById(R.id.ET_editWeight);
-                EditText he = (EditText) findViewById(R.id.ET_editHeight);
+                RadioButton male = (RadioButton) findViewById(R.id.button_male);
+                RadioButton female = (RadioButton) findViewById(R.id.button_female);
+                EditText birthday = (EditText) findViewById(R.id.ET_editBirthday);
+                EditText weight = (EditText) findViewById(R.id.ET_editWeight);
+                EditText height = (EditText) findViewById(R.id.ET_editHeight);
 
-                //DB operation
                 Person person = new Person();
-                if (m.isChecked() == true) {
+                if (male.isChecked()) {
                     person.setId("1");
-                    person.setGender(btnMale.getText().toString());
+                    person.setGender(male.getText().toString());
                 }
-                if (fm.isChecked() == true){
+                if (female.isChecked()) {
                     person.setId("1");
-                    person.setGender(btnFemale.getText().toString());
+                    person.setGender(female.getText().toString());
                 }
-                if (m.isChecked() == false & fm.isChecked() == false) {
+                if (male.isChecked() == false & female.isChecked() == false) {
                     Toast.makeText(getApplicationContext(), "กรุณาเลือกเพศด้วยคะ", Toast.LENGTH_SHORT).show();
                 }
-                if (bd.getText().toString().isEmpty()){
-                    bd.setError("กรุณาเลือกวันเกิดด้วยคะ");
+                if (birthday.getText().toString().isEmpty()) {
+                    birthday.setError("กรุณาเลือกวันเกิดด้วยคะ");
                 }
-                if (we.getText().toString().isEmpty()) {
-                    we.setError("กรุณากรอกด้วยคะ");
+                if (weight.getText().toString().isEmpty()) {
+                    weight.setError("กรุณากรอกด้วยคะ");
                 }
-                if ( he.getText().toString().isEmpty()){
-                    he.setError("กรุณากรอกด้วยคะ");
-                }
-
-                else {
-                    Intent i = new Intent(EditPerson.this, Menu.class);
-                    startActivity(i);
+                if (height.getText().toString().isEmpty()) {
+                    height.setError("กรุณากรอกด้วยคะ");
+                } else {
                     person.setId("1");
                     person.setBirthday(birthday.getText().toString());
                     person.setWeight(weight.getText().toString());
@@ -103,6 +90,8 @@ public class EditPerson extends AppCompatActivity {
 
                     DatabaseManager databaseManager = new DatabaseManager(EditPerson.this);
                     databaseManager.storePerson(person);
+                    Intent i = new Intent(EditPerson.this, Menu.class);
+                    startActivity(i);
                     finish();
                 }
             }
