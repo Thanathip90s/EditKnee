@@ -39,6 +39,7 @@ public class Saveknee extends AppCompatActivity {
                 Notification notification = new Notification.Builder(Saveknee.this)
                         .setSmallIcon(R.drawable.notification_icon)
                         .setContentTitle("บันทึกเข่า")
+                        .setContentText("อย่าลืมกลับมาทำอีกครั้งนะคะ ^^")
                         .setContentIntent(pintent)
                         .setAutoCancel(true)
                         .build();
@@ -61,6 +62,7 @@ public class Saveknee extends AppCompatActivity {
                 Notification notification = new Notification.Builder(Saveknee.this)
                         .setSmallIcon(R.drawable.notification_icon)
                         .setContentTitle("บันทึกเข่า")
+                        .setContentText("อย่าลืมกลับมาทำอีกครั้งนะคะ ^^")
                         .setContentIntent(pintent)
                         .setAutoCancel(true)
                         .build();
@@ -83,6 +85,7 @@ public class Saveknee extends AppCompatActivity {
                 Notification notification = new Notification.Builder(Saveknee.this)
                         .setSmallIcon(R.drawable.notification_icon)
                         .setContentTitle("บันทึกเข่า")
+                        .setContentText("อย่าลืมกลับมาทำอีกครั้งนะคะ ^^")
                         .setContentIntent(pintent)
                         .setAutoCancel(true)
                         .build();
@@ -105,6 +108,7 @@ public class Saveknee extends AppCompatActivity {
                 Notification notification = new Notification.Builder(Saveknee.this)
                         .setSmallIcon(R.drawable.notification_icon)
                         .setContentTitle("บันทึกเข่า")
+                        .setContentText("อย่าลืมกลับมาทำอีกครั้งนะคะ ^^")
                         .setContentIntent(pintent)
                         .setAutoCancel(true)
                         .build();
@@ -127,6 +131,7 @@ public class Saveknee extends AppCompatActivity {
                 Notification notification = new Notification.Builder(Saveknee.this)
                         .setSmallIcon(R.drawable.notification_icon)
                         .setContentTitle("บันทึกเข่า")
+                        .setContentText("อย่าลืมกลับมาทำอีกครั้งนะคะ ^^")
                         .setContentIntent(pintent)
                         .setAutoCancel(true)
                         .build();
@@ -149,6 +154,7 @@ public class Saveknee extends AppCompatActivity {
                 Notification notification = new Notification.Builder(Saveknee.this)
                         .setSmallIcon(R.drawable.notification_icon)
                         .setContentTitle("บันทึกเข่า")
+                        .setContentText("อย่าลืมกลับมาทำอีกครั้งนะคะ ^^")
                         .setContentIntent(pintent)
                         .setAutoCancel(true)
                         .build();
@@ -159,7 +165,6 @@ public class Saveknee extends AppCompatActivity {
                 startActivity(p6);
             }
         });
-
     }
 }
 //    public void Oc_phase(View view) {
