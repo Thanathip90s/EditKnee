@@ -33,17 +33,16 @@ public class Phase1_3 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                //DB operation
-                DBPhase1 dbPhase1 = new DBPhase1();
-                dbPhase1.setId("1");
+//                DBPhase1 dbPhase1 = new DBPhase1();
+//                dbPhase1.setId("1");
                 Intent i = new Intent(Phase1_3.this,CompletePhase.class);
                 startActivity(i);
 
-                dbPhase1.setTxtStep2(number3.getText().toString());
-                dbPhase1.setTxtNote2(note3.getText().toString());
-
-                DatabaseManager databaseManager = new DatabaseManager(Phase1_3.this);
-                databaseManager.storeDBPhase1(dbPhase1);
+//                dbPhase1.setTxtStep2(number3.getText().toString());
+//                dbPhase1.setTxtNote2(note3.getText().toString());
+//
+//                DatabaseManager databaseManager = new DatabaseManager(Phase1_3.this);
+//                databaseManager.storeDBPhase1(dbPhase1);
             }
         });
     }

@@ -53,24 +53,24 @@ public class DatabaseManager {
 
     }
 
-    public void storeDBPhase1(DBPhase1 dbPhase1){
-        Realm realm = getRealm();
-        realm.beginTransaction();
-        realm.copyToRealmOrUpdate(dbPhase1);
-        realm.commitTransaction();
-        realm.close();
-    }
-
-    public DBPhase1 getDBPhase1(){
-        DBPhase1 dbPhase1 = null;
-        Realm realm = getRealm();
-        realm.beginTransaction();
-        DBPhase1 realmDBPhase1 = realm.where(DBPhase1.class).findFirst();
-        if(realmDBPhase1 != null) {
-            dbPhase1 = realm.copyFromRealm(realmDBPhase1);
-        }
-        realm.commitTransaction();
-        realm.close();
-        return dbPhase1;
-    }
+//    public void storeDBPhase1(DBPhase1 dbPhase1){
+//        Realm realm = getRealm();
+//        realm.beginTransaction();
+//        realm.copyToRealmOrUpdate(dbPhase1);
+//        realm.commitTransaction();
+//        realm.close();
+//    }
+//
+//    public DBPhase1 getDBPhase1(){
+//        DBPhase1 dbPhase1 = null;
+//        Realm realm = getRealm();
+//        realm.beginTransaction();
+//        DBPhase1 realmDBPhase1 = realm.where(DBPhase1.class).findFirst();
+//        if(realmDBPhase1 != null) {
+//            dbPhase1 = realm.copyFromRealm(realmDBPhase1);
+//        }
+//        realm.commitTransaction();
+//        realm.close();
+//        return dbPhase1;
+//    }
 }
