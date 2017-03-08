@@ -4,11 +4,11 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.administrator.editknee.R;
-import com.example.administrator.editknee.pageCompleteAll.CompletePhase;
+import com.example.administrator.editknee.pageCompleteAll.CompletePhase1;
+import com.example.administrator.editknee.pageCompleteAll.CompletePhase5;
 
 public class Phase5_6 extends AppCompatActivity {
 
@@ -38,7 +38,7 @@ public class Phase5_6 extends AppCompatActivity {
     }
 
     public void Onclick_nextphase5_6 (View view){
-        Intent intent = new Intent(Phase5_6.this,CompletePhase.class);
+        Intent intent = new Intent(Phase5_6.this,CompletePhase5.class);
         startActivity(intent);
     }
 }

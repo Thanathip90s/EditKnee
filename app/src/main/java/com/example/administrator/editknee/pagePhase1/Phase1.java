@@ -6,11 +6,13 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.administrator.editknee.m_Realm.RealmHelper;
 import com.example.administrator.editknee.m_Realm.Spacecraft;
 import com.example.administrator.editknee.m_UI.MyAdapter;
+import com.example.administrator.editknee.pageCompleteAll.CompletePhase1;
 import com.example.administrator.editknee.picPhase1.PicPhase1_1;
 import com.example.administrator.editknee.R;
 
@@ -76,7 +78,7 @@ Phase1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                //TextView
+                //TextView,EditText
                 Date1 = (TextView) findViewById(R.id.txt_Date1);
                 Time1 = (TextView) findViewById(R.id.txt_Time1);
 
@@ -94,7 +96,6 @@ Phase1 extends AppCompatActivity {
                 if (helper.save(a)) {
                     Date1.setText("");
                     Time1.setText("");
-
                     Intent intent = new Intent(Phase1.this, PicPhase1_1.class);
                     startActivity(intent);
                 }
@@ -108,11 +109,6 @@ Phase1 extends AppCompatActivity {
         realm.removeChangeListener(realmChangeListener);
         realm.close();
     }
-
-    /*public void Onclick_nextphase1(View view) {
-        Intent intent = new Intent(Phase1.this, PicPhase1_1.class);
-        startActivity(intent);
-    }*/
 }
 
 

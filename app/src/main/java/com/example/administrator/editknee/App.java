@@ -11,12 +11,12 @@ import io.realm.RealmConfiguration;
 
 public class App extends Application {
 
-   /*@Override
+   @Override
     public void onCreate() {
         super.onCreate();
 
         //SET UP REALM
         RealmConfiguration config=new RealmConfiguration.Builder(this).schemaVersion(3).deleteRealmIfMigrationNeeded().build();
         Realm.setDefaultConfiguration(config);
-    }*/
+    }
 }

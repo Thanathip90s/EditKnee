@@ -32,7 +32,7 @@
         <activity
             android:name=".pagePhase1.Phase1_3"
             android:parentActivityName=".pagePhase1.Phase1_2" />
-        <activity android:name=".pageCompleteAll.CompletePhase" />
+        <activity android:name=".pageCompleteAll.CompletePhase1" />
         <activity
             android:name=".pagePhase2.Phase2"
             android:parentActivityName=".Saveknee" />
@@ -182,7 +182,12 @@
         <activity android:name=".picPhase6.PicPhase6_3" />
         <activity android:name=".picPhase6.PicPhase6_4" />
         <activity android:name=".picPhase6.PicPhase6_5" />
-        <activity android:name=".picPhase6.PicPhase6_6"></activity>
+        <activity android:name=".picPhase6.PicPhase6_6" />
+        <activity android:name=".pageCompleteAll.CompletePhase2" />
+        <activity android:name=".pageCompleteAll.CompletePhase3" />
+        <activity android:name=".pageCompleteAll.CompletePhase4" />
+        <activity android:name=".pageCompleteAll.CompletePhase5" />
+        <activity android:name=".pageCompleteAll.CompletePhase6"></activity>
     </application>
 
 </manifest>

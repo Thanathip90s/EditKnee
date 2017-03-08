@@ -26,14 +26,13 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:text="วันที่ : "
-                android:textSize="20dp"
-                android:textColor="@android:color/black"
-                android:textStyle="bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                />
+                android:text="วันที่ : "
+                android:textColor="@android:color/black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/txt_Date1"
@@ -53,14 +52,13 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:text="เวลา : "
-                android:textSize="20dp"
-                android:textColor="@android:color/black"
-                android:textStyle="bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                />
+                android:text="เวลา : "
+                android:textColor="@android:color/black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/txt_Time1"
@@ -79,17 +77,18 @@
             android:id="@+id/button_nextphase1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
             android:background="#48D1CC"
             android:onClick="Onclick_nextphase1"
             android:text="@string/txt_next"
             android:textColor="@android:color/white"
             android:textSize="25sp"
-            android:textStyle="bold"
-            android:layout_marginTop="40dp"/>
+            android:textStyle="bold" />
 
-        <include layout="@layout/content_main"
-            android:layout_height="match_parent"
-            android:layout_width="match_parent" />
+        <include
+            layout="@layout/content_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
     </LinearLayout>
 

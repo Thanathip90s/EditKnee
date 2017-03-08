@@ -7,9 +7,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.example.administrator.editknee.DBPhase1;
-import com.example.administrator.editknee.DatabaseManager;
-import com.example.administrator.editknee.pageCompleteAll.CompletePhase;
+import com.example.administrator.editknee.pageCompleteAll.CompletePhase1;
 import com.example.administrator.editknee.R;
 
 public class Phase1_3 extends AppCompatActivity {
@@ -35,7 +33,7 @@ public class Phase1_3 extends AppCompatActivity {
 
 //                DBPhase1 dbPhase1 = new DBPhase1();
 //                dbPhase1.setId("1");
-                Intent i = new Intent(Phase1_3.this,CompletePhase.class);
+                Intent i = new Intent(Phase1_3.this,CompletePhase1.class);
                 startActivity(i);
 
 //                dbPhase1.setTxtStep2(number3.getText().toString());

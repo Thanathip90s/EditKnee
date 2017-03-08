@@ -5,7 +5,7 @@
     android:background="#FFFFF0">
 
     <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/activity_complete_phase1"
+        android:id="@+id/activity_complete_phase2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -13,7 +13,6 @@
 
 
         <ImageView
-            android:id="@+id/imageView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -45,7 +44,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="75dp"
             android:background="#48D1CC"
-            android:onClick="Oc_closePhase"
+            android:onClick="Oc_closePhase2"
             android:text="@string/txt_close"
             android:textColor="@android:color/white"
             android:textSize="25sp"

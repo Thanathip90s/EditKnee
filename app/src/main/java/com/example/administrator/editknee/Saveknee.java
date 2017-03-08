@@ -28,7 +28,39 @@ public class Saveknee extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        Button btn_phase1 = (Button) findViewById(R.id.btn_phase1);
+    }
+
+    public void Oc_phase(View view) {
+        switch (view.getId()) {
+            case R.id.btn_phase1:
+                Intent p1 = new Intent(this, Phase1.class);
+                startActivity(p1);
+                break;
+            case R.id.btn_phase2:
+                Intent p2 = new Intent(this, Phase2.class);
+                startActivity(p2);
+                break;
+            case R.id.btn_phase3:
+                Intent p3 = new Intent(this, Phase3.class);
+                startActivity(p3);
+                break;
+            case R.id.btn_phase4:
+                Intent p4 = new Intent(this, Phase4.class);
+                startActivity(p4);
+                break;
+            case R.id.btn_phase5:
+                Intent p5 = new Intent(this, Phase5.class);
+                startActivity(p5);
+                break;
+            case R.id.btn_phase6:
+                Intent p6 = new Intent(this, Phase6.class);
+                startActivity(p6);
+                break;
+        }
+    }
+}
+
+ /* Button btn_phase1 = (Button) findViewById(R.id.btn_phase1);
         btn_phase1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -164,52 +196,5 @@ public class Saveknee extends AppCompatActivity {
                 Intent p6 = new Intent(Saveknee.this, Phase6.class);
                 startActivity(p6);
             }
-        });
-    }
-}
-//    public void Oc_phase(View view) {
-//        switch (view.getId()) {
-//            case R.id.btn_phase1:
-//                Intent p1 = new Intent(this, Phase1.class);
-//                startActivity(p1);
-//                break;
-//            case R.id.btn_phase2:
-//                NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-//                Intent intent = new Intent(this, Phase2.class);
-//                PendingIntent pintent = PendingIntent.getActivities(this, (int) System.currentTimeMillis(), new Intent[]{intent}, 0);
-//                notificationManager.cancelAll();
-//                Notification notification = new Notification.Builder(this)
-//                        .setSmallIcon(R.drawable.notification_icon)
-//                        .setContentTitle("บันทึกเข่า")
-//                        .setContentText("อย่าลืมกลับมาทำอีกครั้งนะคะ !!!")
-//                        .setContentIntent(pintent)
-//                        .setAutoCancel(true)
-//                        .build();
-//
-//                notificationManager.notify(0, notification);
-//
-//                Intent p2 = new Intent(this, Phase2.class);
-//                startActivity(p2);
-//                break;
-//            case R.id.btn_phase3:
-//                Intent p3 = new Intent(this, Phase3.class);
-//                startActivity(p3);
-//                break;
-//            case R.id.btn_phase4:
-//                Intent p4 = new Intent(this, Phase4.class);
-//                startActivity(p4);
-//                break;
-//            case R.id.btn_phase5:
-//                Intent p5 = new Intent(this, Phase5.class);
-//                startActivity(p5);
-//                break;
-//            case R.id.btn_phase6:
-//                Intent p6 = new Intent(this, Phase6.class);
-//                startActivity(p6);
-//                break;
-//        }
-//    }
-
-
-
+        });*/
 
