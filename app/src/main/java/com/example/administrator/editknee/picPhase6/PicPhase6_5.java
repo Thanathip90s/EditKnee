@@ -16,6 +16,9 @@ public class PicPhase6_5 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pic_phase6_5);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("เกาะ-ย่อ-ลง");
     }
     public void StartP6_5 (View view){
         Intent intent = new Intent(PicPhase6_5.this,Phase6_5.class);

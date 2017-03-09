@@ -16,6 +16,9 @@ public class PicPhase3_3 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pic_phase3_3);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("ก้ม-แตะ-เท้า");
     }
     public void StartP3_3 (View view){
         Intent intent = new Intent(PicPhase3_3.this,Phase3_3.class);

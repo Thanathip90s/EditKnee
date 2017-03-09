@@ -40,7 +40,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="25dp"
-                android:background="#BDB76B"
+                android:background="#2F4F4F"
                 android:gravity="center"
                 android:textColor="@android:color/white"
                 android:textSize="25sp"
@@ -66,7 +66,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="25dp"
-                android:background="#BDB76B"
+                android:background="#2F4F4F"
                 android:gravity="center"
                 android:textColor="@android:color/white"
                 android:textSize="25sp"
@@ -86,5 +86,34 @@
             android:textSize="@dimen/font_button"
             android:textStyle="bold" />
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="หมายเหตุ : "
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:text="1. มีจำนวน 6 เซต"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:text="2. อ่านคำอธิบายก่อนเริ่มบันทึกกิจกรรม"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:text="3. ทำหลังอาหารเช้า-เย็น (2 ครั้งต่อวัน)"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="15sp" />
     </LinearLayout>
 </ScrollView>

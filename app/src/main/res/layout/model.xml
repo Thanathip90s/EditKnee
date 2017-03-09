@@ -81,7 +81,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="ท่าที่ 1 กระ-ดก-เท้า : "
+                android:text="กระ-ดก-เท้า : "
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -129,7 +129,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="ท่าที่ 2 หงาย-ชิด-ก้น : "
+                android:text="หงาย-ชิด-ก้น : "
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -177,7 +177,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="ท่าที่ 3 ก้ม-แตะ-เท้า : "
+                android:text="ก้ม-แตะ-เท้า : "
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />

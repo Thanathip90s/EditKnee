@@ -27,7 +27,7 @@ public class Saveknee extends AppCompatActivity {
         setContentView(R.layout.activity_saveknee);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
+        getSupportActionBar().setTitle("ท่าบริหารเข่า");
     }
 
     public void Oc_phase(View view) {

@@ -12,16 +12,6 @@
         android:padding="16dp">
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:gravity="center"
-            android:text="@string/txt_phase3"
-            android:textColor="@android:color/black"
-            android:textSize="@dimen/font_title"
-            android:textStyle="bold" />
-
-        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/txt_Step3_5"
@@ -34,8 +24,7 @@
             android:layout_height="wrap_content"
             android:text="@string/txt_Explain3_5"
             android:textColor="@android:color/black"
-            android:textSize="@dimen/font_normal"
-            android:textStyle="bold"/>
+            android:textSize="@dimen/font_normaldown"  />
 
         <LinearLayout
             android:layout_width="match_parent"

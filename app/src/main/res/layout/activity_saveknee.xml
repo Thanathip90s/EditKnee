@@ -8,165 +8,175 @@
         android:id="@+id/activity_saveknee"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:gravity="center"
-            android:text="@string/txt_manageknee"
-            android:textColor="@android:color/black"
-            android:textSize="@dimen/font_title"
-            android:textStyle="bold" />
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
             android:gravity="center"
             android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/textView3"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/txt_phase1"
-                android:textColor="@android:color/black"
-                android:textSize="@dimen/font_normal"
-                android:textStyle="bold" />
+                android:orientation="vertical">
 
-            <TextView
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/txt_phase1"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/font_normal"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btn_phase1"
+                    android:layout_width="175dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/phase1"
+                    android:onClick="Oc_phase" />
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
-                android:text="@string/txt_phase2"
-                android:textColor="@android:color/black"
-                android:textSize="@dimen/font_normal"
-                android:textStyle="bold" />
+                android:orientation="vertical">
 
-        </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/txt_phase2"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/font_normal"
+                    android:textStyle="bold" />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:orientation="horizontal">
+                <Button
+                    android:id="@+id/btn_phase2"
+                    android:layout_width="175dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/phase2"
+                    android:onClick="Oc_phase" />
 
-            <Button
-                android:id="@+id/btn_phase1"
-                android:layout_width="175dp"
-                android:layout_height="150dp"
-                android:background="@drawable/phase1"
-                android:onClick="Oc_phase" />
-
-            <Button
-                android:id="@+id/btn_phase2"
-                android:layout_width="175dp"
-                android:layout_height="150dp"
-                android:background="@drawable/phase2"
-                android:onClick="Oc_phase" />
+            </LinearLayout>
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
             android:gravity="center"
             android:orientation="horizontal">
 
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/txt_phase3"
-                android:textColor="@android:color/black"
-                android:textSize="@dimen/font_normal"
-                android:textStyle="bold" />
+                android:orientation="vertical">
 
-            <TextView
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/txt_phase3"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/font_normal"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btn_phase3"
+                    android:layout_width="175dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/phase3"
+                    android:onClick="Oc_phase" />
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
-                android:text="@string/txt_phase4"
-                android:textColor="@android:color/black"
-                android:textSize="@dimen/font_normal"
-                android:textStyle="bold" />
+                android:orientation="vertical">
 
-        </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/txt_phase4"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/font_normal"
+                    android:textStyle="bold" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:orientation="horizontal">
+                <Button
+                    android:id="@+id/btn_phase4"
+                    android:layout_width="175dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/phase4"
+                    android:onClick="Oc_phase" />
 
-            <Button
-                android:id="@+id/btn_phase3"
-                android:layout_width="175dp"
-                android:layout_height="150dp"
-                android:background="@drawable/phase3"
-                android:onClick="Oc_phase" />
-
-            <Button
-                android:id="@+id/btn_phase4"
-                android:layout_width="175dp"
-                android:layout_height="150dp"
-                android:background="@drawable/phase4"
-                android:onClick="Oc_phase" />
+            </LinearLayout>
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
             android:gravity="center"
             android:orientation="horizontal">
 
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/txt_phase5"
-                android:textColor="@android:color/black"
-                android:textSize="@dimen/font_normal"
-                android:textStyle="bold" />
+                android:orientation="vertical">
 
-            <TextView
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/txt_phase5"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/font_normal"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btn_phase5"
+                    android:layout_width="175dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/phase5"
+                    android:onClick="Oc_phase" />
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
-                android:text="@string/txt_phase6"
-                android:textColor="@android:color/black"
-                android:textSize="@dimen/font_normal"
-                android:textStyle="bold" />
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/txt_phase6"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/font_normal"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btn_phase6"
+                    android:layout_width="175dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/phase6"
+                    android:onClick="Oc_phase" />
+
+            </LinearLayout>
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/btn_phase5"
-                android:layout_width="175dp"
-                android:layout_height="150dp"
-                android:background="@drawable/phase5"
-                android:onClick="Oc_phase" />
-
-            <Button
-                android:id="@+id/btn_phase6"
-                android:layout_width="175dp"
-                android:layout_height="150dp"
-                android:background="@drawable/phase6"
-                android:onClick="Oc_phase" />
-
-        </LinearLayout>
     </LinearLayout>
 </ScrollView>

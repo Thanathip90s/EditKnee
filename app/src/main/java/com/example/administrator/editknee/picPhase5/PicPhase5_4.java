@@ -16,6 +16,9 @@ public class PicPhase5_4 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pic_phase5_4);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("นั่ง-เหยียด-ค้าง");
     }
     public void StartP5_4 (View view){
         Intent intent = new Intent(PicPhase5_4.this,Phase5_4.class);

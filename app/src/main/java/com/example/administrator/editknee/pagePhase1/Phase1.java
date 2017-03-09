@@ -36,6 +36,7 @@ Phase1 extends AppCompatActivity {
         setContentView(R.layout.activity_phase1);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("ท่าบริหารเข่า");
 
         TextView txtDate = (TextView) findViewById(R.id.txt_Date1);
         TextView txtTime = (TextView) findViewById(R.id.txt_Time1);

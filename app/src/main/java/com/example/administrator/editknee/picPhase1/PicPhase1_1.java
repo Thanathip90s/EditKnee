@@ -14,6 +14,9 @@ public class PicPhase1_1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pic_phase1_1);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("กระ-ดก-เท้า");
     }
 
     public void StartP1_1 (View view){

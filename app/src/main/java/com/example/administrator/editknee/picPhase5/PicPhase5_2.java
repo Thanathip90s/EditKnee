@@ -16,6 +16,9 @@ public class PicPhase5_2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pic_phase5_2);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("คว่ำ-ชิด-ก้น");
     }
     public void StartP5_2 (View view){
         Intent intent = new Intent(PicPhase5_2.this,Phase5_2.class);
