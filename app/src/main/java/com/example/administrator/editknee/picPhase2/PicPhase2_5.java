@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.administrator.editknee.R;
+import com.example.administrator.editknee.pagePhase2.Phase2_1;
 import com.example.administrator.editknee.pagePhase2.Phase2_2;
 import com.example.administrator.editknee.pagePhase2.Phase2_5;
 
@@ -18,9 +19,13 @@ public class PicPhase2_5 extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("เดิน-สี่-ขา");
-    }
-    public void StartP2_5 (View view){
-        Intent intent = new Intent(PicPhase2_5.this,Phase2_5.class);
-        startActivity(intent);
+
+        findViewById(R.id.btn_Pic2_5).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(PicPhase2_5.this, Phase2_5.class);
+                startActivity(intent);
+            }
+        });
     }
 }

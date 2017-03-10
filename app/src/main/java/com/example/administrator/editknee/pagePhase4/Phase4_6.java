@@ -10,6 +10,7 @@ import android.widget.TextView;
 import com.example.administrator.editknee.R;
 import com.example.administrator.editknee.pageCompleteAll.CompletePhase1;
 import com.example.administrator.editknee.pageCompleteAll.CompletePhase4;
+import com.example.administrator.editknee.picPhase4.PicPhase4_1;
 
 public class Phase4_6 extends AppCompatActivity {
 
@@ -26,23 +27,26 @@ public class Phase4_6 extends AppCompatActivity {
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
 
-        showValue = (TextView)findViewById(R.id.number4_6);
+        showValue = (TextView) findViewById(R.id.number4_6);
 
+        findViewById(R.id.button_nextphase4_6).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Phase4_6.this, CompletePhase4.class);
+                startActivity(intent);
+            }
+        });
     }
-    public void  countIN (View  view){
+
+    public void countIN(View view) {
         counter++;
-        if (counter>=0 && counter<=25)
-        showValue.setText(Integer.toString(counter)+" นาที");
+        if (counter >= 0 && counter <= 25)
+            showValue.setText(Integer.toString(counter) + " นาที");
     }
 
-    public  void  countDE (View view){
+    public void countDE(View view) {
         counter--;
-        if (counter>=0 && counter<=25)
-        showValue.setText(Integer.toString(counter)+" นาที");
-    }
-
-    public void Onclick_nextphase4_6 (View view){
-        Intent intent = new Intent(Phase4_6.this,CompletePhase4.class);
-        startActivity(intent);
+        if (counter >= 0 && counter <= 25)
+            showValue.setText(Integer.toString(counter) + " นาที");
     }
 }

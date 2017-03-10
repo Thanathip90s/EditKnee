@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.administrator.editknee.R;
+import com.example.administrator.editknee.picPhase4.PicPhase4_1;
 import com.example.administrator.editknee.picPhase4.PicPhase4_6;
 
 public class Phase4_5 extends AppCompatActivity {
@@ -28,6 +29,13 @@ public class Phase4_5 extends AppCompatActivity {
 
         showValue = (TextView)findViewById(R.id.number4_5);
 
+        findViewById(R.id.button_nextphase4_5).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Phase4_5.this, PicPhase4_6.class);
+                startActivity(intent);
+            }
+        });
     }
     public void  countIN (View  view){
         counter++;

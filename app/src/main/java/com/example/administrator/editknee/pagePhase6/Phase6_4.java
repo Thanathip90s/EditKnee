@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.administrator.editknee.R;
+import com.example.administrator.editknee.pagePhase5.Phase5;
+import com.example.administrator.editknee.picPhase5.PicPhase5_1;
 import com.example.administrator.editknee.picPhase6.PicPhase6_5;
 
 public class Phase6_4 extends AppCompatActivity {
@@ -26,23 +28,26 @@ public class Phase6_4 extends AppCompatActivity {
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
 
-        showValue = (TextView)findViewById(R.id.number6_4);
+        showValue = (TextView) findViewById(R.id.number6_4);
 
+        findViewById(R.id.button_nextphase6_4).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Phase6_4.this, PicPhase6_5.class);
+                startActivity(intent);
+            }
+        });
     }
-    public void  countIN (View  view){
+
+    public void countIN(View view) {
         counter++;
-        if (counter>=0 && counter<=30)
-        showValue.setText(Integer.toString(counter)+" ครั้ง");
+        if (counter >= 0 && counter <= 30)
+            showValue.setText(Integer.toString(counter) + " ครั้ง");
     }
 
-    public  void  countDE (View view){
+    public void countDE(View view) {
         counter--;
-        if (counter>=0 && counter<=30)
-        showValue.setText(Integer.toString(counter)+" ครั้ง");
-    }
-
-    public void Onclick_nextphase6_4 (View view){
-        Intent intent = new Intent(Phase6_4.this,PicPhase6_5.class);
-        startActivity(intent);
+        if (counter >= 0 && counter <= 30)
+            showValue.setText(Integer.toString(counter) + " ครั้ง");
     }
 }

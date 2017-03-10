@@ -27,15 +27,14 @@
             android:text="@string/txt_Explain"
             android:textColor="@android:color/black"
             android:textSize="@dimen/font_normal"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/txt_Explain3_4"
             android:textColor="@android:color/black"
-            android:textSize="@dimen/font_normal" />
+            android:textSize="@dimen/font_normaldown" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -43,16 +42,16 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/btn_Pic3_4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:background="#48D1CC"
                 android:onClick="StartP3_4"
                 android:text="@string/txt_start"
                 android:textColor="@android:color/white"
-                android:background="#48D1CC"
-                android:textStyle="bold"
-                android:textSize="@dimen/font_button" />
+                android:textSize="@dimen/font_button"
+                android:textStyle="bold" />
 
         </LinearLayout>
 

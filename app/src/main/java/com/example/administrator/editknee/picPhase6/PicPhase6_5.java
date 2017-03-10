@@ -7,6 +7,7 @@ import android.view.View;
 
 import com.example.administrator.editknee.R;
 import com.example.administrator.editknee.pagePhase5.Phase5_1;
+import com.example.administrator.editknee.pagePhase6.Phase6_1;
 import com.example.administrator.editknee.pagePhase6.Phase6_5;
 import com.example.administrator.editknee.picPhase5.PicPhase5_1;
 
@@ -19,9 +20,13 @@ public class PicPhase6_5 extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("เกาะ-ย่อ-ลง");
-    }
-    public void StartP6_5 (View view){
-        Intent intent = new Intent(PicPhase6_5.this,Phase6_5.class);
-        startActivity(intent);
+
+        findViewById(R.id.btn_Pic6_5).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(PicPhase6_5.this, Phase6_5.class);
+                startActivity(intent);
+            }
+        });
     }
 }

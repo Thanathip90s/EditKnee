@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.administrator.editknee.R;
+import com.example.administrator.editknee.pagePhase1.Phase1_1;
 import com.example.administrator.editknee.pagePhase1.Phase1_2;
 
 public class PicPhase1_2 extends AppCompatActivity {
@@ -17,10 +18,13 @@ public class PicPhase1_2 extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("หงาย-ชิด-ก้น");
-    }
 
-    public void StartP1_2 (View view){
-        Intent intent = new Intent(PicPhase1_2.this,Phase1_2.class);
-        startActivity(intent);
+        findViewById(R.id.btn_Pic1_2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(PicPhase1_2.this, Phase1_2.class);
+                startActivity(intent);
+            }
+        });
     }
 }

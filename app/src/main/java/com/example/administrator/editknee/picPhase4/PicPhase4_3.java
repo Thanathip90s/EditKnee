@@ -7,6 +7,7 @@ import android.view.View;
 
 import com.example.administrator.editknee.R;
 import com.example.administrator.editknee.pagePhase3.Phase3_1;
+import com.example.administrator.editknee.pagePhase4.Phase4_2;
 import com.example.administrator.editknee.pagePhase4.Phase4_3;
 import com.example.administrator.editknee.picPhase3.PicPhase3_1;
 
@@ -19,9 +20,13 @@ public class PicPhase4_3 extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("ก้ม-แตะ-เท้า");
-    }
-    public void StartP4_3 (View view){
-        Intent intent = new Intent(PicPhase4_3.this,Phase4_3.class);
-        startActivity(intent);
+
+        findViewById(R.id.btn_Pic4_3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(PicPhase4_3.this, Phase4_3.class);
+                startActivity(intent);
+            }
+        });
     }
 }

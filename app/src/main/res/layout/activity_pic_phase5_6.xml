@@ -16,7 +16,7 @@
         tools:context="com.example.administrator.editknee.picPhase1.PicPhase1_1">
 
         <ImageView
-            android:layout_width="425dp"
+            android:layout_width="400dp"
             android:layout_height="385dp"
             android:layout_gravity="center"
             android:background="@drawable/twokha4" />
@@ -27,15 +27,14 @@
             android:text="@string/txt_Explain"
             android:textColor="@android:color/black"
             android:textSize="@dimen/font_normal"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/txt_Explain5_6"
             android:textColor="@android:color/black"
-            android:textSize="@dimen/font_normal" />
+            android:textSize="@dimen/font_normaldown" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -43,16 +42,16 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/btn_Pic5_6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:background="#48D1CC"
                 android:onClick="StartP5_6"
                 android:text="@string/txt_start"
                 android:textColor="@android:color/white"
-                android:background="#48D1CC"
-                android:textStyle="bold"
-                android:textSize="@dimen/font_button" />
+                android:textSize="@dimen/font_button"
+                android:textStyle="bold" />
         </LinearLayout>
 
     </LinearLayout>

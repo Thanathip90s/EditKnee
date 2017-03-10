@@ -19,9 +19,13 @@ public class PicPhase3_1 extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("หงาย-ชิด-ก้น");
-    }
-    public void StartP3_1 (View view){
-        Intent intent = new Intent(PicPhase3_1.this,Phase3_1.class);
-        startActivity(intent);
+
+        findViewById(R.id.btn_Pic3_1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(PicPhase3_1.this, Phase3_1.class);
+                startActivity(intent);
+            }
+        });
     }
 }

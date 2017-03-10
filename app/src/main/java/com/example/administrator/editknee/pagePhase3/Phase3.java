@@ -11,6 +11,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.administrator.editknee.R;
+import com.example.administrator.editknee.pagePhase2.Phase2_1;
+import com.example.administrator.editknee.picPhase2.PicPhase2_2;
 import com.example.administrator.editknee.picPhase3.PicPhase3_1;
 
 import java.text.DateFormat;
@@ -35,10 +37,12 @@ public class Phase3 extends AppCompatActivity {
         txtDate.setText(currentDateString);
         txtTime.setText(currentTimeString);
 
-    }
-
-    public void Onclick_nextphase3 (View view){
-        Intent intent = new Intent(Phase3.this,PicPhase3_1.class);
-        startActivity(intent);
+        findViewById(R.id.button_nextphase3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Phase3.this, PicPhase3_1.class);
+                startActivity(intent);
+            }
+        });
     }
 }

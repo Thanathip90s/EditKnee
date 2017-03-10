@@ -3,22 +3,21 @@
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_gravity="top"
     android:layout_margin="10dp"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     card_view:cardCornerRadius="5dp"
     card_view:cardElevation="5dp">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
             android:gravity="center"
-            android:padding="10dp"
             android:text="ระยะที่ 1"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textSize="@dimen/font_title"
@@ -44,7 +43,7 @@
                 android:layout_height="wrap_content"
                 android:text="-"
                 android:textColor="@android:color/black"
-                android:textSize="20sp" />
+                android:textSize="15sp" />
 
         </LinearLayout>
 
@@ -68,7 +67,7 @@
                 android:layout_height="wrap_content"
                 android:text="-"
                 android:textColor="@android:color/black"
-                android:textSize="20sp" />
+                android:textSize="15sp" />
 
         </LinearLayout>
 
@@ -92,9 +91,10 @@
                 android:layout_height="wrap_content"
                 android:text="-"
                 android:textColor="@android:color/black"
-                android:textSize="20sp" />
+                android:textSize="15sp" />
 
         </LinearLayout>
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -110,15 +110,16 @@
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/noteTxt1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-"
-                android:textColor="@android:color/black"
-                android:textSize="20sp" />
-
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/noteTxt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="-"
+            android:textColor="@android:color/black"
+            android:textSize="15sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -140,7 +141,7 @@
                 android:layout_height="wrap_content"
                 android:text="-"
                 android:textColor="@android:color/black"
-                android:textSize="20sp" />
+                android:textSize="15sp" />
 
         </LinearLayout>
 
@@ -158,15 +159,16 @@
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/noteTxt2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-"
-                android:textColor="@android:color/black"
-                android:textSize="20sp" />
-
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/noteTxt2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="-"
+            android:textColor="@android:color/black"
+            android:textSize="15sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -188,7 +190,7 @@
                 android:layout_height="wrap_content"
                 android:text="-"
                 android:textColor="@android:color/black"
-                android:textSize="20sp" />
+                android:textSize="15sp" />
 
         </LinearLayout>
 
@@ -206,15 +208,15 @@
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/noteTxt3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-"
-                android:textColor="@android:color/black"
-                android:textSize="20sp" />
-
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/noteTxt3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textColor="@android:color/black"
+            android:textSize="15sp" />
 
     </LinearLayout>
 

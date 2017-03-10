@@ -19,6 +19,7 @@
             android:layout_width="385dp"
             android:layout_height="385dp"
             android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
             android:background="@drawable/chitkon1" />
 
         <TextView
@@ -35,7 +36,7 @@
             android:layout_height="wrap_content"
             android:text="@string/txt_Explain1_2"
             android:textColor="@android:color/black"
-            android:textSize="@dimen/font_normal" />
+            android:textSize="@dimen/font_normaldown"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -44,7 +45,7 @@
             android:weightSum="1">
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/btn_Pic1_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"

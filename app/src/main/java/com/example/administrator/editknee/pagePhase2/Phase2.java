@@ -35,10 +35,13 @@ public class Phase2 extends AppCompatActivity {
         txtDate.setText(currentDateString);
         txtTime.setText(currentTimeString);
 
-    }
-    public void Onclick_nextphase2 (View view) {
-        Intent intent = new Intent(Phase2.this,PicPhase2_1.class);
-        startActivity(intent);
+        findViewById(R.id.button_nextphase2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Phase2.this, PicPhase2_1.class);
+                startActivity(intent);
+            }
+        });
     }
 }
 
