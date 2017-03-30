@@ -3,26 +3,26 @@
     package="com.example.administrator.editknee">
 
     <application
+        android:name=".MyFonts"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".pagePerson.FirstRecord">
+        <activity android:name=".SelectUser">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".WarningActivity" />
         <activity android:name=".Menu" />
         <activity
             android:name=".Saveknee"
             android:parentActivityName=".Menu" />
         <activity
             android:name=".pagePhase1.Phase1"
-            android:parentActivityName=".Saveknee" />
+            android:parentActivityName=".MenuFragActivity" />
         <activity
             android:name=".pagePhase1.Phase1_1"
             android:parentActivityName=".picPhase1.PicPhase1_1" />
@@ -32,11 +32,10 @@
         <activity
             android:name=".pagePhase1.Phase1_3"
             android:parentActivityName=".picPhase1.PicPhase1_3" />
-        <activity
-            android:name=".pageCompleteAll.CompletePhase1" />
+        <activity android:name=".pageCompleteAll.CompletePhase1" />
         <activity
             android:name=".pagePhase2.Phase2"
-            android:parentActivityName=".Saveknee" />
+            android:parentActivityName=".MenuFragActivity" />
         <activity
             android:name=".pagePhase2.Phase2_1"
             android:parentActivityName=".picPhase2.PicPhase2_1" />
@@ -54,7 +53,7 @@
             android:parentActivityName=".picPhase2.PicPhase2_5" />
         <activity
             android:name=".pagePhase3.Phase3"
-            android:parentActivityName=".Saveknee" />
+            android:parentActivityName=".MenuFragActivity" />
         <activity
             android:name=".pagePhase3.Phase3_1"
             android:parentActivityName=".picPhase3.PicPhase3_1" />
@@ -72,7 +71,7 @@
             android:parentActivityName=".picPhase3.PicPhase3_5" />
         <activity
             android:name=".pagePhase4.Phase4"
-            android:parentActivityName=".Saveknee" />
+            android:parentActivityName=".MenuFragActivity" />
         <activity
             android:name=".pagePhase4.Phase4_1"
             android:parentActivityName=".picPhase4.PicPhase4_1" />
@@ -93,7 +92,7 @@
             android:parentActivityName=".picPhase4.PicPhase4_6" />
         <activity
             android:name=".pagePhase5.Phase5"
-            android:parentActivityName=".Saveknee" />
+            android:parentActivityName=".MenuFragActivity" />
         <activity
             android:name=".pagePhase5.Phase5_1"
             android:parentActivityName=".picPhase5.PicPhase5_1" />
@@ -114,7 +113,7 @@
             android:parentActivityName=".picPhase5.PicPhase5_6" />
         <activity
             android:name=".pagePhase6.Phase6"
-            android:parentActivityName=".Saveknee" />
+            android:parentActivityName=".MenuFragActivity" />
         <activity
             android:name=".pagePhase6.Phase6_1"
             android:parentActivityName=".picPhase6.PicPhase6_1" />
@@ -140,11 +139,8 @@
         <activity android:name=".recordOld.Record3" />
         <activity android:name=".recordOld.Record4" />
         <activity
-            android:name=".pagePerson.HistoryKnee"
-            android:parentActivityName=".pagePerson.History" />
-        <activity
             android:name=".pagePerson.EditPerson"
-            android:parentActivityName=".pagePerson.History" />
+            android:parentActivityName=".MenuFragActivity" />
         <!--
  ATTENTION: This was auto-generated to add Google Play services to your project for
      App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -153,42 +149,118 @@
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
-        <activity android:name=".picPhase1.PicPhase1_1" android:parentActivityName=".pagePhase1.Phase1" />
-        <activity android:name=".picPhase1.PicPhase1_2" android:parentActivityName=".pagePhase1.Phase1_1" />
-        <activity android:name=".picPhase1.PicPhase1_3" android:parentActivityName=".pagePhase1.Phase1_2"/>
-        <activity android:name=".picPhase2.PicPhase2_1" android:parentActivityName=".pagePhase2.Phase2"/>
-        <activity android:name=".picPhase2.PicPhase2_2" android:parentActivityName=".pagePhase2.Phase2_1"/>
-        <activity android:name=".picPhase2.PicPhase2_3" android:parentActivityName=".pagePhase2.Phase2_2"/>
-        <activity android:name=".picPhase2.PicPhase2_4" android:parentActivityName=".pagePhase2.Phase2_3"/>
-        <activity android:name=".picPhase2.PicPhase2_5" android:parentActivityName=".pagePhase2.Phase2_4"/>
-        <activity android:name=".picPhase3.PicPhase3_1" android:parentActivityName=".pagePhase3.Phase3"/>
-        <activity android:name=".picPhase3.PicPhase3_2" android:parentActivityName=".pagePhase3.Phase3_1"/>
-        <activity android:name=".picPhase3.PicPhase3_3" android:parentActivityName=".pagePhase3.Phase3_2"/>
-        <activity android:name=".picPhase3.PicPhase3_4" android:parentActivityName=".pagePhase3.Phase3_3"/>
-        <activity android:name=".picPhase3.PicPhase3_5" android:parentActivityName=".pagePhase3.Phase3_4"/>
-        <activity android:name=".picPhase4.PicPhase4_1" android:parentActivityName=".pagePhase4.Phase4"/>
-        <activity android:name=".picPhase4.PicPhase4_2" android:parentActivityName=".pagePhase4.Phase4_1"/>
-        <activity android:name=".picPhase4.PicPhase4_3" android:parentActivityName=".pagePhase4.Phase4_2"/>
-        <activity android:name=".picPhase4.PicPhase4_4" android:parentActivityName=".pagePhase4.Phase4_3"/>
-        <activity android:name=".picPhase4.PicPhase4_5" android:parentActivityName=".pagePhase4.Phase4_4"/>
-        <activity android:name=".picPhase4.PicPhase4_6" android:parentActivityName=".pagePhase4.Phase4_5"/>
-        <activity android:name=".picPhase5.PicPhase5_1" android:parentActivityName=".pagePhase5.Phase5"/>
-        <activity android:name=".picPhase5.PicPhase5_2" android:parentActivityName=".pagePhase5.Phase5_1"/>
-        <activity android:name=".picPhase5.PicPhase5_3" android:parentActivityName=".pagePhase5.Phase5_2"/>
-        <activity android:name=".picPhase5.PicPhase5_4" android:parentActivityName=".pagePhase5.Phase5_3"/>
-        <activity android:name=".picPhase5.PicPhase5_5" android:parentActivityName=".pagePhase5.Phase5_4"/>
-        <activity android:name=".picPhase5.PicPhase5_6" android:parentActivityName=".pagePhase5.Phase5_5"/>
-        <activity android:name=".picPhase6.PicPhase6_1" android:parentActivityName=".pagePhase6.Phase6"/>
-        <activity android:name=".picPhase6.PicPhase6_2" android:parentActivityName=".pagePhase6.Phase6_1"/>
-        <activity android:name=".picPhase6.PicPhase6_3" android:parentActivityName=".pagePhase6.Phase6_2"/>
-        <activity android:name=".picPhase6.PicPhase6_4" android:parentActivityName=".pagePhase6.Phase6_3"/>
-        <activity android:name=".picPhase6.PicPhase6_5" android:parentActivityName=".pagePhase6.Phase6_4"/>
-        <activity android:name=".picPhase6.PicPhase6_6" android:parentActivityName=".pagePhase6.Phase6_5"/>
+        <activity
+            android:name=".picPhase1.PicPhase1_1"
+            android:parentActivityName=".pagePhase1.Phase1" />
+        <activity
+            android:name=".picPhase1.PicPhase1_2"
+            android:parentActivityName=".pagePhase1.Phase1_1" />
+        <activity
+            android:name=".picPhase1.PicPhase1_3"
+            android:parentActivityName=".pagePhase1.Phase1_2" />
+        <activity
+            android:name=".picPhase2.PicPhase2_1"
+            android:parentActivityName=".pagePhase2.Phase2" />
+        <activity
+            android:name=".picPhase2.PicPhase2_2"
+            android:parentActivityName=".pagePhase2.Phase2_1" />
+        <activity
+            android:name=".picPhase2.PicPhase2_3"
+            android:parentActivityName=".pagePhase2.Phase2_2" />
+        <activity
+            android:name=".picPhase2.PicPhase2_4"
+            android:parentActivityName=".pagePhase2.Phase2_3" />
+        <activity
+            android:name=".picPhase2.PicPhase2_5"
+            android:parentActivityName=".pagePhase2.Phase2_4" />
+        <activity
+            android:name=".picPhase3.PicPhase3_1"
+            android:parentActivityName=".pagePhase3.Phase3" />
+        <activity
+            android:name=".picPhase3.PicPhase3_2"
+            android:parentActivityName=".pagePhase3.Phase3_1" />
+        <activity
+            android:name=".picPhase3.PicPhase3_3"
+            android:parentActivityName=".pagePhase3.Phase3_2" />
+        <activity
+            android:name=".picPhase3.PicPhase3_4"
+            android:parentActivityName=".pagePhase3.Phase3_3" />
+        <activity
+            android:name=".picPhase3.PicPhase3_5"
+            android:parentActivityName=".pagePhase3.Phase3_4" />
+        <activity
+            android:name=".picPhase4.PicPhase4_1"
+            android:parentActivityName=".pagePhase4.Phase4" />
+        <activity
+            android:name=".picPhase4.PicPhase4_2"
+            android:parentActivityName=".pagePhase4.Phase4_1" />
+        <activity
+            android:name=".picPhase4.PicPhase4_3"
+            android:parentActivityName=".pagePhase4.Phase4_2" />
+        <activity
+            android:name=".picPhase4.PicPhase4_4"
+            android:parentActivityName=".pagePhase4.Phase4_3" />
+        <activity
+            android:name=".picPhase4.PicPhase4_5"
+            android:parentActivityName=".pagePhase4.Phase4_4" />
+        <activity
+            android:name=".picPhase4.PicPhase4_6"
+            android:parentActivityName=".pagePhase4.Phase4_5" />
+        <activity
+            android:name=".picPhase5.PicPhase5_1"
+            android:parentActivityName=".pagePhase5.Phase5" />
+        <activity
+            android:name=".picPhase5.PicPhase5_2"
+            android:parentActivityName=".pagePhase5.Phase5_1" />
+        <activity
+            android:name=".picPhase5.PicPhase5_3"
+            android:parentActivityName=".pagePhase5.Phase5_2" />
+        <activity
+            android:name=".picPhase5.PicPhase5_4"
+            android:parentActivityName=".pagePhase5.Phase5_3" />
+        <activity
+            android:name=".picPhase5.PicPhase5_5"
+            android:parentActivityName=".pagePhase5.Phase5_4" />
+        <activity
+            android:name=".picPhase5.PicPhase5_6"
+            android:parentActivityName=".pagePhase5.Phase5_5" />
+        <activity
+            android:name=".picPhase6.PicPhase6_1"
+            android:parentActivityName=".pagePhase6.Phase6" />
+        <activity
+            android:name=".picPhase6.PicPhase6_2"
+            android:parentActivityName=".pagePhase6.Phase6_1" />
+        <activity
+            android:name=".picPhase6.PicPhase6_3"
+            android:parentActivityName=".pagePhase6.Phase6_2" />
+        <activity
+            android:name=".picPhase6.PicPhase6_4"
+            android:parentActivityName=".pagePhase6.Phase6_3" />
+        <activity
+            android:name=".picPhase6.PicPhase6_5"
+            android:parentActivityName=".pagePhase6.Phase6_4" />
+        <activity
+            android:name=".picPhase6.PicPhase6_6"
+            android:parentActivityName=".pagePhase6.Phase6_5" />
         <activity android:name=".pageCompleteAll.CompletePhase2" />
         <activity android:name=".pageCompleteAll.CompletePhase3" />
         <activity android:name=".pageCompleteAll.CompletePhase4" />
         <activity android:name=".pageCompleteAll.CompletePhase5" />
-        <activity android:name=".pageCompleteAll.CompletePhase6"></activity>
+        <activity android:name=".pageCompleteAll.CompletePhase6" />
+        <activity android:name=".pagePerson.FirstRecord" />
+        <activity android:name=".pagePerson.FirstRecord2" />
+        <activity android:name=".pagePerson.DetailPatient" />
+        <activity
+            android:name=".MenuFragActivity"
+            android:label="@string/title_activity_menu_frag"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".FirstPhase.FirstPhase1"
+            android:parentActivityName=".MenuFragActivity"></activity>
+        <activity
+            android:name=".pagePerson.EditDetailPatient"
+            android:parentActivityName=".MenuFragActivity"></activity>
     </application>
 
 </manifest>

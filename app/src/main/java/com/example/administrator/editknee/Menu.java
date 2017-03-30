@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.administrator.editknee.pagePerson.History;
-import com.example.administrator.editknee.pagePerson.HistoryKnee;
 
 public class Menu extends AppCompatActivity {
 
@@ -22,10 +21,6 @@ public class Menu extends AppCompatActivity {
                 Intent m1 = new Intent(this,Saveknee.class);
                 startActivity(m1);
                 break;
-            /*case R.id.btn_knowledge:
-                Intent m2 = new Intent(this,HistoryKnee.class);
-                startActivity(m2);
-                break;*/
             case R.id.btn_history:
                 Intent m3 = new Intent(this,History.class);
                 startActivity(m3);

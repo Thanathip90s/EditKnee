@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.administrator.editknee.Menu;
+import com.example.administrator.editknee.MenuFragActivity;
 import com.example.administrator.editknee.R;
 import com.example.administrator.editknee.pagePhase1.Phase1;
 import com.example.administrator.editknee.pagePhase6.Phase6;
@@ -35,7 +36,7 @@ public class CompletePhase6 extends AppCompatActivity {
 
         notificationManager.notify(0, notification);
 
-        Intent cp6 = new Intent(CompletePhase6.this,Menu.class);
+        Intent cp6 = new Intent(CompletePhase6.this,MenuFragActivity.class);
         startActivity(cp6);
         finish();
     }

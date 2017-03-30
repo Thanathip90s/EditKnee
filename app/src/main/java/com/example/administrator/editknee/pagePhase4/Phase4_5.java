@@ -23,7 +23,7 @@ public class Phase4_5 extends AppCompatActivity {
         setContentView(R.layout.activity_phase4_5);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("ระยะที่ 4");
+        getSupportActionBar().setTitle("เกาะ-ย่อ-ลง");
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
 
@@ -32,7 +32,7 @@ public class Phase4_5 extends AppCompatActivity {
         findViewById(R.id.button_nextphase4_5).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Phase4_5.this, PicPhase4_6.class);
+                Intent intent = new Intent(Phase4_5.this, Phase4_6.class);
                 startActivity(intent);
             }
         });

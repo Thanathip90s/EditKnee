@@ -23,7 +23,7 @@ public class Phase2_5 extends AppCompatActivity {
         setContentView(R.layout.activity_phase2_5);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("ระยะที่ 2");
+        getSupportActionBar().setTitle("เดิน-สี่-ขา");
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
 

@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/picbackground">
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:id="@+id/activity_first_record"
@@ -11,14 +10,32 @@
         android:orientation="vertical"
         android:padding="16dp">
 
-        <TextView
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:gravity="center"-->
+            <!--android:text="@string/txt_title"-->
+            <!--android:textColor="@android:color/black"-->
+            <!--android:textSize="@dimen/font_title"-->
+            <!--android:textStyle="bold" />-->
+
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/txt_title"
-            android:textColor="@android:color/black"
-            android:textSize="@dimen/font_title"
-            android:textStyle="bold" />
+            android:layout_marginTop="30dp"
+            android:textColorHint="@android:color/black">
+
+            <EditText
+                android:id="@+id/ET_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:hint="@string/txt_name"
+                android:inputType="text"
+                android:textColorHint="@android:color/black"
+                android:textSize="@dimen/font_normal" />
+
+        </android.support.design.widget.TextInputLayout>
 
         <RadioGroup
             android:layout_width="match_parent"
@@ -109,8 +126,8 @@
             android:id="@+id/BT_save"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:background="#48D1CC"
+            android:layout_marginTop="25dp"
+            android:background="#e68299"
             android:text="@string/txt_save"
             android:textColor="@android:color/white"
             android:textSize="@dimen/font_button"

@@ -12,8 +12,8 @@ import android.widget.RadioButton;
 import android.widget.Toast;
 
 import com.example.administrator.editknee.DatabaseManager;
-import com.example.administrator.editknee.Menu;
-import com.example.administrator.editknee.Person;
+import com.example.administrator.editknee.MenuFragActivity;
+import com.example.administrator.editknee.ModelPerson.Person;
 import com.example.administrator.editknee.R;
 
 public class EditPerson extends AppCompatActivity {
@@ -25,6 +25,7 @@ public class EditPerson extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_person);
 
+        getSupportActionBar().setTitle("แก้ไขประวัติ");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
@@ -61,6 +62,7 @@ public class EditPerson extends AppCompatActivity {
             public void onClick(View v) {
                 RadioButton male = (RadioButton) findViewById(R.id.button_male);
                 RadioButton female = (RadioButton) findViewById(R.id.button_female);
+                EditText name = (EditText) findViewById(R.id.ET_editName);
                 EditText birthday = (EditText) findViewById(R.id.ET_editBirthday);
                 EditText weight = (EditText) findViewById(R.id.ET_editWeight);
                 EditText height = (EditText) findViewById(R.id.ET_editHeight);
@@ -77,6 +79,9 @@ public class EditPerson extends AppCompatActivity {
                 if (male.isChecked() == false & female.isChecked() == false) {
                     Toast.makeText(getApplicationContext(), "กรุณาเลือกเพศด้วยคะ", Toast.LENGTH_SHORT).show();
                 }
+                if (name.getText().toString().isEmpty()) {
+                    name.setError("กรุณากรอกชื่อด้วยคะ");
+                }
                 if (birthday.getText().toString().isEmpty()) {
                     birthday.setError("กรุณาเลือกวันเกิดด้วยคะ");
                 }
@@ -87,13 +92,14 @@ public class EditPerson extends AppCompatActivity {
                     height.setError("กรุณากรอกด้วยคะ");
                 } else {
                     person.setId("1");
+                    person.setName(name.getText().toString());
                     person.setBirthday(birthday.getText().toString());
                     person.setWeight(weight.getText().toString());
                     person.setHeight(height.getText().toString());
 
                     DatabaseManager databaseManager = new DatabaseManager(EditPerson.this);
                     databaseManager.storePerson(person);
-                    Intent i = new Intent(EditPerson.this, Menu.class);
+                    Intent i = new Intent(EditPerson.this, MenuFragActivity.class);
                     startActivity(i);
                     finish();
                 }

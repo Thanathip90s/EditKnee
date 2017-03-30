@@ -1,15 +1,16 @@
-package com.example.administrator.editknee;
+package com.example.administrator.editknee.ModelPerson;
 
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
 
 /**
- * Created by Administrator on 1/31/2017.
+ * Created by Administrator on 22-Mar-17.
  */
 
 public class Person extends RealmObject {
     @PrimaryKey
     String id;
+    String name;
     String gender;
     String birthday;
     String weight;
@@ -21,6 +22,14 @@ public class Person extends RealmObject {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getGender() {

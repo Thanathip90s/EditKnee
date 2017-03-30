@@ -13,7 +13,8 @@ import android.widget.Toast;
 
 import com.example.administrator.editknee.DatabaseManager;
 import com.example.administrator.editknee.Menu;
-import com.example.administrator.editknee.Person;
+import com.example.administrator.editknee.MenuFragActivity;
+import com.example.administrator.editknee.ModelPerson.Person;
 import com.example.administrator.editknee.R;
 
 public class FirstRecord extends AppCompatActivity {
@@ -27,6 +28,7 @@ public class FirstRecord extends AppCompatActivity {
 
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
+        getSupportActionBar().setTitle("ข้อมูลส่วนบุคคล");
 
         date = (EditText) findViewById(R.id.ET_birthday);
 
@@ -55,19 +57,20 @@ public class FirstRecord extends AppCompatActivity {
             }
         });
 
-        DatabaseManager databaseManager = new DatabaseManager(this);
-        Person person = databaseManager.getPerson();
-        if (person != null) {
-            Intent intent = new Intent(this, Menu.class);
-            startActivity(intent);
-            finish();
-        }
+//        DatabaseManager databaseManager = DatabaseManager.getInstance(this);
+//        Person person = databaseManager.getPerson();
+//        if (person != null) {
+//            Intent intent = new Intent(this, Menu.class);
+//            startActivity(intent);
+//            finish();
+//        }
 
         findViewById(R.id.BT_save).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 RadioButton male = (RadioButton) findViewById(R.id.button_male);
                 RadioButton female = (RadioButton) findViewById(R.id.button_female);
+                EditText name = (EditText)findViewById(R.id.ET_name);
                 EditText birthday = (EditText) findViewById(R.id.ET_birthday);
                 EditText weight = (EditText) findViewById(R.id.ET_weight);
                 EditText height = (EditText) findViewById(R.id.ET_height);
@@ -84,6 +87,9 @@ public class FirstRecord extends AppCompatActivity {
                 if (male.isChecked() == false & female.isChecked() == false) {
                     Toast.makeText(getApplicationContext(), "กรุณาเลือกเพศด้วยคะ", Toast.LENGTH_SHORT).show();
                 }
+                if (name.getText().toString().isEmpty()) {
+                    name.setError("กรุณากรอกชื่อด้วยคะ");
+                }
                 if (birthday.getText().toString().isEmpty()) {
                     birthday.setError("กรุณาเลือกวันเกิดด้วยคะ");
                 }
@@ -94,13 +100,14 @@ public class FirstRecord extends AppCompatActivity {
                     height.setError("กรุณากรอกด้วยคะ");
                 } else {
                     person.setId("1");
+                    person.setName(name.getText().toString());
                     person.setBirthday(birthday.getText().toString());
                     person.setWeight(weight.getText().toString());
                     person.setHeight(height.getText().toString());
 
                     DatabaseManager databaseManager = new DatabaseManager(FirstRecord.this);
                     databaseManager.storePerson(person);
-                    Intent i = new Intent(FirstRecord.this, Menu.class);
+                    Intent i = new Intent(FirstRecord.this, MenuFragActivity.class);
                     startActivity(i);
                     finish();
                 }

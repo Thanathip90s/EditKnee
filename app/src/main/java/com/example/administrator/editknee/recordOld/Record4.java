@@ -39,7 +39,7 @@ public class Record4 extends AppCompatActivity {
        /* findViewById(R.id.button_record4).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(Record4.this,WarningActivity.class);
+
                 startActivity(i);
                 realm.beginTransaction();
                 //DB operation
@@ -56,7 +56,7 @@ public class Record4 extends AppCompatActivity {
   /*  public void Button_record4(View view) {
         EditText h = (EditText) findViewById(R.id.editText_height);
         Button btn_record4 = (Button) findViewById(R.id.button_record4);
-        Intent intent = new Intent(Record4.this, WarningActivity.class);
+
         EditText height = (EditText) findViewById(R.id.editText_height);
         String text = height.getText().toString();
 

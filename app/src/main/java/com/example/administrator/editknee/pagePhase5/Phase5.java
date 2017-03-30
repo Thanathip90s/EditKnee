@@ -26,7 +26,7 @@ public class Phase5 extends AppCompatActivity {
         setContentView(R.layout.activity_phase5);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("ท่าบริหารเข่า");
+        getSupportActionBar().setTitle("ระยะที่ 5");
 
         TextView txtDate = (TextView) findViewById(R.id.txt_Date5);
         TextView txtTime = (TextView) findViewById(R.id.txt_Time5);
@@ -40,7 +40,7 @@ public class Phase5 extends AppCompatActivity {
         findViewById(R.id.button_nextphase5).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Phase5.this, PicPhase5_1.class);
+                Intent intent = new Intent(Phase5.this, Phase5_1.class);
                 startActivity(intent);
             }
         });

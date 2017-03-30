@@ -20,16 +20,13 @@ import java.util.Date;
 
 public class Phase4 extends AppCompatActivity {
 
-    EditText date;
-    DatePickerDialog datePickerDialog;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_phase4);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("ท่าบริหารเข่า");
+        getSupportActionBar().setTitle("ระยะที่ 4");
 
         TextView txtDate = (TextView) findViewById(R.id.txt_Date4);
         TextView txtTime = (TextView) findViewById(R.id.txt_Time4);
@@ -43,7 +40,7 @@ public class Phase4 extends AppCompatActivity {
         findViewById(R.id.button_nextphase4).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Phase4.this, PicPhase4_1.class);
+                Intent intent = new Intent(Phase4.this, Phase4_1.class);
                 startActivity(intent);
             }
         });

@@ -11,6 +11,9 @@ import com.example.administrator.editknee.pagePhase1.Phase1_1;
 import com.example.administrator.editknee.picPhase5.PicPhase5_1;
 
 public class PicPhase1_1 extends AppCompatActivity {
+    public static int REQUEST_UPDATE = 99;
+    public static String EXTRA_PHASE1_ID = "phase1Id";
+    private int mPhase1Id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,11 +23,17 @@ public class PicPhase1_1 extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("กระ-ดก-เท้า");
 
+        if (getIntent().hasExtra(EXTRA_PHASE1_ID)) {
+            mPhase1Id = getIntent().getIntExtra(EXTRA_PHASE1_ID, 0);
+        }
+
         findViewById(R.id.btn_Pic1_1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(PicPhase1_1.this, Phase1_1.class);
-                startActivity(intent);
+                intent.putExtra(EXTRA_PHASE1_ID, mPhase1Id);
+                startActivityForResult(intent, REQUEST_UPDATE);
+                finish();
             }
         });
     }
