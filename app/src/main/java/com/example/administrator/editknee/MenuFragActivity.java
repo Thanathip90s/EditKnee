@@ -63,10 +63,10 @@ public class MenuFragActivity extends AppCompatActivity {
 
     }
 
-    /*@Override
+    @Override
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(CalligraphyContextWrapper.wrap(base));
-    }*/
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -133,11 +133,11 @@ public class MenuFragActivity extends AppCompatActivity {
                 case 0:
                     return "บันทึกเข่า";
                 case 1:
-                    return "ประวัติบริหารเข่า";
+                    return "ประวัติ";
                 case 2:
-                    return "ความรู้ข้อเข่าเสื่อม";
+                    return "ความรู้";
                 case 3:
-                    return "ประวัติส่วนบุคคล";
+                    return "ส่วนบุคคล";
             }
             return null;
         }

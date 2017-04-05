@@ -1,6 +1,7 @@
 package com.example.administrator.editknee.pagePerson;
 
 import android.app.DatePickerDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,6 +15,8 @@ import com.example.administrator.editknee.DatabaseManager;
 import com.example.administrator.editknee.MenuFragActivity;
 import com.example.administrator.editknee.ModelPerson.DetailPerson;
 import com.example.administrator.editknee.R;
+
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class EditDetailPatient extends AppCompatActivity {
     EditText date,date2,date3;
@@ -210,5 +213,9 @@ public class EditDetailPatient extends AppCompatActivity {
                 finish();
             }
         });
+    }
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(base));
     }
 }

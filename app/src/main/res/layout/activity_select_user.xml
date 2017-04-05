@@ -1,40 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#FFFFF0"
-    tools:context="com.example.administrator.editknee.SelectUser">
+    android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/btn_notSick"
-        android:layout_marginTop="20dp"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:layout_width="350dp"
-        android:layout_height="250dp"
-        android:onClick="Oc_select"
-        android:background="@drawable/general" />
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFF0"
+        android:orientation="vertical"
+        tools:context="com.example.administrator.editknee.SelectUser">
 
-    <Button
-        android:id="@+id/btn_Sick"
-        android:layout_marginTop="10dp"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:layout_width="350dp"
-        android:layout_height="250dp"
-        android:onClick="Oc_select"
-        android:background="@drawable/patient"  />
+        <Button
+            android:id="@+id/btn_notSick"
+            android:layout_width="350dp"
+            android:layout_height="250dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/general"
+            android:gravity="center"
+            android:onClick="Oc_select" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Powered By MyHealth Thailand."
-        android:textColor="@android:color/black"
-        android:textStyle="bold"
-        android:layout_marginTop="10dp"
-        android:textSize="15sp"
-        android:layout_gravity="center"/>
+        <Button
+            android:id="@+id/btn_Sick"
+            android:layout_width="350dp"
+            android:layout_height="250dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/patient"
+            android:gravity="center"
+            android:onClick="Oc_select" />
 
-</LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="Powered By MyHealth Thailand."
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,5 +1,6 @@
 package com.example.administrator.editknee;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,6 +10,8 @@ import com.example.administrator.editknee.ModelPerson.Person;
 import com.example.administrator.editknee.pagePerson.FirstRecord;
 import com.example.administrator.editknee.pagePerson.FirstRecord2;
 import com.example.administrator.editknee.pagePerson.History;
+
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class SelectUser extends AppCompatActivity {
 
@@ -37,5 +40,9 @@ public class SelectUser extends AppCompatActivity {
                 startActivity(s2);
                 break;
         }
+    }
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(base));
     }
 }

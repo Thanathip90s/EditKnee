@@ -266,14 +266,23 @@
         <activity
             android:name=".HistoryPhase.HistoryFirstPhase3"
             android:parentActivityName=".MenuFragActivity" />
-
-        <activity android:name=".HistoryPhase.HistoryFirstPhase4"
+        <activity
+            android:name=".HistoryPhase.HistoryFirstPhase4"
+            android:parentActivityName=".MenuFragActivity" />
+        <activity
+            android:name=".HistoryPhase.HistoryFirstPhase5"
+            android:parentActivityName=".MenuFragActivity" />
+        <activity
+            android:name=".HistoryPhase.HistoryFirstPhase6"
             android:parentActivityName=".MenuFragActivity" />
 
-        <activity android:name=".HistoryPhase.HistoryFirstPhase5"
+        <activity android:name=".knowledgeActivity1"
             android:parentActivityName=".MenuFragActivity"/>
 
-        <activity android:name=".HistoryPhase.HistoryFirstPhase6"
+        <activity android:name=".knowledgeActivity2"
+            android:parentActivityName=".MenuFragActivity"/>
+
+        <activity android:name=".knowledgeActivity3"
             android:parentActivityName=".MenuFragActivity">
 
         </activity>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="หลังผ่าตัด 24 ชั่วโมงแรก ?"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ภายหลังการผ่าตัดเสร็จเรียบร้อยแล้ว ใน 24 ชั่วโมงแรก คนไข้จะได้รับการดูแลเกี่ยวกับสัญญาณชีพ ระดับความดันโลหิตที่เหมาะสม รวมถึงการให้ยาระงับปวดที่เพียงพอ คนไข้จะต้องเริ่มทำกายบริหารเบาๆ ตั้งแต่เริ่มรู้สึกตัว"
+            android:textColor="@android:color/black"
+            android:textSize="17sp"
+            android:gravity="left"/>
+
+    </LinearLayout>
+</ScrollView>

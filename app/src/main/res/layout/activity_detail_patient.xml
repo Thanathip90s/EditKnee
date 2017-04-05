@@ -1,136 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#FFFFF0"
-    android:orientation="vertical"
-    android:padding="16dp"
-    tools:context="com.example.administrator.editknee.pagePerson.DetailPatient">
+    android:layout_height="match_parent">
 
-    <!--<TextView-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_gravity="center"-->
-    <!--android:layout_marginBottom="10dp"-->
-    <!--android:gravity="center"-->
-    <!--android:text="กำหนดนัดหมาย"-->
-    <!--android:textColor="@android:color/black"-->
-    <!--android:textSize="@dimen/font_title"-->
-    <!--android:textStyle="bold" />-->
-
-    <LinearLayout
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:background="#FFFFF0"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:context="com.example.administrator.editknee.pagePerson.DetailPatient">
 
-        <CheckBox
-            android:id="@+id/checkQ1"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="จองคิวนัดวันผ่า (แพทย์จะทำการผ่าตัดทุกวันจันทร์)"
-            android:textSize="15sp" />
+            android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/chooseDate"
+            <CheckBox
+                android:id="@+id/checkQ1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="จองคิวนัดวันผ่า (แพทย์จะทำการผ่าตัดทุกวันจันทร์)"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/chooseDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="เลือกวันที่" />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="เลือกวันที่" />
+            android:orientation="vertical">
 
-    </LinearLayout>
+            <CheckBox
+                android:id="@+id/checkQ2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="นัดหมายการตรวจร่างกายก่อนเข้ารับการผ่าตัดและปรึกษาเรื่องค่าใช้จ่ายในการผ่าตัดซึ่งขึ้นอยู่กับชนิดข้อที่ใช้และหอผู้ป่วย"
+                android:textSize="15sp" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+            <EditText
+                android:id="@+id/chooseDate2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="เลือกวันที่" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/checkQ3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="จองห้องนอนโรงพยาบาล"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/chooseDate3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="เลือกวันที่" />
+
+        </LinearLayout>
 
         <CheckBox
-            android:id="@+id/checkQ2"
+            android:id="@+id/checkQ4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:text="นัดหมายการตรวจร่างกายก่อนเข้ารับการผ่าตัดและปรึกษาเรื่องค่าใช้จ่ายในการผ่าตัดซึ่งขึ้นอยู่กับชนิดข้อที่ใช้และหอผู้ป่วย"
+            android:text="รับใบนัดและรับยา"
             android:textSize="15sp" />
 
-        <EditText
-            android:id="@+id/chooseDate2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="เลือกวันที่" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
         <CheckBox
-            android:id="@+id/checkQ3"
+
+            android:id="@+id/checkQ5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:text="จองห้องนอนโรงพยาบาล"
+            android:text="ตรวจเลือด-ปัสสาวะ (คลินิคอายุรกรรม)"
             android:textSize="15sp" />
 
-        <EditText
-            android:id="@+id/chooseDate3"
+        <CheckBox
+            android:id="@+id/checkQ6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="เลือกวันที่" />
+            android:layout_marginTop="5dp"
+            android:text="ตรวจโรคประจำตัว เช่น ความดันโลหิต เบาหวาน เป็นต้น (คลินิคอายุรกรรม)"
+            android:textSize="15sp" />
+
+        <CheckBox
+            android:id="@+id/checkQ7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="เอกซเรย์ปอดและข้อเข่า"
+            android:textSize="15sp" />
+
+        <CheckBox
+            android:id="@+id/checkQ8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="ตรวจคลื่นไฟฟ้าหัวใจ"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/btn_saveHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:background="#e68299"
+            android:text="@string/txt_save"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/font_button"
+            android:textStyle="bold" />
 
     </LinearLayout>
-
-    <CheckBox
-        android:id="@+id/checkQ4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:text="รับใบนัดและรับยา"
-        android:textSize="15sp" />
-
-    <CheckBox
-
-        android:id="@+id/checkQ5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:text="ตรวจเลือด-ปัสสาวะ (คลินิคอายุรกรรม)"
-        android:textSize="15sp" />
-
-    <CheckBox
-        android:id="@+id/checkQ6"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:text="ตรวจโรคประจำตัว เช่น ความดันโลหิต เบาหวาน เป็นต้น (คลินิคอายุรกรรม)"
-        android:textSize="15sp" />
-
-    <CheckBox
-        android:id="@+id/checkQ7"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:text="เอกซเรย์ปอดและข้อเข่า"
-        android:textSize="15sp" />
-
-    <CheckBox
-        android:id="@+id/checkQ8"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:text="ตรวจคลื่นไฟฟ้าหัวใจ"
-        android:textSize="15sp" />
-
-    <Button
-        android:id="@+id/btn_saveHistory"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:background="#e68299"
-        android:text="@string/txt_save"
-        android:textColor="@android:color/white"
-        android:textSize="@dimen/font_button"
-        android:textStyle="bold" />
-
-</LinearLayout>
+</ScrollView>
