@@ -10,13 +10,17 @@
         android:orientation="vertical"
         android:padding="16dp">
 
-        <!--<TextView-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="@string/txt_Step1_1"-->
-            <!--android:textColor="@android:color/black"-->
-            <!--android:textSize="@dimen/font_title"-->
-            <!--android:textStyle="bold" />-->
+        <include layout="@layout/usage_stateprogressbar" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:text="@string/txt_Step1_1"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/font_normal"
+            android:textStyle="bold" />
 
         <ImageView
             android:id="@+id/imageView"
@@ -26,10 +30,10 @@
             android:background="@drawable/kadoktao1" />
 
         <TextView
-            android:layout_marginTop="10dp"
-            android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
             android:text="@string/txt_Explain1_1"
             android:textColor="@android:color/black"
             android:textSize="@dimen/font_normal" />
@@ -94,7 +98,7 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/button_nextphase1_1"
+            android:id="@+id/btn_nextPhase1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"

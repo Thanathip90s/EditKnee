@@ -254,13 +254,29 @@
             android:name=".MenuFragActivity"
             android:label="@string/title_activity_menu_frag"
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity
-            android:name=".FirstPhase.FirstPhase1"
-            android:parentActivityName=".MenuFragActivity"></activity>
+            android:name=".HistoryPhase.HistoryFirstPhase1"
+            android:parentActivityName=".MenuFragActivity" />
         <activity
             android:name=".pagePerson.EditDetailPatient"
-            android:parentActivityName=".MenuFragActivity"></activity>
+            android:parentActivityName=".MenuFragActivity" />
+        <activity
+            android:name=".HistoryPhase.HistoryFirstPhase2"
+            android:parentActivityName=".MenuFragActivity" />
+        <activity
+            android:name=".HistoryPhase.HistoryFirstPhase3"
+            android:parentActivityName=".MenuFragActivity" />
+
+        <activity android:name=".HistoryPhase.HistoryFirstPhase4"
+            android:parentActivityName=".MenuFragActivity" />
+
+        <activity android:name=".HistoryPhase.HistoryFirstPhase5"
+            android:parentActivityName=".MenuFragActivity"/>
+
+        <activity android:name=".HistoryPhase.HistoryFirstPhase6"
+            android:parentActivityName=".MenuFragActivity">
+
+        </activity>
     </application>
 
 </manifest>

@@ -4,8 +4,6 @@ package com.example.administrator.editknee;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +11,6 @@ import android.widget.Button;
 
 import android.view.View.OnClickListener;
 
-import com.example.administrator.editknee.FirstPhase.FirstPhase1;
 import com.example.administrator.editknee.pagePhase1.Phase1;
 import com.example.administrator.editknee.pagePhase2.Phase2;
 import com.example.administrator.editknee.pagePhase3.Phase3;
@@ -25,7 +22,7 @@ import com.example.administrator.editknee.pagePhase6.Phase6;
  * Created by Administrator on 22-Mar-17.
  */
 
-public class Tab1SaveKnee extends Fragment {
+public class  Tab1SaveKnee extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

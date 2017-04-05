@@ -10,8 +10,12 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.administrator.editknee.DatabaseManager;
+import com.example.administrator.editknee.ModelPhase.DBPhase4;
+import com.example.administrator.editknee.ModelPhase.DBPhase5;
 import com.example.administrator.editknee.R;
 import com.example.administrator.editknee.pagePhase4.Phase4;
+import com.example.administrator.editknee.pagePhase4.Phase4_1;
 import com.example.administrator.editknee.picPhase4.PicPhase4_1;
 import com.example.administrator.editknee.picPhase5.PicPhase5_1;
 
@@ -19,6 +23,10 @@ import java.text.DateFormat;
 import java.util.Date;
 
 public class Phase5 extends AppCompatActivity {
+    public static int REQUEST_UPDATE5 = 99;
+    public static String EXTRA_PHASE5_ID = "phase5Id";
+    private TextView date5Input, time5Input;
+    private int mPhase5Id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,12 +45,37 @@ public class Phase5 extends AppCompatActivity {
         txtDate.setText(currentDateString);
         txtTime.setText(currentTimeString);
 
-        findViewById(R.id.button_nextphase5).setOnClickListener(new View.OnClickListener() {
+        date5Input = (TextView) findViewById(R.id.txt_Date5);
+        time5Input = (TextView) findViewById(R.id.txt_Time5);
+
+        Button nextButton = (Button) findViewById(R.id.btn_phase5);
+        nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Phase5.this, Phase5_1.class);
-                startActivity(intent);
+                switch (v.getId()) {
+                    case R.id.btn_phase5:
+                        saveDbPhase5();
+                        break;
+                }
             }
         });
+    }
+
+    private void saveDbPhase5() {
+        DatabaseManager databaseManager = DatabaseManager.getInstance(this);
+
+        // Set DBPhase5
+        mPhase5Id = databaseManager.getLatestId5();
+        DBPhase5 dbPhase5 = new DBPhase5();
+        dbPhase5.setId(mPhase5Id);
+        dbPhase5.setDate5(date5Input.getText().toString());
+        dbPhase5.setTime5(time5Input.getText().toString());
+
+        // Store DBPhase5
+        Intent intent = new Intent(Phase5.this, Phase5_1.class);
+        intent.putExtra(EXTRA_PHASE5_ID, mPhase5Id);
+        startActivityForResult(intent, REQUEST_UPDATE5);
+        databaseManager.storeDBPhase5(dbPhase5);
+        finish();
     }
 }

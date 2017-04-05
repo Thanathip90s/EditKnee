@@ -1,21 +1,24 @@
 package com.example.administrator.editknee.pagePhase6;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.administrator.editknee.DatabaseManager;
+import com.example.administrator.editknee.ModelPhase.DBPhase6;
 import com.example.administrator.editknee.R;
-import com.example.administrator.editknee.pagePhase5.Phase5;
-import com.example.administrator.editknee.picPhase5.PicPhase5_1;
-import com.example.administrator.editknee.picPhase6.PicPhase6_5;
+import com.example.administrator.editknee.UsageBaseActivity6;
+import admin.stateprogress.StateProgressBar;
 
-public class Phase6_4 extends AppCompatActivity {
-
-    TextView showValue;
+public class Phase6_4 extends UsageBaseActivity6 {
+    public static int REQUEST_UPDATE6 = 99;
+    public static String EXTRA_PHASE6_ID = "phase6Id";
+    private TextView number6_4Input, showValue;
+    private EditText note6_4Input;
+    private int mPhase6Id;
     int counter = 0;
 
     @Override
@@ -23,31 +26,78 @@ public class Phase6_4 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_phase6_4);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("นั่ง-เหยียด-ค้าง");
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
 
-        showValue = (TextView) findViewById(R.id.number6_4);
+        stateprogressbar.setCurrentStateNumber(StateProgressBar.StateNumber.FOUR);
 
-        findViewById(R.id.button_nextphase6_4).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Phase6_4.this, Phase6_5.class);
-                startActivity(intent);
-            }
-        });
+        showValue = (TextView) findViewById(R.id.number6_4);
+        number6_4Input = (TextView) findViewById(R.id.number6_4);
+        note6_4Input = (EditText) findViewById(R.id.editText_note6_4);
+
+        if (getIntent().hasExtra(EXTRA_PHASE6_ID)) {
+            mPhase6Id = getIntent().getIntExtra(EXTRA_PHASE6_ID, 0);
+            updateFormView();
+        }
     }
+
+    private void updateFormView() {
+        DBPhase6 dbPhase6 = DatabaseManager.getInstance(this)
+                .getDBPhase6(mPhase6Id);
+        if (dbPhase6 != null) {
+            number6_4Input.setText(String.valueOf(dbPhase6.getNumber6_4()));
+            note6_4Input.setText(dbPhase6.getNote4());
+        }
+    }
+
+    // @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.btn_nextPhase6:
+               /* if (counter >= 0 && counter <= 9 && note1_1Input.getText().toString().equals("")) {
+                    Toast.makeText(this, "กรุณากรอกสาเหตุคะ", Toast.LENGTH_SHORT).show();
+                } else if (counter >= 0 && counter <= 9 && note1_1Input != null) {
+                    saveDbPhase1();
+                } else {*/
+                saveDbPhase6();
+        }
+    }
+    //}
 
     public void countIN(View view) {
         counter++;
         if (counter >= 0 && counter <= 30)
-            showValue.setText(Integer.toString(counter) + " ครั้ง");
+            showValue.setText(Integer.toString(counter));
+        else {
+            counter = 30;
+        }
     }
 
     public void countDE(View view) {
         counter--;
         if (counter >= 0 && counter <= 30)
-            showValue.setText(Integer.toString(counter) + " ครั้ง");
+            showValue.setText(Integer.toString(counter));
+        else {
+            counter = 0;
+        }
+    }
+
+    private void saveDbPhase6() {
+        DatabaseManager databaseManager = DatabaseManager.getInstance(this);
+
+        // Set DBPhase6
+        DBPhase6 dbPhase6 = DatabaseManager.getInstance(this)
+                .getDBPhase6(mPhase6Id);
+        dbPhase6.setNumber6_4(Integer.parseInt(number6_4Input.getText().toString()));
+        dbPhase6.setNote4(note6_4Input.getText().toString());
+
+        // Store DBPhase6
+        Intent intent = new Intent(Phase6_4.this, Phase6_5.class);
+        intent.putExtra(EXTRA_PHASE6_ID, mPhase6Id);
+        startActivityForResult(intent, REQUEST_UPDATE6);
+        databaseManager.storeDBPhase6(dbPhase6);
+        finish();
+
     }
 }
+

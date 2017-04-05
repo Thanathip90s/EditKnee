@@ -9,7 +9,9 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.administrator.editknee.DatabaseManager;
+import com.example.administrator.editknee.MenuFragActivity;
 import com.example.administrator.editknee.ModelPhase.DBPhase1;
+import com.example.administrator.editknee.pagePerson.FirstRecord;
 import com.example.administrator.editknee.picPhase1.PicPhase1_1;
 import com.example.administrator.editknee.R;
 
@@ -43,12 +45,12 @@ public class Phase1 extends AppCompatActivity {
         date1Input = (TextView) findViewById(R.id.txt_Date1);
         time1Input = (TextView) findViewById(R.id.txt_Time1);
 
-        Button nextButton = (Button) findViewById(R.id.btn_phase1);
+        Button nextButton = (Button) findViewById(R.id.btn_Phase1);
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 switch (v.getId()) {
-                    case R.id.btn_phase1:
+                    case R.id.btn_Phase1:
                         saveDbPhase1();
                         break;
                 }
@@ -73,5 +75,6 @@ public class Phase1 extends AppCompatActivity {
         databaseManager.storeDBPhase1(dbPhase1);
         finish();
     }
+
 }
 

@@ -20,6 +20,14 @@
             android:layout_height="match_parent"
             android:orientation="vertical">>
 
+            <ImageView
+                android:id="@+id/editBtn1"
+                android:layout_marginRight="5dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="right"
+                android:background="@drawable/ic_edit_black_24dp" />
+
             <TextView
                 android:id="@+id/adapter_tv_name"
                 android:layout_width="wrap_content"

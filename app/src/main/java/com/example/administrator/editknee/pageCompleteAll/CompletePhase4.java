@@ -4,40 +4,62 @@ import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.administrator.editknee.Menu;
+import com.example.administrator.editknee.DatabaseManager;
+import com.example.administrator.editknee.HistoryPhase.HistoryFirstPhase4;
 import com.example.administrator.editknee.MenuFragActivity;
+import com.example.administrator.editknee.ModelPhase.DBPhase4;
 import com.example.administrator.editknee.R;
-import com.example.administrator.editknee.pagePhase1.Phase1;
+import com.example.administrator.editknee.UsageBaseActivity4;
 import com.example.administrator.editknee.pagePhase4.Phase4;
 
-public class CompletePhase4 extends AppCompatActivity {
+public class CompletePhase4 extends UsageBaseActivity4 {
+    public static String EXTRA_PHASE4_ID = "phase4Id";
+    private int mPhase4Id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_complete_phase4);
+
+        stateprogressbar.setAllStatesCompleted(true);
+        stateprogressbar.enableAnimationToCurrentState(false);
+
+        if (getIntent().hasExtra(EXTRA_PHASE4_ID)) {
+            mPhase4Id = getIntent().getIntExtra(EXTRA_PHASE4_ID, 0);
+        }
     }
-    public void Oc_closePhase4 (View view){
-        NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-        Intent intent = new Intent(this, Phase4.class);
-        PendingIntent pintent = PendingIntent.getActivities(this, (int) System.currentTimeMillis(), new Intent[]{intent}, 0);
-        notificationManager.cancelAll();
-        Notification notification = new Notification.Builder(this)
-                .setSmallIcon(R.drawable.notification_icon)
-                .setContentTitle("บันทึกเข่า,ระยะที่ 4")
-                .setContentText("อย่าลืมกลับมาทำอีกครั้งนะคะ ^^")
-                .setContentIntent(pintent)
-                .setAutoCancel(true)
-                .build();
 
-        notificationManager.notify(0, notification);
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.btn_nextPhase4:
+                DatabaseManager databaseManager = DatabaseManager.getInstance(this);
 
-        Intent cp4 = new Intent(CompletePhase4.this,MenuFragActivity.class);
-        startActivity(cp4);
-        finish();
+                // Set DBPhase4
+                DBPhase4 dbPhase4 = DatabaseManager.getInstance(this)
+                        .getDBPhase4(mPhase4Id);
+
+                NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+                Intent intent = new Intent(this, Phase4.class);
+                PendingIntent pintent = PendingIntent.getActivities(this, (int) System.currentTimeMillis(), new Intent[]{intent}, 0);
+                notificationManager.cancelAll();
+                Notification notification = new Notification.Builder(this)
+                        .setSmallIcon(R.drawable.notification_icon)
+                        .setContentTitle("บันทึกเข่า,ระยะที่ 4")
+                        .setContentText("อย่าลืมกลับมาทำอีกครั้งนะคะ ^^")
+                        .setContentIntent(pintent)
+                        .setAutoCancel(true)
+                        .build();
+
+                notificationManager.notify(0, notification);
+
+                databaseManager.storeDBPhase4(dbPhase4);
+                Intent cp4 = new Intent(CompletePhase4.this, HistoryFirstPhase4.class);
+                startActivity(cp4);
+                finish();
+        }
     }
 }

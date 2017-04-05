@@ -56,12 +56,6 @@ public class MenuFragActivity extends AppCompatActivity {
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
 
-
-//        tabLayout.addTab(tabLayout.newTab().setText("บันทึกเข่า").setIcon(R.drawable.ic_assignment_white_24dp));
-//        tabLayout.addTab(tabLayout.newTab().setText("ประวัติบริหารเข่า").setIcon(R.drawable.ic_library_books_white_24dp));
-//        tabLayout.addTab(tabLayout.newTab().setText("ความรู้ข้อเข่าเสื่อม").setIcon(R.drawable.ic_import_contacts_white_24dp));
-//        tabLayout.addTab(tabLayout.newTab().setText("ประวัติส่วนบุคคล").setIcon(R.drawable.ic_face_white_24dp));
-
         tabLayout.getTabAt(0).setIcon(R.drawable.ic_assignment_white_24dp);
         tabLayout.getTabAt(1).setIcon(R.drawable.ic_library_books_white_24dp);
         tabLayout.getTabAt(2).setIcon(R.drawable.ic_import_contacts_white_24dp);
@@ -69,10 +63,10 @@ public class MenuFragActivity extends AppCompatActivity {
 
     }
 
-//    @Override
-//    protected void attachBaseContext(Context base) {
-//        super.attachBaseContext(CalligraphyContextWrapper.wrap(base));
-//    }
+    /*@Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(base));
+    }*/
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
