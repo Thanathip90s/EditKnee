@@ -26,9 +26,7 @@ import com.example.administrator.editknee.pagePhase6.Phase6;
  */
 
 public class Tab2HistoryKnee extends Fragment {
-//    public static final int REQUEST_UPDATE = 99;
-//    private Phase1Adapter mPhase1Adapter;
-//    private int mPhase1Id;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -36,27 +34,6 @@ public class Tab2HistoryKnee extends Fragment {
         //getActivity().setTitle("ประวัติบริหารเข่า");
         //getActivity().getActionBar().setTitle("ประวัติบริหารเข่า");
 
-//        // Setup recycler view
-//        RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.recycle_view);
-//        mPhase1Adapter = new Phase1Adapter(getActivity(), DatabaseManager.getInstance(getActivity()).getPhase1());
-//
-//        recyclerView.setAdapter(mPhase1Adapter);
-//        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-//        return rootView;
-//    }
-//
-//    @Override
-//    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-//        super.onActivityResult(requestCode, resultCode, data);
-//        if (requestCode == REQUEST_UPDATE) {
-//            updateListView();
-//        }
-//    }
-//
-//    private void updateListView() {
-//        mPhase1Adapter.setPhase1(DatabaseManager.getInstance(getActivity()).getPhase1());
-//        mPhase1Adapter.notifyDataSetChanged();
-//    }
         Button p1 = (Button) rootView.findViewById(R.id.btn_HistoryPhase1);
         p1.setOnClickListener(new OnClickListener() {
             @Override
