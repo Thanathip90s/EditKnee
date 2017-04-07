@@ -3,6 +3,7 @@ package com.example.administrator.editknee.pageCompleteAll;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -18,6 +19,8 @@ import com.example.administrator.editknee.R;
 import com.example.administrator.editknee.UsageBaseActivity6;
 import com.example.administrator.editknee.pagePhase1.Phase1;
 import com.example.administrator.editknee.pagePhase6.Phase6;
+
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class CompletePhase6 extends UsageBaseActivity6 {
     public static String EXTRA_PHASE6_ID = "phase6Id";
@@ -65,5 +68,9 @@ public class CompletePhase6 extends UsageBaseActivity6 {
                 startActivity(cp6);
                 finish();
         }
+    }
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(base));
     }
 }

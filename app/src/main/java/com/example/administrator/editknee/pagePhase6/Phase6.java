@@ -1,6 +1,7 @@
 package com.example.administrator.editknee.pagePhase6;
 
 import android.app.DatePickerDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -21,6 +22,8 @@ import com.example.administrator.editknee.picPhase6.PicPhase6_1;
 
 import java.text.DateFormat;
 import java.util.Date;
+
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class Phase6 extends AppCompatActivity {
     public static int REQUEST_UPDATE6 = 99;
@@ -77,5 +80,9 @@ public class Phase6 extends AppCompatActivity {
         startActivityForResult(intent, REQUEST_UPDATE6);
         databaseManager.storeDBPhase6(dbPhase6);
         finish();
+    }
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(base));
     }
 }

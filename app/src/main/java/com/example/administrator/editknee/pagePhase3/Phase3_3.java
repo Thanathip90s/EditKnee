@@ -1,5 +1,6 @@
 package com.example.administrator.editknee.pagePhase3;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -12,6 +13,7 @@ import com.example.administrator.editknee.ModelPhase.DBPhase3;
 import com.example.administrator.editknee.R;
 import com.example.administrator.editknee.UsageBaseActivity3;
 import admin.stateprogress.StateProgressBar;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class Phase3_3 extends UsageBaseActivity3 {
     public static int REQUEST_UPDATE3 = 99;
@@ -100,6 +102,10 @@ public class Phase3_3 extends UsageBaseActivity3 {
         databaseManager.storeDBPhase3(dbPhase3);
         finish();
 
+    }
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(base));
     }
 }
 

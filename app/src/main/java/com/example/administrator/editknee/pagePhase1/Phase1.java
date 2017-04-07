@@ -1,5 +1,6 @@
 package com.example.administrator.editknee.pagePhase1;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -17,6 +18,8 @@ import com.example.administrator.editknee.R;
 
 import java.text.DateFormat;
 import java.util.Date;
+
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 
 public class Phase1 extends AppCompatActivity {
@@ -75,6 +78,9 @@ public class Phase1 extends AppCompatActivity {
         databaseManager.storeDBPhase1(dbPhase1);
         finish();
     }
-
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(base));
+    }
 }
 

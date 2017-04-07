@@ -13,6 +13,7 @@ import android.widget.RadioButton;
 import android.widget.Toast;
 
 import com.example.administrator.editknee.DatabaseManager;
+import com.example.administrator.editknee.MenuFragActivity;
 import com.example.administrator.editknee.ModelPerson.Person;
 import com.example.administrator.editknee.R;
 
@@ -57,13 +58,13 @@ public class FirstRecord2 extends AppCompatActivity {
             }
         });
 
-//        DatabaseManager databaseManager = DatabaseManager.getInstance(this);
-//        Person person = databaseManager.getPerson();
-//        if (person != null) {
-//            Intent intent = new Intent(this, Menu.class);
-//            startActivity(intent);
-//            finish();
-//        }
+        DatabaseManager databaseManager = DatabaseManager.getInstance(this);
+        Person person = databaseManager.getPerson();
+        if (person != null) {
+            Intent intent = new Intent(this, MenuFragActivity.class);
+            startActivity(intent);
+            finish();
+        }
 
         findViewById(R.id.BT_save2).setOnClickListener(new View.OnClickListener() {
             @Override

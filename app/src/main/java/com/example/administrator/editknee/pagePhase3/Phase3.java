@@ -1,5 +1,6 @@
 package com.example.administrator.editknee.pagePhase3;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,6 +14,8 @@ import com.example.administrator.editknee.R;
 
 import java.text.DateFormat;
 import java.util.Date;
+
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class Phase3 extends AppCompatActivity {
     public static int REQUEST_UPDATE3 = 99;
@@ -69,5 +72,9 @@ public class Phase3 extends AppCompatActivity {
         startActivityForResult(intent, REQUEST_UPDATE3);
         databaseManager.storeDBPhase3(dbPhase3);
         finish();
+    }
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(base));
     }
 }

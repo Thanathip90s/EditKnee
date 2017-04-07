@@ -60,13 +60,13 @@ public class FirstRecord extends AppCompatActivity {
             }
         });
 
-//        DatabaseManager databaseManager = DatabaseManager.getInstance(this);
-//        Person person = databaseManager.getPerson();
-//        if (person != null) {
-//            Intent intent = new Intent(this, Menu.class);
-//            startActivity(intent);
-//            finish();
-//        }
+        DatabaseManager databaseManager = DatabaseManager.getInstance(this);
+        Person person = databaseManager.getPerson();
+        if (person != null) {
+            Intent intent = new Intent(this, MenuFragActivity.class);
+            startActivity(intent);
+            finish();
+        }
 
         findViewById(R.id.BT_save).setOnClickListener(new View.OnClickListener() {
             @Override
