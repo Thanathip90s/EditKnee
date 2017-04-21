@@ -19,22 +19,17 @@
            <!--android:layout_height="wrap_content"-->
            <!--android:gravity="center">-->
 
-        <!--<ImageView-->
-            <!--android:layout_width="30dp"-->
-            <!--android:layout_height="30dp"-->
-            <!--android:background="@drawable/ic_face_pink_24dp" />-->
-
        <!--</LinearLayout>-->
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="ประวัติส่วนบุคคล"
-            android:textColor="@android:color/black"
-            android:textStyle="bold"
-            android:textSize="20sp"
-            android:gravity="center"
-            android:layout_marginTop="10dp"/>
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="ประวัติส่วนบุคคล"-->
+            <!--android:textColor="@android:color/black"-->
+            <!--android:textStyle="bold"-->
+            <!--android:textSize="20sp"-->
+            <!--android:gravity="center"-->
+            <!--android:layout_marginTop="10dp"/>-->
 
         <LinearLayout
             android:id="@+id/activity_history"
@@ -45,6 +40,12 @@
             android:paddingLeft="@dimen/activity_horizontal_margin"
             android:paddingRight="@dimen/activity_horizontal_margin"
             android:paddingTop="@dimen/activity_vertical_margin">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/ic_face_pink_24dp"
+                android:layout_gravity="center"/>
 
             <Button
                 android:id="@+id/edit_Personal"
@@ -88,7 +89,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="15dp"
                     android:text="@string/txt_gender"
                     android:textColor="@android:color/black"
                     android:textSize="@dimen/font_normaldown"
@@ -99,7 +100,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="15dp"
                     android:hint="-"
                     android:textColor="@android:color/black"
                     android:textSize="@dimen/font_normaldown" />
@@ -114,7 +115,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="15dp"
                     android:text="@string/txt_birthday"
                     android:textColor="@android:color/black"
                     android:textSize="@dimen/font_normaldown"
@@ -125,7 +126,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="15dp"
                     android:hint="-"
                     android:textColor="@android:color/black"
                     android:textSize="@dimen/font_normaldown" />
@@ -140,7 +141,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="15dp"
                     android:text="@string/txt_weight"
                     android:textColor="@android:color/black"
                     android:textSize="@dimen/font_normaldown"
@@ -151,7 +152,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="15dp"
                     android:hint="-"
                     android:textColor="@android:color/black"
                     android:textSize="@dimen/font_normaldown" />
@@ -167,7 +168,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="15dp"
                     android:text="@string/txt_height"
                     android:textColor="@android:color/black"
                     android:textSize="@dimen/font_normaldown"
@@ -178,7 +179,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="15dp"
                     android:hint="-"
                     android:textColor="@android:color/black"
                     android:textSize="@dimen/font_normaldown" />
@@ -233,7 +234,7 @@
                 android:id="@+id/txt_Q1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="15dp"
                 android:hint=""
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/font_normaldown" />
@@ -251,7 +252,7 @@
                 android:id="@+id/txt_Q2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="15dp"
                 android:hint=""
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/font_normaldown" />
@@ -269,7 +270,7 @@
                 android:id="@+id/txt_Q3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="15dp"
                 android:hint=""
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/font_normaldown" />
@@ -287,7 +288,7 @@
                 android:id="@+id/txt_Q4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="15dp"
                 android:hint=""
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/font_normaldown" />
@@ -296,7 +297,7 @@
                 android:id="@+id/txt_Q5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="15dp"
                 android:hint=""
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/font_normaldown" />
@@ -305,7 +306,7 @@
                 android:id="@+id/txt_Q6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="15dp"
                 android:hint=""
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/font_normaldown" />
@@ -314,7 +315,7 @@
                 android:id="@+id/txt_Q7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="15dp"
                 android:hint=""
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/font_normaldown" />
@@ -323,7 +324,7 @@
                 android:id="@+id/txt_Q8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="15dp"
                 android:hint=""
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/font_normaldown" />

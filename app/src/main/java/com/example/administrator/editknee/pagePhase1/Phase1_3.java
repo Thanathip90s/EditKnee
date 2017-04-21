@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.administrator.editknee.DatabaseManager;
 import com.example.administrator.editknee.ModelPhase.DBPhase1;
@@ -59,15 +60,15 @@ public class Phase1_3 extends UsageBaseActivity {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_nextPhase1:
-                /*if (counter >= 0 && counter <= 9 && note1_3Input.getText().toString().equals("")) {
+                if (counter >= 0 && counter <= 9 && note1_3Input.getText().toString().equals("")) {
                     Toast.makeText(this, "กรุณากรอกสาเหตุคะ", Toast.LENGTH_SHORT).show();
                 } else if (counter >= 0 && counter <= 9 && note1_3Input != null) {
                     saveDbPhase1();
-                } else {*/
+                } else {
                     saveDbPhase1();
                 }
         }
-   // }
+    }
 
     public void countIN(View view) {
         counter++;

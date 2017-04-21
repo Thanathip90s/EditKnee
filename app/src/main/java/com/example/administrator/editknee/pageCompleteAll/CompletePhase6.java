@@ -64,7 +64,7 @@ public class CompletePhase6 extends UsageBaseActivity6 {
                 notificationManager.notify(0, notification);
 
                 databaseManager.storeDBPhase6(dbPhase6);
-                Intent cp6 = new Intent(CompletePhase6.this,HistoryFirstPhase6.class);
+                Intent cp6 = new Intent(CompletePhase6.this, MenuFragActivity.class);
                 startActivity(cp6);
                 finish();
         }

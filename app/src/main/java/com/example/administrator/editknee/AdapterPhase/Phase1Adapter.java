@@ -77,7 +77,7 @@ public class Phase1Adapter extends RecyclerView.Adapter<Phase1ViewHolder> {
     private void startEditForm(int phase1Id) {
         Intent intent = new Intent(mContext, Phase1_1.class);
         intent.putExtra(Phase1_1.EXTRA_PHASE1_ID, phase1Id);
-        ((Activity) mContext).startActivityForResult(intent, HistoryFirstPhase1.REQUEST_UPDATE);
+        ((Activity) mContext).startActivityForResult(intent, Tab2HistoryKnee.REQUEST_UPDATE);
     }
 
     @Override

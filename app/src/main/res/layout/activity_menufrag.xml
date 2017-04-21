@@ -27,11 +27,6 @@
                 app:layout_scrollFlags="scroll|enterAlways"
                 app:popupTheme="@style/AppTheme.PopupOverlay">
 
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:background="@drawable/ic_home_white_24dp" />
-
             </android.support.v7.widget.Toolbar>
 
         </android.support.design.widget.AppBarLayout>

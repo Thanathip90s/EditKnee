@@ -7,16 +7,18 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.administrator.editknee.DatabaseManager;
 import com.example.administrator.editknee.ModelPhase.DBPhase4;
 import com.example.administrator.editknee.R;
 import com.example.administrator.editknee.UsageBaseActivity4;
+
 import admin.stateprogress.StateProgressBar;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class Phase4_1 extends UsageBaseActivity4 {
-    public static int REQUEST_UPDATE4 = 99;
+    public static int REQUEST_UPDATE = 99;
     public static String EXTRA_PHASE4_ID = "phase4Id";
     private TextView number4_1Input, showValue;
     private EditText note4_1Input;
@@ -58,12 +60,13 @@ public class Phase4_1 extends UsageBaseActivity4 {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_nextPhase4:
-               /* if (counter >= 0 && counter <= 9 && note1_1Input.getText().toString().equals("")) {
+                if (counter >= 0 && counter <= 24 && note4_1Input.getText().toString().equals("")) {
                     Toast.makeText(this, "กรุณากรอกสาเหตุคะ", Toast.LENGTH_SHORT).show();
-                } else if (counter >= 0 && counter <= 9 && note1_1Input != null) {
-                    saveDbPhase1();
-                } else {*/
-                saveDbPhase4();
+                } else if (counter >= 0 && counter <= 24 && note4_1Input != null) {
+                    saveDbPhase4();
+                } else {
+                    saveDbPhase4();
+                }
         }
     }
 
@@ -98,11 +101,12 @@ public class Phase4_1 extends UsageBaseActivity4 {
         // Store DBPhase4
         Intent intent = new Intent(Phase4_1.this, Phase4_2.class);
         intent.putExtra(EXTRA_PHASE4_ID, mPhase4Id);
-        startActivityForResult(intent, REQUEST_UPDATE4);
+        startActivityForResult(intent, REQUEST_UPDATE);
         databaseManager.storeDBPhase4(dbPhase4);
         finish();
 
     }
+
     @Override
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(CalligraphyContextWrapper.wrap(base));

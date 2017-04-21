@@ -13,6 +13,7 @@ import com.example.administrator.editknee.HistoryPhase.HistoryFirstPhase4;
 import com.example.administrator.editknee.ModelPhase.DBPhase3;
 import com.example.administrator.editknee.ModelPhase.DBPhase4;
 import com.example.administrator.editknee.R;
+import com.example.administrator.editknee.Tab2HistoryKnee;
 import com.example.administrator.editknee.ViewHolder.Phase3ViewHolder;
 import com.example.administrator.editknee.ViewHolder.Phase4ViewHolder;
 import com.example.administrator.editknee.pagePhase3.Phase3_1;
@@ -89,7 +90,7 @@ public class Phase4Adapter extends RecyclerView.Adapter<Phase4ViewHolder> {
     private void startEditForm(int phase4Id) {
         Intent intent = new Intent(mContext, Phase4_1.class);
         intent.putExtra(Phase4_1.EXTRA_PHASE4_ID, phase4Id);
-        ((Activity) mContext).startActivityForResult(intent, HistoryFirstPhase4.REQUEST_UPDATE4);
+        ((Activity) mContext).startActivityForResult(intent, Tab2HistoryKnee.REQUEST_UPDATE);
     }
 
     @Override

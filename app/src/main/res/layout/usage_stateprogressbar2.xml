@@ -12,7 +12,7 @@
         android:id="@+id/usage_stateprogressbar2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:spb_animateToCurrentProgressState="true"
+        app:spb_animateToCurrentProgressState="false"
         app:spb_checkStateCompleted="true"
         app:spb_currentStateDescriptionColor="@color/usage_state_foreground_color"
         app:spb_descriptionTopSpaceIncrementer="3dp"

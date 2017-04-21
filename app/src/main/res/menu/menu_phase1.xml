@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:apps="http://schemas.android.com/apk/res-auto">
-    <item android:id="@+id/add1"
-        android:title="@string/txt_add"
+    <item android:id="@+id/close"
+        android:title="@string/txt_close"
+        android:icon="@drawable/ic_clear_white_24dp"
         apps:showAsAction="always"/>
 </menu>

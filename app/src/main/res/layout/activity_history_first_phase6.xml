@@ -6,6 +6,11 @@
     android:orientation="vertical"
     tools:context="com.example.administrator.editknee.HistoryPhase.HistoryFirstPhase1">
 
-    <include layout="@layout/recycler_view" />
+    <LinearLayout
+        android:id="@+id/ViewGraph6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    </LinearLayout>
 
 </LinearLayout>

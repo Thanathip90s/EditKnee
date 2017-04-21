@@ -60,7 +60,7 @@ public class CompletePhase4 extends UsageBaseActivity4 {
                 notificationManager.notify(0, notification);
 
                 databaseManager.storeDBPhase4(dbPhase4);
-                Intent cp4 = new Intent(CompletePhase4.this, HistoryFirstPhase4.class);
+                Intent cp4 = new Intent(CompletePhase4.this, MenuFragActivity.class);
                 startActivity(cp4);
                 finish();
         }

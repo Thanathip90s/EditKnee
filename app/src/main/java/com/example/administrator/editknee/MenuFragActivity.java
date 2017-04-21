@@ -3,6 +3,7 @@ package com.example.administrator.editknee;
 import android.content.Context;
 import android.content.Intent;
 import android.support.design.widget.TabLayout;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
@@ -11,9 +12,11 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.administrator.editknee.pagePerson.EditPerson;
@@ -53,8 +56,41 @@ public class MenuFragActivity extends AppCompatActivity {
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+        final TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                switch (tab.getPosition()) {
+                    case 0:
+                        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+                        getSupportActionBar().setCustomView(R.layout.tab1_textlayout);
+                        break;
+                    case 1:
+                        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+                        getSupportActionBar().setCustomView(R.layout.tab2_textlayout);
+                        break;
+                    case 2:
+                        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+                        getSupportActionBar().setCustomView(R.layout.tab3_textlayout);
+                        break;
+                    case 3:
+                        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+                        getSupportActionBar().setCustomView(R.layout.tab4_textlayout);
+                        break;
+                }
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
 
         tabLayout.getTabAt(0).setIcon(R.drawable.ic_assignment_white_24dp);
         tabLayout.getTabAt(1).setIcon(R.drawable.ic_library_books_white_24dp);
@@ -105,17 +141,15 @@ public class MenuFragActivity extends AppCompatActivity {
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
-                    Tab1SaveKnee tab1 = new Tab1SaveKnee();
-                    return tab1;
+                    getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+                    getSupportActionBar().setCustomView(R.layout.tab1_textlayout);
+                    return new Tab1SaveKnee();
                 case 1:
-                    Tab2HistoryKnee tab2 = new Tab2HistoryKnee();
-                    return tab2;
+                    return new Tab2HistoryKnee();
                 case 2:
-                    Tab3Knowledge tab3 = new Tab3Knowledge();
-                    return tab3;
+                    return new Tab3Knowledge();
                 case 3:
-                    Tab4History tab4 = new Tab4History();
-                    return tab4;
+                    return new Tab4History();
                 default:
                     return null;
             }

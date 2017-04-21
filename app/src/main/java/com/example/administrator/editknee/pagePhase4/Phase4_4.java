@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.administrator.editknee.DatabaseManager;
 import com.example.administrator.editknee.ModelPhase.DBPhase4;
@@ -16,7 +17,7 @@ import admin.stateprogress.StateProgressBar;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class Phase4_4 extends UsageBaseActivity4 {
-    public static int REQUEST_UPDATE4 = 99;
+    public static int REQUEST_UPDATE = 99;
     public static String EXTRA_PHASE4_ID = "phase4Id";
     private TextView number4_4Input, showValue;
     private EditText note4_4Input;
@@ -57,15 +58,15 @@ public class Phase4_4 extends UsageBaseActivity4 {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_nextPhase4:
-               /* if (counter >= 0 && counter <= 9 && note1_1Input.getText().toString().equals("")) {
+                if (counter >= 0 && counter <= 24 && note4_4Input.getText().toString().equals("")) {
                     Toast.makeText(this, "กรุณากรอกสาเหตุคะ", Toast.LENGTH_SHORT).show();
-                } else if (counter >= 0 && counter <= 9 && note1_1Input != null) {
-                    saveDbPhase1();
-                } else {*/
-                saveDbPhase4();
+                } else if (counter >= 0 && counter <= 24 && note4_4Input != null) {
+                    saveDbPhase4();
+                } else {
+                    saveDbPhase4();
+                }
         }
-    }
-    //}
+     }
 
     public void countIN(View view) {
         counter++;
@@ -97,7 +98,7 @@ public class Phase4_4 extends UsageBaseActivity4 {
         // Store DBPhase4
         Intent intent = new Intent(Phase4_4.this, Phase4_5.class);
         intent.putExtra(EXTRA_PHASE4_ID, mPhase4Id);
-        startActivityForResult(intent, REQUEST_UPDATE4);
+        startActivityForResult(intent, REQUEST_UPDATE);
         databaseManager.storeDBPhase4(dbPhase4);
         finish();
 

@@ -16,7 +16,6 @@ import com.example.administrator.editknee.ModelPhase.DBPhase1;
 import com.example.administrator.editknee.ModelPhase.DBPhase2;
 import com.example.administrator.editknee.pagePhase1.Phase1;
 import com.example.administrator.editknee.pagePhase1.Phase1_1;
-import com.example.administrator.editknee.picPhase2.PicPhase2_1;
 import com.example.administrator.editknee.R;
 
 import java.text.DateFormat;
@@ -25,7 +24,7 @@ import java.util.Date;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class Phase2 extends AppCompatActivity {
-    public static int REQUEST_UPDATE2 = 99;
+    public static int REQUEST_UPDATE = 99;
     public static String EXTRA_PHASE2_ID = "phase2Id";
     private TextView date2Input, time2Input;
     private int mPhase2Id;
@@ -76,7 +75,7 @@ public class Phase2 extends AppCompatActivity {
         // Store DBPhase2
         Intent intent = new Intent(Phase2.this, Phase2_1.class);
         intent.putExtra(EXTRA_PHASE2_ID, mPhase2Id);
-        startActivityForResult(intent, REQUEST_UPDATE2);
+        startActivityForResult(intent, REQUEST_UPDATE);
         databaseManager.storeDBPhase2(dbPhase2);
         finish();
     }

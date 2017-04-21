@@ -63,7 +63,7 @@ public class CompletePhase3 extends UsageBaseActivity3 {
                 notificationManager.notify(0, notification);
 
                 databaseManager.storeDBPhase3(dbPhase3);
-                Intent cp3 = new Intent(CompletePhase3.this, HistoryFirstPhase3.class);
+                Intent cp3 = new Intent(CompletePhase3.this, MenuFragActivity.class);
                 startActivity(cp3);
                 finish();
         }

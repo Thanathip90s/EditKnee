@@ -63,7 +63,7 @@ public class CompletePhase2 extends UsageBaseActivity2 {
                 notificationManager.notify(0, notification);
 
                 databaseManager.storeDBPhase2(dbPhase2);
-                Intent cp2 = new Intent(CompletePhase2.this, HistoryFirstPhase2.class);
+                Intent cp2 = new Intent(CompletePhase2.this, MenuFragActivity.class);
                 startActivity(cp2);
                 finish();
         }

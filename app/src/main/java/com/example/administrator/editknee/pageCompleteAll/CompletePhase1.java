@@ -13,6 +13,7 @@ import com.example.administrator.editknee.HistoryPhase.HistoryFirstPhase1;
 import com.example.administrator.editknee.MenuFragActivity;
 import com.example.administrator.editknee.ModelPhase.DBPhase1;
 import com.example.administrator.editknee.R;
+import com.example.administrator.editknee.Tab2HistoryKnee;
 import com.example.administrator.editknee.UsageBaseActivity;
 import com.example.administrator.editknee.pagePhase1.Phase1;
 
@@ -60,7 +61,7 @@ public class CompletePhase1 extends UsageBaseActivity {
                 notificationManager.notify(0, notification);
 
                 databaseManager.storeDBPhase1(dbPhase1);
-                Intent cp1 = new Intent(CompletePhase1.this, HistoryFirstPhase1.class);
+                Intent cp1 = new Intent(CompletePhase1.this, MenuFragActivity.class);
                 startActivity(cp1);
                 finish();
         }

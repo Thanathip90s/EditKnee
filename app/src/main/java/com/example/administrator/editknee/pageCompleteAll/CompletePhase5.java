@@ -64,7 +64,7 @@ public class CompletePhase5 extends UsageBaseActivity5 {
                 notificationManager.notify(0, notification);
 
                 databaseManager.storeDBPhase5(dbPhase5);
-                Intent cp5 = new Intent(CompletePhase5.this, HistoryFirstPhase5.class);
+                Intent cp5 = new Intent(CompletePhase5.this, MenuFragActivity.class);
                 startActivity(cp5);
                 finish();
         }

@@ -1,5 +1,6 @@
 package com.example.administrator.editknee;
 
+import android.app.DatePickerDialog;
 import android.content.Context;
 
 import com.example.administrator.editknee.ModelPerson.DetailPerson;
@@ -116,10 +117,26 @@ public class DatabaseManager {
         return dbPhase1;
     }
 
+//    public List<DBPhase1> getDate1() {
+//        Realm realm = getRealm();
+//        List<DBPhase1> realmPhase1 = realm.where(DBPhase1.class).equalTo("date1", "Apr 7,2017").findAll();
+//        List<DBPhase1> phase1 = realm.copyFromRealm(realmPhase1);
+//        realm.close();
+//        return phase1;
+//    }
+
     public List<DBPhase1> getPhase1() {
         Realm realm = getRealm();
         List<DBPhase1> realmPhase1 = realm.where(DBPhase1.class)
                 .findAllSorted("id");
+        List<DBPhase1> phase1 = realm.copyFromRealm(realmPhase1);
+        realm.close();
+        return phase1;
+    }
+
+    public List<DBPhase1> getDate1(String date) {
+        Realm realm = getRealm();
+        List<DBPhase1> realmPhase1 = realm.where(DBPhase1.class).equalTo("date1", date).findAll();
         List<DBPhase1> phase1 = realm.copyFromRealm(realmPhase1);
         realm.close();
         return phase1;
@@ -289,6 +306,8 @@ public class DatabaseManager {
         List<DBPhase6> phase6 = getPhase6();
         return phase6.size() + 1;
     }
+
+
 
 
 //    RealmConfiguration realmConfiguration;

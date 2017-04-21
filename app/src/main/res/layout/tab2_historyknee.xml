@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -7,188 +6,565 @@
         android:id="@+id/tab2_historyknee"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="16dp">
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="ประวัติบริหารเข่า"
-            android:textColor="@android:color/black"
-            android:textStyle="bold"
-            android:textSize="20sp"
-            android:gravity="center"
-            android:layout_marginBottom="10dp"/>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
             android:orientation="horizontal">
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:text="1."
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/textView3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="@string/txt_phase1"
-                    android:textColor="@android:color/black"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:background="@drawable/his1" />
 
-                <Button
-                    android:id="@+id/btn_HistoryPhase1"
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
-                    android:background="@drawable/exercise1"
-                    android:onClick="Oc_phase" />
+            <Button
+                android:id="@+id/btn_HistoryPhase1"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ic_library_books_black_24dp"
+                android:gravity="center"
+                android:onClick="Oc_phase"
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="25dp"
-                android:orientation="vertical">
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:text="ดูบันทึก"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:text="@string/txt_phase2"
-                    android:textColor="@android:color/black"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
+            <Button
+                android:id="@+id/btn_CloseHistoryPhase1"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ic_remove_circle_black_24dp"
+                android:gravity="center"
+                android:onClick="Oc_phase"
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
-                <Button
-                    android:id="@+id/btn_HistoryPhase2"
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
-                    android:background="@drawable/exercise2"
-                    android:onClick="Oc_phase" />
+            <TextView
+                android:id="@+id/closeRecycler1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:text="ปิด"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
-            </LinearLayout>
+            <Button
+                android:id="@+id/btn_Graph1"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ic_poll_black_24dp"
+                android:gravity="center"
+                android:onClick="Oc_phase"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:text="กราฟ"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
+        <include layout="@layout/recycler_view" />
+
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
+            android:layout_marginTop="10dp"
             android:orientation="horizontal">
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:text="2."
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="@string/txt_phase3"
-                    android:textColor="@android:color/black"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:background="@drawable/his2" />
 
-                <Button
-                    android:id="@+id/btn_HistoryPhase3"
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
-                    android:background="@drawable/exercise3"
-                    android:onClick="Oc_phase" />
+            <Button
+                android:id="@+id/btn_HistoryPhase2"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ic_library_books_black_24dp"
+                android:gravity="center"
+                android:onClick="Oc_phase"
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="25dp"
-                android:orientation="vertical">
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:text="ดูบันทึก"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:text="@string/txt_phase4"
-                    android:textColor="@android:color/black"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
+            <Button
+                android:id="@+id/btn_CloseHistoryPhase2"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ic_remove_circle_black_24dp"
+                android:gravity="center"
+                android:onClick="Oc_phase"
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
-                <Button
-                    android:id="@+id/btn_HistoryPhase4"
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
-                    android:background="@drawable/exercise4"
-                    android:onClick="Oc_phase" />
+            <TextView
+                android:id="@+id/closeRecycler2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:text="ปิด"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
-            </LinearLayout>
+            <Button
+                android:id="@+id/btn_Graph2"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ic_poll_black_24dp"
+                android:gravity="center"
+                android:onClick="Oc_phase"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:text="กราฟ"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
+
+        <include layout="@layout/recycler_view2" />
+
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
+            android:layout_marginTop="10dp"
             android:orientation="horizontal">
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:text="3."
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="@string/txt_phase5"
-                    android:textColor="@android:color/black"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:background="@drawable/his3" />
 
-                <Button
-                    android:id="@+id/btn_HistoryPhase5"
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
-                    android:background="@drawable/exercise5"
-                    android:onClick="Oc_phase" />
+            <Button
+                android:id="@+id/btn_HistoryPhase3"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ic_library_books_black_24dp"
+                android:gravity="center"
+                android:onClick="Oc_phase"
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="25dp"
-                android:orientation="vertical">
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:text="ดูบันทึก"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:text="@string/txt_phase6"
-                    android:textColor="@android:color/black"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
+            <Button
+                android:id="@+id/btn_CloseHistoryPhase3"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ic_remove_circle_black_24dp"
+                android:gravity="center"
+                android:onClick="Oc_phase"
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
-                <Button
-                    android:id="@+id/btn_HistoryPhase6"
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
-                    android:background="@drawable/exercise6"
-                    android:onClick="Oc_phase" />
+            <TextView
+                android:id="@+id/closeRecycler3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:text="ปิด"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
-            </LinearLayout>
+            <Button
+                android:id="@+id/btn_Graph3"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ic_poll_black_24dp"
+                android:gravity="center"
+                android:onClick="Oc_phase"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:text="กราฟ"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
+
+
+        <include layout="@layout/recycler_view3" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:text="4."
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:background="@drawable/his4" />
+
+            <Button
+                android:id="@+id/btn_HistoryPhase4"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ic_library_books_black_24dp"
+                android:gravity="center"
+                android:onClick="Oc_phase"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:text="ดูบันทึก"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_CloseHistoryPhase4"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ic_remove_circle_black_24dp"
+                android:gravity="center"
+                android:onClick="Oc_phase"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/closeRecycler4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:text="ปิด"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_Graph4"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ic_poll_black_24dp"
+                android:gravity="center"
+                android:onClick="Oc_phase"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:text="กราฟ"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+        <include layout="@layout/recycler_view4" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:text="5."
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:background="@drawable/his5" />
+
+            <Button
+                android:id="@+id/btn_HistoryPhase5"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ic_library_books_black_24dp"
+                android:gravity="center"
+                android:onClick="Oc_phase"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:text="ดูบันทึก"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_CloseHistoryPhase5"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ic_remove_circle_black_24dp"
+                android:gravity="center"
+                android:onClick="Oc_phase"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/closeRecycler5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:text="ปิด"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_Graph5"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ic_poll_black_24dp"
+                android:gravity="center"
+                android:onClick="Oc_phase"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:text="กราฟ"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <include layout="@layout/recycler_view5" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:text="6."
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:background="@drawable/his6" />
+
+            <Button
+                android:id="@+id/btn_HistoryPhase6"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ic_library_books_black_24dp"
+                android:gravity="center"
+                android:onClick="Oc_phase"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:text="ดูบันทึก"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_CloseHistoryPhase6"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ic_remove_circle_black_24dp"
+                android:gravity="center"
+                android:onClick="Oc_phase"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/closeRecycler6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:text="ปิด"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_Graph6"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ic_poll_black_24dp"
+                android:gravity="center"
+                android:onClick="Oc_phase"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:text="กราฟ"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <include layout="@layout/recycler_view6" />
 
     </LinearLayout>
 </ScrollView>
+
+
+

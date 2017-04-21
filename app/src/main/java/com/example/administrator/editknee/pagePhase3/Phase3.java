@@ -18,7 +18,7 @@ import java.util.Date;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class Phase3 extends AppCompatActivity {
-    public static int REQUEST_UPDATE3 = 99;
+    public static int REQUEST_UPDATE = 99;
     public static String EXTRA_PHASE3_ID = "phase3Id";
     private TextView date3Input, time3Input;
     private int mPhase3Id;
@@ -69,7 +69,7 @@ public class Phase3 extends AppCompatActivity {
         // Store DBPhase3
         Intent intent = new Intent(Phase3.this, Phase3_1.class);
         intent.putExtra(EXTRA_PHASE3_ID, mPhase3Id);
-        startActivityForResult(intent, REQUEST_UPDATE3);
+        startActivityForResult(intent, REQUEST_UPDATE);
         databaseManager.storeDBPhase3(dbPhase3);
         finish();
     }

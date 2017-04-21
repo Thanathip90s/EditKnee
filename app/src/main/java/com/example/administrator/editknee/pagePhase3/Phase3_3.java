@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.administrator.editknee.DatabaseManager;
 import com.example.administrator.editknee.ModelPhase.DBPhase3;
@@ -16,7 +17,7 @@ import admin.stateprogress.StateProgressBar;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class Phase3_3 extends UsageBaseActivity3 {
-    public static int REQUEST_UPDATE3 = 99;
+    public static int REQUEST_UPDATE = 99;
     public static String EXTRA_PHASE3_ID = "phase3Id";
     private TextView number3_3Input, showValue;
     private EditText note3_3Input;
@@ -58,15 +59,15 @@ public class Phase3_3 extends UsageBaseActivity3 {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_nextPhase3:
-               /* if (counter >= 0 && counter <= 9 && note1_1Input.getText().toString().equals("")) {
+                if (counter >= 0 && counter <= 19 && note3_3Input.getText().toString().equals("")) {
                     Toast.makeText(this, "กรุณากรอกสาเหตุคะ", Toast.LENGTH_SHORT).show();
-                } else if (counter >= 0 && counter <= 9 && note1_1Input != null) {
-                    saveDbPhase1();
-                } else {*/
-                saveDbPhase3();
+                } else if (counter >= 0 && counter <= 19 && note3_3Input != null) {
+                    saveDbPhase3();
+                } else {
+                    saveDbPhase3();
+                }
         }
     }
-    //}
 
     public void countIN(View view) {
         counter++;
@@ -98,7 +99,7 @@ public class Phase3_3 extends UsageBaseActivity3 {
         // Store DBPhase3
         Intent intent = new Intent(Phase3_3.this, Phase3_4.class);
         intent.putExtra(EXTRA_PHASE3_ID, mPhase3Id);
-        startActivityForResult(intent, REQUEST_UPDATE3);
+        startActivityForResult(intent, REQUEST_UPDATE);
         databaseManager.storeDBPhase3(dbPhase3);
         finish();
 

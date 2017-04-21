@@ -23,9 +23,6 @@ public class Tab4History extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.tab4_history, container, false);
-        //getActivity().setTitle("ประวัติส่วนบุคคล");
-        //getActivity().getActionBar().setTitle("ประวัติส่วนบุคคล");
-
 
         TextView name = (TextView) rootView.findViewById(R.id.txt_name);
         TextView gender = (TextView) rootView.findViewById(R.id.txt_gender);

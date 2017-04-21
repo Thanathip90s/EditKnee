@@ -4,6 +4,8 @@ package com.example.administrator.editknee;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,8 +30,6 @@ public class  Tab1SaveKnee extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.tab1_saveknee, container, false);
-
-        //getActivity().setTitle("บริหารเข่า");
 
         Button p1 = (Button) rootView.findViewById(R.id.btn_phase1);
         p1.setOnClickListener(new OnClickListener() {

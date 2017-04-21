@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import admin.stateprogress.StateProgressBar;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
@@ -58,15 +59,15 @@ public class Phase1_2 extends UsageBaseActivity {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_nextPhase1:
-               /* if (counter >= 0 && counter <= 9 && note1_2Input.getText().toString().equals("")) {
+                if (counter >= 0 && counter <= 9 && note1_2Input.getText().toString().equals("")) {
                     Toast.makeText(this, "กรุณากรอกสาเหตุคะ", Toast.LENGTH_SHORT).show();
                 } else if (counter >= 0 && counter <= 9 && note1_2Input != null) {
                     saveDbPhase1();
-                } else {*/
+                } else {
                     saveDbPhase1();
                 }
         }
-   // }
+    }
 
     public void countIN(View view) {
         counter++;

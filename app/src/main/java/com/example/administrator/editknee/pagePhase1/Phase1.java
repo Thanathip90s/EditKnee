@@ -13,7 +13,6 @@ import com.example.administrator.editknee.DatabaseManager;
 import com.example.administrator.editknee.MenuFragActivity;
 import com.example.administrator.editknee.ModelPhase.DBPhase1;
 import com.example.administrator.editknee.pagePerson.FirstRecord;
-import com.example.administrator.editknee.picPhase1.PicPhase1_1;
 import com.example.administrator.editknee.R;
 
 import java.text.DateFormat;

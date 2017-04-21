@@ -5,6 +5,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.DatePicker;
@@ -29,7 +32,7 @@ public class EditPerson extends AppCompatActivity {
         setContentView(R.layout.activity_edit_person);
 
         getSupportActionBar().setTitle("แก้ไขประวัติ");
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
 
@@ -112,5 +115,27 @@ public class EditPerson extends AppCompatActivity {
     @Override
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(CalligraphyContextWrapper.wrap(base));
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_phase1, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        switch (id) {
+            case R.id.close:
+                startActivity();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    private void startActivity() {
+        finish();
     }
 }
