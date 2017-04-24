@@ -16,7 +16,7 @@
                 android:text="เตรียมตัวอย่างไรก่อนวันผ่าตัด ?"
                 android:textColor="@android:color/black"
                 android:textStyle="bold"
-                android:textSize="20sp"
+                android:textSize="17sp"
                 android:gravity="center"
                 android:layout_marginBottom="10dp"/>
 
@@ -25,7 +25,7 @@
                 android:layout_height="wrap_content"
                 android:text="ก่อนถึงวันผ่าตัดคุณจะได้รับการตรวจร่างกายทุกระบบอย่างละเอียด โดยอายุรแพทย์และวิสัญญีแพทย์จะร่วมประเมินเพื่อให้แน่ใจว่าคุณพร้อมสำหรับการผ่าตัด คุณจะได้รับคำแนะนำในการเตรียมตัวทั้งก่อนและหลังผ่าตัดจากทีมแพทย์และพยาบาล คุณควรบอกประวัติโรคประจำตัว ประวัติแพ้ยา และยาที่รับประทานเป็นประจำให้แพทย์ทราบ โดยเฉพาะอย่างยิ่งคนไข้ที่รับประทานยาละลายลิ่มเลือด ต้องหยุดรับประทานยาก่อนผ่าตัด 7-10 วัน"
                 android:textColor="@android:color/black"
-                android:textSize="17sp"
+                android:textSize="15sp"
                 android:gravity="left"/>
 
         </LinearLayout>

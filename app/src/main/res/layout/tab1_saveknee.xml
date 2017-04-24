@@ -44,8 +44,8 @@
 
                 <Button
                     android:id="@+id/btn_phase1"
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
                     android:background="@drawable/exercise1"
                     android:onClick="Oc_phase" />
 
@@ -69,8 +69,8 @@
 
                 <Button
                     android:id="@+id/btn_phase2"
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
                     android:background="@drawable/exercise2"
                     android:onClick="Oc_phase" />
 
@@ -100,8 +100,8 @@
 
                 <Button
                     android:id="@+id/btn_phase3"
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
                     android:background="@drawable/exercise3"
                     android:onClick="Oc_phase" />
 
@@ -125,8 +125,8 @@
 
                 <Button
                     android:id="@+id/btn_phase4"
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
                     android:background="@drawable/exercise4"
                     android:onClick="Oc_phase" />
 
@@ -156,8 +156,8 @@
 
                 <Button
                     android:id="@+id/btn_phase5"
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
                     android:background="@drawable/exercise5"
                     android:onClick="Oc_phase" />
 
@@ -181,8 +181,8 @@
 
                 <Button
                     android:id="@+id/btn_phase6"
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
                     android:background="@drawable/exercise6"
                     android:onClick="Oc_phase" />
 

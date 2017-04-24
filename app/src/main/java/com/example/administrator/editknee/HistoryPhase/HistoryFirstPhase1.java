@@ -107,7 +107,7 @@ public class HistoryFirstPhase1 extends AppCompatActivity {
         mrenderer.addSeriesRenderer(renderer2);
         mrenderer.addSeriesRenderer(renderer3);
         mrenderer.setYTitle("จำนวน (ครั้ง)");
-        mrenderer.setXTitle("ครั้ง");
+        mrenderer.setXTitle("ครั้งที่");
         mrenderer.setZoomButtonsVisible(true);
         mrenderer.setChartTitleTextSize(50);
         mrenderer.setLabelsTextSize(30);

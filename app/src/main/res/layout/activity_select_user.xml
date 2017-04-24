@@ -13,8 +13,8 @@
 
         <Button
             android:id="@+id/btn_notSick"
-            android:layout_width="350dp"
-            android:layout_height="250dp"
+            android:layout_width="320dp"
+            android:layout_height="220dp"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:background="@drawable/general"
@@ -23,8 +23,8 @@
 
         <Button
             android:id="@+id/btn_Sick"
-            android:layout_width="350dp"
-            android:layout_height="250dp"
+            android:layout_width="320dp"
+            android:layout_height="220dp"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:background="@drawable/patient"

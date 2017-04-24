@@ -36,8 +36,8 @@ public class Tab4History extends Fragment {
         name.setText(String.format(getString(R.string.txtName), person.getName()));
         gender.setText(String.format(getString(R.string.txtGender), person.getGender()));
         birthday.setText(String.format(getString(R.string.txtBiryhday), person.getBirthday()));
-        weight.setText(String.format(getString(R.string.txtWeight), person.getWeight() + " ก.ก"));
-        height.setText(String.format(getString(R.string.txtHeight), person.getHeight() + " ซ.ม"));
+        weight.setText(String.format(getString(R.string.txtWeight), person.getWeight() + " กก."));
+        height.setText(String.format(getString(R.string.txtHeight), person.getHeight() + " ซม."));
 
         Button editHistory = (Button) rootView.findViewById(R.id.edit_Personal);
         editHistory.setOnClickListener(new View.OnClickListener() {

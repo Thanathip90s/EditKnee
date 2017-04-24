@@ -5,8 +5,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="top"
@@ -22,10 +21,10 @@
 
             <ImageView
                 android:id="@+id/editBtn1"
-                android:layout_marginRight="5dp"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:layout_gravity="right"
+                android:layout_marginRight="5dp"
                 android:background="@drawable/ic_edit_black_24dp" />
 
             <TextView
@@ -37,7 +36,7 @@
                 android:layout_marginTop="10dp"
                 android:text="@string/format_IdCount"
                 android:textColor="@android:color/black"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 android:textStyle="bold" />
 
             <LinearLayout
@@ -51,7 +50,7 @@
                     android:layout_height="wrap_content"
                     android:text="วันที่ : "
                     android:textColor="@android:color/black"
-                    android:textSize="20sp"
+                    android:textSize="15sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -66,11 +65,11 @@
                     android:id="@+id/textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
                     android:text="เวลา : "
                     android:textColor="@android:color/black"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:layout_marginLeft="10dp"/>
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/timeTxt1"
@@ -83,16 +82,14 @@
             </LinearLayout>
 
             <TextView
-                android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="---------------------------------"
+                android:text="--------------------------------------------"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
             <LinearLayout
-                android:id="@+id/row_step1_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="2dp"
@@ -103,7 +100,7 @@
                     android:layout_height="wrap_content"
                     android:text="กระ-ดก-เท้า : "
                     android:textColor="@android:color/black"
-                    android:textSize="20sp"
+                    android:textSize="15sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -137,7 +134,7 @@
                     android:layout_height="wrap_content"
                     android:text="หมายเหตุ ท่าที่ 1 : "
                     android:textColor="@android:color/black"
-                    android:textSize="15sp"
+                    android:textSize="12sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -147,7 +144,7 @@
                     android:layout_marginBottom="10dp"
                     android:text="@string/note1_1"
                     android:textColor="@android:color/black"
-                    android:textSize="15sp" />
+                    android:textSize="12sp" />
 
             </LinearLayout>
 
@@ -163,7 +160,7 @@
                     android:layout_height="wrap_content"
                     android:text="หงาย-ชิด-ก้น : "
                     android:textColor="@android:color/black"
-                    android:textSize="20sp"
+                    android:textSize="15sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -195,7 +192,7 @@
                     android:layout_height="wrap_content"
                     android:text="หมายเหตุ ท่าที่ 2 : "
                     android:textColor="@android:color/black"
-                    android:textSize="15sp"
+                    android:textSize="12sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -205,7 +202,7 @@
                     android:layout_marginBottom="10dp"
                     android:text="@string/note1_2"
                     android:textColor="@android:color/black"
-                    android:textSize="15sp" />
+                    android:textSize="12sp" />
 
             </LinearLayout>
 
@@ -221,7 +218,7 @@
                     android:layout_height="wrap_content"
                     android:text="ก้ม-แตะ-เท้า : "
                     android:textColor="@android:color/black"
-                    android:textSize="20sp"
+                    android:textSize="15sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -253,7 +250,7 @@
                     android:layout_height="wrap_content"
                     android:text="หมายเหตุ ท่าที่ 3 : "
                     android:textColor="@android:color/black"
-                    android:textSize="15sp"
+                    android:textSize="12sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -262,17 +259,10 @@
                     android:layout_height="wrap_content"
                     android:text="@string/note1_3"
                     android:textColor="@android:color/black"
-                    android:textSize="15sp" />
+                    android:textSize="12sp" />
 
             </LinearLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="---------------------------------"
-                android:textColor="@android:color/black"
-                android:textSize="20sp"
-                android:textStyle="bold" />
         </LinearLayout>
     </android.support.v7.widget.CardView>
 </LinearLayout>

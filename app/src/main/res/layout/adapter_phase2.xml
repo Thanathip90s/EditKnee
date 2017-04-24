@@ -23,8 +23,8 @@
             <ImageView
                 android:id="@+id/editBtn2"
                 android:layout_marginRight="5dp"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:layout_gravity="right"
                 android:background="@drawable/ic_edit_black_24dp" />
 
@@ -37,7 +37,7 @@
                 android:layout_marginTop="10dp"
                 android:text="@string/format_IdCount2"
                 android:textColor="@android:color/black"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 android:textStyle="bold" />
 
             <LinearLayout
@@ -51,7 +51,7 @@
                     android:layout_height="wrap_content"
                     android:text="วันที่ : "
                     android:textColor="@android:color/black"
-                    android:textSize="20sp"
+                    android:textSize="15sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -68,7 +68,7 @@
                     android:layout_height="wrap_content"
                     android:text="เวลา : "
                     android:textColor="@android:color/black"
-                    android:textSize="20sp"
+                    android:textSize="15sp"
                     android:textStyle="bold"
                     android:layout_marginLeft="10dp"/>
 
@@ -83,16 +83,14 @@
             </LinearLayout>
 
             <TextView
-                android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="---------------------------------"
+                android:text="--------------------------------------------"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
             <LinearLayout
-                android:id="@+id/row_step2_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
@@ -102,7 +100,7 @@
                     android:layout_height="wrap_content"
                     android:text="กระ-ดก-เท้า : "
                     android:textColor="@android:color/black"
-                    android:textSize="20sp"
+                    android:textSize="15sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -135,7 +133,7 @@
                     android:layout_height="wrap_content"
                     android:text="หมายเหตุ ท่าที่ 1 : "
                     android:textColor="@android:color/black"
-                    android:textSize="15sp"
+                    android:textSize="12sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -145,7 +143,7 @@
                     android:layout_marginBottom="10dp"
                     android:text="@string/note2_1"
                     android:textColor="@android:color/black"
-                    android:textSize="15sp" />
+                    android:textSize="12sp" />
 
             </LinearLayout>
 
@@ -160,7 +158,7 @@
                     android:layout_height="wrap_content"
                     android:text="หงาย-ชิด-ก้น : "
                     android:textColor="@android:color/black"
-                    android:textSize="20sp"
+                    android:textSize="15sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -192,7 +190,7 @@
                     android:layout_height="wrap_content"
                     android:text="หมายเหตุ ท่าที่ 2 : "
                     android:textColor="@android:color/black"
-                    android:textSize="15sp"
+                    android:textSize="12sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -202,7 +200,7 @@
                     android:layout_marginBottom="10dp"
                     android:text="@string/note2_2"
                     android:textColor="@android:color/black"
-                    android:textSize="15sp" />
+                    android:textSize="12sp" />
 
             </LinearLayout>
 
@@ -217,7 +215,7 @@
                     android:layout_height="wrap_content"
                     android:text="ก้ม-แตะ-เท้า : "
                     android:textColor="@android:color/black"
-                    android:textSize="20sp"
+                    android:textSize="15sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -249,7 +247,7 @@
                     android:layout_height="wrap_content"
                     android:text="หมายเหตุ ท่าที่ 3 : "
                     android:textColor="@android:color/black"
-                    android:textSize="15sp"
+                    android:textSize="12sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -258,7 +256,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/note2_3"
                     android:textColor="@android:color/black"
-                    android:textSize="15sp" />
+                    android:textSize="12sp" />
 
             </LinearLayout>
 
@@ -274,7 +272,7 @@
                     android:layout_height="wrap_content"
                     android:text="นั่ง-เหยียด-ค้าง : "
                     android:textColor="@android:color/black"
-                    android:textSize="20sp"
+                    android:textSize="15sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -306,7 +304,7 @@
                     android:layout_height="wrap_content"
                     android:text="หมายเหตุ ท่าที่ 4 : "
                     android:textColor="@android:color/black"
-                    android:textSize="15sp"
+                    android:textSize="12sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -315,7 +313,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/note2_4"
                     android:textColor="@android:color/black"
-                    android:textSize="15sp" />
+                    android:textSize="12sp" />
 
             </LinearLayout>
 
@@ -331,7 +329,7 @@
                     android:layout_height="wrap_content"
                     android:text="เดิน-สี่-ขา : "
                     android:textColor="@android:color/black"
-                    android:textSize="20sp"
+                    android:textSize="15sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -363,7 +361,7 @@
                     android:layout_height="wrap_content"
                     android:text="หมายเหตุ ท่าที่ 5 : "
                     android:textColor="@android:color/black"
-                    android:textSize="15sp"
+                    android:textSize="12sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -372,17 +370,9 @@
                     android:layout_height="wrap_content"
                     android:text="@string/note2_5"
                     android:textColor="@android:color/black"
-                    android:textSize="15sp" />
+                    android:textSize="12sp" />
 
             </LinearLayout>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="---------------------------------"
-                android:textColor="@android:color/black"
-                android:textSize="20sp"
-                android:textStyle="bold" />
 
         </LinearLayout>
 

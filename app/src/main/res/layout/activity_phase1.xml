@@ -71,7 +71,7 @@
             android:onClick="Onclick_nextphase1"
             android:text="@string/txt_next"
             android:textColor="@android:color/white"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <TextView

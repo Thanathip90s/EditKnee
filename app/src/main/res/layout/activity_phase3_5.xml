@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="8dp">
 
         <include layout="@layout/usage_stateprogressbar3" />
 
@@ -24,8 +24,8 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="350dp"
-            android:layout_height="250dp"
+            android:layout_width="330dp"
+            android:layout_height="230dp"
             android:layout_gravity="center"
             android:background="@drawable/threekha" />
 
@@ -41,8 +41,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -101,7 +101,7 @@
             android:id="@+id/btn_nextPhase3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="10dp"
             android:background="#e68299"
             android:onClick="Onclick_nextphase3_5"
             android:text="@string/txt_save"

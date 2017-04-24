@@ -104,7 +104,7 @@ public class MenuFragActivity extends AppCompatActivity {
         super.attachBaseContext(CalligraphyContextWrapper.wrap(base));
     }
 
-    @Override
+    /*@Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu_menu, menu);
@@ -125,7 +125,7 @@ public class MenuFragActivity extends AppCompatActivity {
     private void startEditActivity() {
         Intent i = new Intent(this, EditPerson.class);
         startActivity(i);
-    }
+    }*/
 
     /**
      * A {@link FragmentPagerAdapter} that returns a fragment corresponding to

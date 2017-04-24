@@ -49,8 +49,8 @@
 
             <Button
                 android:id="@+id/edit_Personal"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:layout_gravity="right"
                 android:background="@drawable/ic_edit_black_24dp" />
 
@@ -66,7 +66,7 @@
                     android:layout_marginTop="5dp"
                     android:text="@string/txt_name"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/font_normaldown"
+                    android:textSize="@dimen/font_normal"
                     android:textStyle="bold" />
 
                 <TextView
@@ -77,7 +77,7 @@
                     android:layout_marginTop="5dp"
                     android:hint="-"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/font_normaldown" />
+                    android:textSize="@dimen/font_normal" />
 
             </LinearLayout>
 
@@ -92,7 +92,7 @@
                     android:layout_marginTop="15dp"
                     android:text="@string/txt_gender"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/font_normaldown"
+                    android:textSize="@dimen/font_normal"
                     android:textStyle="bold" />
 
                 <TextView
@@ -103,7 +103,7 @@
                     android:layout_marginTop="15dp"
                     android:hint="-"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/font_normaldown" />
+                    android:textSize="@dimen/font_normal" />
 
             </LinearLayout>
 
@@ -118,7 +118,7 @@
                     android:layout_marginTop="15dp"
                     android:text="@string/txt_birthday"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/font_normaldown"
+                    android:textSize="@dimen/font_normal"
                     android:textStyle="bold" />
 
                 <TextView
@@ -129,7 +129,7 @@
                     android:layout_marginTop="15dp"
                     android:hint="-"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/font_normaldown" />
+                    android:textSize="@dimen/font_normal" />
 
             </LinearLayout>
 
@@ -144,7 +144,7 @@
                     android:layout_marginTop="15dp"
                     android:text="@string/txt_weight"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/font_normaldown"
+                    android:textSize="@dimen/font_normal"
                     android:textStyle="bold" />
 
                 <TextView
@@ -155,7 +155,7 @@
                     android:layout_marginTop="15dp"
                     android:hint="-"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/font_normaldown" />
+                    android:textSize="@dimen/font_normal" />
 
             </LinearLayout>
 
@@ -171,7 +171,7 @@
                     android:layout_marginTop="15dp"
                     android:text="@string/txt_height"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/font_normaldown"
+                    android:textSize="@dimen/font_normal"
                     android:textStyle="bold" />
 
                 <TextView
@@ -182,7 +182,7 @@
                     android:layout_marginTop="15dp"
                     android:hint="-"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/font_normaldown" />
+                    android:textSize="@dimen/font_normal" />
 
             </LinearLayout>
 
@@ -191,15 +191,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="-------------------------------------------------"
+                android:text="-----------------------------------------------"
                 android:textColor="@android:color/black"
-                android:textSize="@dimen/font_normaldown"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <Button
                 android:id="@+id/edit_detailPersonal"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:layout_gravity="right"
                 android:background="@drawable/ic_edit_black_24dp" />
 
@@ -214,7 +214,7 @@
                     android:layout_height="wrap_content"
                     android:text="สถานะ :"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/font_normaldown"
+                    android:textSize="@dimen/font_normal"
                     android:textStyle="bold" />
 
                 <TextView
@@ -224,7 +224,7 @@
                     android:layout_marginLeft="5dp"
                     android:text="ผู้ป่วยที่รับการผ่าตัด"
                     android:textColor="@android:color/holo_red_light"
-                    android:textSize="@dimen/font_normaldown"
+                    android:textSize="@dimen/font_normal"
                     android:textStyle="bold" />
 
             </LinearLayout>
@@ -237,7 +237,7 @@
                 android:layout_marginTop="15dp"
                 android:hint=""
                 android:textColor="@android:color/black"
-                android:textSize="@dimen/font_normaldown" />
+                android:textSize="@dimen/font_normal" />
 
             <TextView
                 android:id="@+id/date_Q1"
@@ -246,7 +246,7 @@
                 android:layout_marginTop="5dp"
                 android:hint=""
                 android:textColor="@android:color/black"
-                android:textSize="@dimen/font_normaldown" />
+                android:textSize="@dimen/font_normal" />
 
             <TextView
                 android:id="@+id/txt_Q2"
@@ -255,7 +255,7 @@
                 android:layout_marginTop="15dp"
                 android:hint=""
                 android:textColor="@android:color/black"
-                android:textSize="@dimen/font_normaldown" />
+                android:textSize="@dimen/font_normal" />
 
             <TextView
                 android:id="@+id/date_Q2"
@@ -264,7 +264,7 @@
                 android:layout_marginTop="5dp"
                 android:hint=""
                 android:textColor="@android:color/black"
-                android:textSize="@dimen/font_normaldown" />
+                android:textSize="@dimen/font_normal" />
 
             <TextView
                 android:id="@+id/txt_Q3"
@@ -273,7 +273,7 @@
                 android:layout_marginTop="15dp"
                 android:hint=""
                 android:textColor="@android:color/black"
-                android:textSize="@dimen/font_normaldown" />
+                android:textSize="@dimen/font_normal" />
 
             <TextView
                 android:id="@+id/date_Q3"
@@ -282,7 +282,7 @@
                 android:layout_marginTop="5dp"
                 android:hint=""
                 android:textColor="@android:color/black"
-                android:textSize="@dimen/font_normaldown" />
+                android:textSize="@dimen/font_normal" />
 
             <TextView
                 android:id="@+id/txt_Q4"
@@ -291,7 +291,7 @@
                 android:layout_marginTop="15dp"
                 android:hint=""
                 android:textColor="@android:color/black"
-                android:textSize="@dimen/font_normaldown" />
+                android:textSize="@dimen/font_normal" />
 
             <TextView
                 android:id="@+id/txt_Q5"
@@ -300,7 +300,7 @@
                 android:layout_marginTop="15dp"
                 android:hint=""
                 android:textColor="@android:color/black"
-                android:textSize="@dimen/font_normaldown" />
+                android:textSize="@dimen/font_normal" />
 
             <TextView
                 android:id="@+id/txt_Q6"
@@ -309,7 +309,7 @@
                 android:layout_marginTop="15dp"
                 android:hint=""
                 android:textColor="@android:color/black"
-                android:textSize="@dimen/font_normaldown" />
+                android:textSize="@dimen/font_normal" />
 
             <TextView
                 android:id="@+id/txt_Q7"
@@ -318,7 +318,7 @@
                 android:layout_marginTop="15dp"
                 android:hint=""
                 android:textColor="@android:color/black"
-                android:textSize="@dimen/font_normaldown" />
+                android:textSize="@dimen/font_normal" />
 
             <TextView
                 android:id="@+id/txt_Q8"
@@ -327,19 +327,7 @@
                 android:layout_marginTop="15dp"
                 android:hint=""
                 android:textColor="@android:color/black"
-                android:textSize="@dimen/font_normaldown" />
-
-            <!--<Button-->
-            <!--android:id="@+id/btn_EditHistory"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_marginTop="10dp"-->
-            <!--android:background="#48D1CC"-->
-            <!--android:onClick="OcHistory"-->
-            <!--android:text="@string/txt_edithistory"-->
-            <!--android:textColor="@android:color/white"-->
-            <!--android:textSize="@dimen/font_button"-->
-            <!--android:textStyle="bold" />-->
+                android:textSize="@dimen/font_normal" />
 
         </LinearLayout>
     </android.support.v7.widget.CardView>

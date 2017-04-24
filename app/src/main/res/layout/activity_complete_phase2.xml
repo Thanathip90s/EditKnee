@@ -18,6 +18,7 @@
             android:layout_height="75dp"
             android:layout_gravity="center"
             android:background="@drawable/ic_info_sent"
+            android:backgroundTint="#228B22"
             />
 
         <TextView
@@ -27,7 +28,7 @@
             android:layout_marginTop="10dp"
             android:text="@string/txt_great"
             android:textColor="@android:color/black"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <TextView
@@ -37,7 +38,7 @@
             android:layout_marginTop="10dp"
             android:text="@string/txt_tryit"
             android:textColor="@android:color/black"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <Button
@@ -49,7 +50,7 @@
             android:onClick="Oc_closePhase2"
             android:text="@string/txt_close"
             android:textColor="@android:color/white"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
     </LinearLayout>

@@ -9,99 +9,136 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SelectUser">
+        <activity android:name=".SelectUser"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Menu" />
+        <activity
+            android:name=".Menu" />
         <activity
             android:name=".Saveknee"
             android:parentActivityName=".Menu" />
         <activity
             android:name=".pagePhase1.Phase1"
-            android:parentActivityName=".MenuFragActivity" />
+            android:parentActivityName=".MenuFragActivity"
+            android:screenOrientation="portrait"/>
         <activity
-            android:name=".pagePhase1.Phase1_1" />
+            android:name=".pagePhase1.Phase1_1"
+            android:screenOrientation="portrait"/>
         <activity
-            android:name=".pagePhase1.Phase1_2" />
+            android:name=".pagePhase1.Phase1_2"
+            android:screenOrientation="portrait"/>
         <activity
-            android:name=".pagePhase1.Phase1_3" />
-        <activity
-            android:name=".pageCompleteAll.CompletePhase1" />
+            android:name=".pagePhase1.Phase1_3"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".pagePhase2.Phase2"
-            android:parentActivityName=".MenuFragActivity" />
+            android:parentActivityName=".MenuFragActivity"
+            android:screenOrientation="portrait"/>
         <activity
-            android:name=".pagePhase2.Phase2_1" />
+            android:name=".pagePhase2.Phase2_1"
+            android:screenOrientation="portrait"/>
         <activity
-            android:name=".pagePhase2.Phase2_2" />
+            android:name=".pagePhase2.Phase2_2"
+            android:screenOrientation="portrait"/>
         <activity
-            android:name=".pagePhase2.Phase2_3" />
+            android:name=".pagePhase2.Phase2_3"
+            android:screenOrientation="portrait"/>
         <activity
-            android:name=".pagePhase2.Phase2_4" />
+            android:name=".pagePhase2.Phase2_4"
+            android:screenOrientation="portrait"/>
         <activity
-            android:name=".pagePhase2.Phase2_5" />
+            android:name=".pagePhase2.Phase2_5"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".pagePhase3.Phase3"
-            android:parentActivityName=".MenuFragActivity" />
+            android:parentActivityName=".MenuFragActivity"
+            android:screenOrientation="portrait"/>
         <activity
-            android:name=".pagePhase3.Phase3_1" />
+            android:name=".pagePhase3.Phase3_1"
+            android:screenOrientation="portrait"/>
         <activity
-            android:name=".pagePhase3.Phase3_2" />
+            android:name=".pagePhase3.Phase3_2"
+            android:screenOrientation="portrait"/>
         <activity
-            android:name=".pagePhase3.Phase3_3" />
+            android:name=".pagePhase3.Phase3_3"
+            android:screenOrientation="portrait"/>
         <activity
-            android:name=".pagePhase3.Phase3_4" />
+            android:name=".pagePhase3.Phase3_4"
+            android:screenOrientation="portrait"/>
         <activity
-            android:name=".pagePhase3.Phase3_5" />
+            android:name=".pagePhase3.Phase3_5"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".pagePhase4.Phase4"
-            android:parentActivityName=".MenuFragActivity" />
+            android:parentActivityName=".MenuFragActivity"
+            android:screenOrientation="portrait"/>
         <activity
-            android:name=".pagePhase4.Phase4_1" />
+            android:name=".pagePhase4.Phase4_1"
+            android:screenOrientation="portrait"/>
         <activity
-            android:name=".pagePhase4.Phase4_2" />
+            android:name=".pagePhase4.Phase4_2"
+            android:screenOrientation="portrait"/>
         <activity
-            android:name=".pagePhase4.Phase4_3" />
+            android:name=".pagePhase4.Phase4_3"
+            android:screenOrientation="portrait"/>
         <activity
-            android:name=".pagePhase4.Phase4_4" />
+            android:name=".pagePhase4.Phase4_4"
+            android:screenOrientation="portrait"/>
         <activity
-            android:name=".pagePhase4.Phase4_5" />
+            android:name=".pagePhase4.Phase4_5"
+            android:screenOrientation="portrait"/>
         <activity
-            android:name=".pagePhase4.Phase4_6" />
+            android:name=".pagePhase4.Phase4_6"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".pagePhase5.Phase5"
-            android:parentActivityName=".MenuFragActivity" />
+            android:parentActivityName=".MenuFragActivity"
+            android:screenOrientation="portrait"/>
         <activity
-            android:name=".pagePhase5.Phase5_1" />
+            android:name=".pagePhase5.Phase5_1"
+            android:screenOrientation="portrait"/>
         <activity
-            android:name=".pagePhase5.Phase5_2" />
+            android:name=".pagePhase5.Phase5_2"
+            android:screenOrientation="portrait"/>
         <activity
-            android:name=".pagePhase5.Phase5_3" />
+            android:name=".pagePhase5.Phase5_3"
+            android:screenOrientation="portrait"/>
         <activity
-            android:name=".pagePhase5.Phase5_4" />
+            android:name=".pagePhase5.Phase5_4"
+            android:screenOrientation="portrait"/>
         <activity
-            android:name=".pagePhase5.Phase5_5" />
+            android:name=".pagePhase5.Phase5_5"
+            android:screenOrientation="portrait"/>
         <activity
-            android:name=".pagePhase5.Phase5_6" />
+            android:name=".pagePhase5.Phase5_6"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".pagePhase6.Phase6"
-            android:parentActivityName=".MenuFragActivity" />
+            android:parentActivityName=".MenuFragActivity"
+            android:screenOrientation="portrait"/>
         <activity
-            android:name=".pagePhase6.Phase6_1" />
+            android:name=".pagePhase6.Phase6_1"
+            android:screenOrientation="portrait"/>
         <activity
-            android:name=".pagePhase6.Phase6_2" />
+            android:name=".pagePhase6.Phase6_2"
+            android:screenOrientation="portrait"/>
         <activity
-            android:name=".pagePhase6.Phase6_3" />
+            android:name=".pagePhase6.Phase6_3"
+            android:screenOrientation="portrait"/>
         <activity
-            android:name=".pagePhase6.Phase6_4" />
+            android:name=".pagePhase6.Phase6_4"
+            android:screenOrientation="portrait"/>
         <activity
-            android:name=".pagePhase6.Phase6_5" />
+            android:name=".pagePhase6.Phase6_5"
+            android:screenOrientation="portrait"/>
         <activity
-            android:name=".pagePhase6.Phase6_6" />
+            android:name=".pagePhase6.Phase6_6"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".pagePerson.History"
             android:parentActivityName=".Menu" />
@@ -109,7 +146,8 @@
         <activity android:name=".recordOld.Record3" />
         <activity android:name=".recordOld.Record4" />
         <activity
-            android:name=".pagePerson.EditPerson" />
+            android:name=".pagePerson.EditPerson"
+            android:screenOrientation="portrait"/>
         <!--
  ATTENTION: This was auto-generated to add Google Play services to your project for
      App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -117,45 +155,71 @@
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
-
-        <activity android:name=".pageCompleteAll.CompletePhase2" />
-        <activity android:name=".pageCompleteAll.CompletePhase3" />
-        <activity android:name=".pageCompleteAll.CompletePhase4" />
-        <activity android:name=".pageCompleteAll.CompletePhase5" />
-        <activity android:name=".pageCompleteAll.CompletePhase6" />
-        <activity android:name=".pagePerson.FirstRecord" />
-        <activity android:name=".pagePerson.FirstRecord2" />
-        <activity android:name=".pagePerson.DetailPatient" />
+        <activity
+            android:name=".pageCompleteAll.CompletePhase1"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".pageCompleteAll.CompletePhase2"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".pageCompleteAll.CompletePhase3"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".pageCompleteAll.CompletePhase4"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".pageCompleteAll.CompletePhase5"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".pageCompleteAll.CompletePhase6"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".pagePerson.FirstRecord"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".pagePerson.FirstRecord2"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".pagePerson.DetailPatient"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".MenuFragActivity"
             android:label="@string/title_activity_menu_frag"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".HistoryPhase.HistoryFirstPhase1"
-            android:theme="@style/AppTheme.CustomTheme" />
+            android:theme="@style/AppTheme.CustomTheme"
+            android:screenOrientation="portrait"/>
         <activity
-            android:name=".pagePerson.EditDetailPatient" />
+            android:name=".pagePerson.EditDetailPatient"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".HistoryPhase.HistoryFirstPhase2"
-            android:theme="@style/AppTheme.CustomTheme" />
+            android:theme="@style/AppTheme.CustomTheme"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".HistoryPhase.HistoryFirstPhase3"
-            android:theme="@style/AppTheme.CustomTheme" />
+            android:theme="@style/AppTheme.CustomTheme"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".HistoryPhase.HistoryFirstPhase4"
-            android:theme="@style/AppTheme.CustomTheme" />
+            android:theme="@style/AppTheme.CustomTheme"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".HistoryPhase.HistoryFirstPhase5"
-            android:theme="@style/AppTheme.CustomTheme" />
+            android:theme="@style/AppTheme.CustomTheme"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".HistoryPhase.HistoryFirstPhase6"
-            android:theme="@style/AppTheme.CustomTheme" />
-
-        <activity android:name=".knowledgeActivity1" />
-
-        <activity android:name=".knowledgeActivity2" />
-
-        <activity android:name=".knowledgeActivity3">
+            android:theme="@style/AppTheme.CustomTheme"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".knowledgeActivity1"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".knowledgeActivity2"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".knowledgeActivity3"
+            android:screenOrientation="portrait">
 
         </activity>
     </application>
