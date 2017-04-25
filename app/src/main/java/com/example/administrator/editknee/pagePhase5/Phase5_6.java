@@ -21,7 +21,7 @@ public class Phase5_6 extends UsageBaseActivity5 {
     public static int REQUEST_UPDATE = 99;
     public static String EXTRA_PHASE5_ID = "phase5Id";
     private TextView number5_6Input, showValue;
-    private EditText note5_6Input;
+    private EditText note5_6Input,editNum;
     private int mPhase5Id;
     int counter = 0;
 
@@ -38,6 +38,7 @@ public class Phase5_6 extends UsageBaseActivity5 {
         showValue = (TextView) findViewById(R.id.number5_6);
         number5_6Input = (TextView) findViewById(R.id.number5_6);
         note5_6Input = (EditText) findViewById(R.id.editText_note5_6);
+        editNum = (EditText) findViewById(R.id.edtNum);
 
         if (getIntent().hasExtra(EXTRA_PHASE5_ID)) {
             mPhase5Id = getIntent().getIntExtra(EXTRA_PHASE5_ID, 0);
@@ -58,9 +59,10 @@ public class Phase5_6 extends UsageBaseActivity5 {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_nextPhase5:
-                if (counter >= 0 && counter <= 24 && note5_6Input.getText().toString().equals("")) {
+                int intEdt = Integer.parseInt(editNum.getText().toString());
+                if (counter >= 0 && counter <= intEdt-1 && note5_6Input.getText().toString().equals("")) {
                     Toast.makeText(this, "กรุณากรอกสาเหตุคะ", Toast.LENGTH_SHORT).show();
-                } else if (counter >= 0 && counter <= 24 && note5_6Input != null) {
+                } else if (counter >= 0 && counter <= intEdt-1 && note5_6Input != null) {
                     saveDbPhase5();
                 } else {
                     saveDbPhase5();
@@ -70,16 +72,18 @@ public class Phase5_6 extends UsageBaseActivity5 {
 
     public void countIN(View view) {
         counter++;
-        if (counter >= 0 && counter <= 25)
+        int intEdt = Integer.parseInt(editNum.getText().toString());
+        if (counter >= 0 && counter <= intEdt)
             showValue.setText(Integer.toString(counter));
         else {
-            counter = 25;
+            counter = intEdt;
         }
     }
 
     public void countDE(View view) {
         counter--;
-        if (counter >= 0 && counter <= 25)
+        int intEdt = Integer.parseInt(editNum.getText().toString());
+        if (counter >= 0 && counter <= intEdt)
             showValue.setText(Integer.toString(counter));
         else {
             counter = 0;

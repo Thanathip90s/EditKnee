@@ -22,7 +22,7 @@ public class Phase1_3 extends UsageBaseActivity {
     public static int REQUEST_UPDATE = 99;
     public static String EXTRA_PHASE1_ID = "phase1Id";
     private TextView number1_3Input, showValue;
-    private EditText note1_3Input;
+    private EditText note1_3Input, editNum;
     private int mPhase1Id;
     int counter = 0;
 
@@ -37,9 +37,9 @@ public class Phase1_3 extends UsageBaseActivity {
         stateprogressbar.setCurrentStateNumber(StateProgressBar.StateNumber.THREE);
 
         showValue = (TextView) findViewById(R.id.number1_3);
-
         number1_3Input = (TextView) findViewById(R.id.number1_3);
         note1_3Input = (EditText) findViewById(R.id.editText_note1_3);
+        editNum = (EditText) findViewById(R.id.edtNum);
 
         if (getIntent().hasExtra(EXTRA_PHASE1_ID)) {
             mPhase1Id = getIntent().getIntExtra(EXTRA_PHASE1_ID, 0);
@@ -60,9 +60,10 @@ public class Phase1_3 extends UsageBaseActivity {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_nextPhase1:
-                if (counter >= 0 && counter <= 9 && note1_3Input.getText().toString().equals("")) {
+                int intEdt = Integer.parseInt(editNum.getText().toString());
+                if (counter >= 0 && counter <= intEdt - 1 && note1_3Input.getText().toString().equals("")) {
                     Toast.makeText(this, "กรุณากรอกสาเหตุคะ", Toast.LENGTH_SHORT).show();
-                } else if (counter >= 0 && counter <= 9 && note1_3Input != null) {
+                } else if (counter >= 0 && counter <= intEdt - 1 && note1_3Input != null) {
                     saveDbPhase1();
                 } else {
                     saveDbPhase1();
@@ -72,19 +73,21 @@ public class Phase1_3 extends UsageBaseActivity {
 
     public void countIN(View view) {
         counter++;
-        if (counter >= 0 && counter <= 10)
+        int intEdt = Integer.parseInt(editNum.getText().toString());
+        if (counter >= 0 && counter <= intEdt)
             showValue.setText(Integer.toString(counter));
         else {
-            counter=10;
+            counter = intEdt;
         }
     }
 
     public void countDE(View view) {
         counter--;
-        if (counter >= 0 && counter <= 10)
+        int intEdt = Integer.parseInt(editNum.getText().toString());
+        if (counter >= 0 && counter <= intEdt)
             showValue.setText(Integer.toString(counter));
         else {
-            counter=0;
+            counter = 0;
         }
     }
 
@@ -104,6 +107,7 @@ public class Phase1_3 extends UsageBaseActivity {
         databaseManager.storeDBPhase1(dbPhase1);
         finish();
     }
+
     @Override
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(CalligraphyContextWrapper.wrap(base));

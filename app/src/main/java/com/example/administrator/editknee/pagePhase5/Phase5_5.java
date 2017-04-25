@@ -13,6 +13,7 @@ import com.example.administrator.editknee.DatabaseManager;
 import com.example.administrator.editknee.ModelPhase.DBPhase5;
 import com.example.administrator.editknee.R;
 import com.example.administrator.editknee.UsageBaseActivity5;
+
 import admin.stateprogress.StateProgressBar;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
@@ -20,7 +21,7 @@ public class Phase5_5 extends UsageBaseActivity5 {
     public static int REQUEST_UPDATE = 99;
     public static String EXTRA_PHASE5_ID = "phase5Id";
     private TextView number5_5Input, showValue;
-    private EditText note5_5Input;
+    private EditText note5_5Input, editNum;
     private int mPhase5Id;
     int counter = 0;
 
@@ -37,6 +38,7 @@ public class Phase5_5 extends UsageBaseActivity5 {
         showValue = (TextView) findViewById(R.id.number5_5);
         number5_5Input = (TextView) findViewById(R.id.number5_5);
         note5_5Input = (EditText) findViewById(R.id.editText_note5_5);
+        editNum = (EditText) findViewById(R.id.edtNum);
 
         if (getIntent().hasExtra(EXTRA_PHASE5_ID)) {
             mPhase5Id = getIntent().getIntExtra(EXTRA_PHASE5_ID, 0);
@@ -57,9 +59,10 @@ public class Phase5_5 extends UsageBaseActivity5 {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_nextPhase5:
-                if (counter >= 0 && counter <= 29 && note5_5Input.getText().toString().equals("")) {
+                int intEdt = Integer.parseInt(editNum.getText().toString());
+                if (counter >= 0 && counter <= intEdt - 1 && note5_5Input.getText().toString().equals("")) {
                     Toast.makeText(this, "กรุณากรอกสาเหตุคะ", Toast.LENGTH_SHORT).show();
-                } else if (counter >= 0 && counter <= 29 && note5_5Input != null) {
+                } else if (counter >= 0 && counter <= intEdt - 1 && note5_5Input != null) {
                     saveDbPhase5();
                 } else {
                     saveDbPhase5();
@@ -69,16 +72,18 @@ public class Phase5_5 extends UsageBaseActivity5 {
 
     public void countIN(View view) {
         counter++;
-        if (counter >= 0 && counter <= 30)
+        int intEdt = Integer.parseInt(editNum.getText().toString());
+        if (counter >= 0 && counter <= intEdt)
             showValue.setText(Integer.toString(counter));
         else {
-            counter = 30;
+            counter = intEdt;
         }
     }
 
     public void countDE(View view) {
         counter--;
-        if (counter >= 0 && counter <= 30)
+        int intEdt = Integer.parseInt(editNum.getText().toString());
+        if (counter >= 0 && counter <= intEdt)
             showValue.setText(Integer.toString(counter));
         else {
             counter = 0;
@@ -102,6 +107,7 @@ public class Phase5_5 extends UsageBaseActivity5 {
         finish();
 
     }
+
     @Override
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(CalligraphyContextWrapper.wrap(base));
