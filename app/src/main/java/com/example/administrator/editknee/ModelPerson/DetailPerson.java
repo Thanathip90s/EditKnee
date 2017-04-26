@@ -18,6 +18,21 @@ public class DetailPerson extends RealmObject{
     String q6;
     String q7;
     String q8;
+    String q9;
+    String q10;
+    String q11;
+    String dateQ1;
+    String dateQ2;
+    String dateQ3;
+    String dateQ4;
+    String dateQ5;
+    String dateQ6;
+    String dateQ7;
+    String dateQ8;
+    String dateQ9;
+    String dateQ10;
+    String dateQ11;
+
 
     public String getId() {
         return id;
@@ -26,35 +41,6 @@ public class DetailPerson extends RealmObject{
     public void setId(String id) {
         this.id = id;
     }
-
-    public String getDateQ1() {
-        return dateQ1;
-    }
-
-    public void setDateQ1(String dateQ1) {
-        this.dateQ1 = dateQ1;
-    }
-
-    String dateQ1;
-
-    public String getDateQ2() {
-        return dateQ2;
-    }
-
-    public void setDateQ2(String dateQ2) {
-        this.dateQ2 = dateQ2;
-    }
-
-    public String getDateQ3() {
-        return dateQ3;
-    }
-
-    public void setDateQ3(String dateQ3) {
-        this.dateQ3 = dateQ3;
-    }
-
-    String dateQ2;
-    String dateQ3;
 
     public String getQ1() {
         return q1;
@@ -118,5 +104,117 @@ public class DetailPerson extends RealmObject{
 
     public void setQ8(String q8) {
         this.q8 = q8;
+    }
+
+    public String getQ9() {
+        return q9;
+    }
+
+    public void setQ9(String q9) {
+        this.q9 = q9;
+    }
+
+    public String getQ10() {
+        return q10;
+    }
+
+    public void setQ10(String q10) {
+        this.q10 = q10;
+    }
+
+    public String getQ11() {
+        return q11;
+    }
+
+    public void setQ11(String q11) {
+        this.q11 = q11;
+    }
+
+    public String getDateQ1() {
+        return dateQ1;
+    }
+
+    public void setDateQ1(String dateQ1) {
+        this.dateQ1 = dateQ1;
+    }
+
+    public String getDateQ2() {
+        return dateQ2;
+    }
+
+    public void setDateQ2(String dateQ2) {
+        this.dateQ2 = dateQ2;
+    }
+
+    public String getDateQ3() {
+        return dateQ3;
+    }
+
+    public void setDateQ3(String dateQ3) {
+        this.dateQ3 = dateQ3;
+    }
+
+    public String getDateQ4() {
+        return dateQ4;
+    }
+
+    public void setDateQ4(String dateQ4) {
+        this.dateQ4 = dateQ4;
+    }
+
+    public String getDateQ5() {
+        return dateQ5;
+    }
+
+    public void setDateQ5(String dateQ5) {
+        this.dateQ5 = dateQ5;
+    }
+
+    public String getDateQ6() {
+        return dateQ6;
+    }
+
+    public void setDateQ6(String dateQ6) {
+        this.dateQ6 = dateQ6;
+    }
+
+    public String getDateQ7() {
+        return dateQ7;
+    }
+
+    public void setDateQ7(String dateQ7) {
+        this.dateQ7 = dateQ7;
+    }
+
+    public String getDateQ8() {
+        return dateQ8;
+    }
+
+    public void setDateQ8(String dateQ8) {
+        this.dateQ8 = dateQ8;
+    }
+
+    public String getDateQ9() {
+        return dateQ9;
+    }
+
+    public void setDateQ9(String dateQ9) {
+        this.dateQ9 = dateQ9;
+    }
+
+    public String getDateQ10() {
+        return dateQ10;
+    }
+
+    public void setDateQ10(String dateQ10) {
+        this.dateQ10 = dateQ10;
+    }
+
+    public String getDateQ11() {
+        return dateQ11;
+    }
+
+    public void setDateQ11(String dateQ11) {
+        this.dateQ11 = dateQ11;
     }
 }

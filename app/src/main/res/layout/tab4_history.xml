@@ -184,7 +184,17 @@
                     android:textColor="@android:color/black"
                     android:textSize="@dimen/font_normal" />
 
+
             </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_BMI"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:hint=""
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/font_normal" />
 
             <TextView
                 android:id="@+id/txt_that"
@@ -294,10 +304,28 @@
                 android:textSize="@dimen/font_normal" />
 
             <TextView
+                android:id="@+id/date_Q4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint=""
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/font_normal" />
+
+            <TextView
                 android:id="@+id/txt_Q5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
+                android:hint=""
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/font_normal" />
+
+            <TextView
+                android:id="@+id/date_Q5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:hint=""
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/font_normal" />
@@ -312,6 +340,15 @@
                 android:textSize="@dimen/font_normal" />
 
             <TextView
+                android:id="@+id/date_Q6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint=""
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/font_normal" />
+
+            <TextView
                 android:id="@+id/txt_Q7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -321,10 +358,82 @@
                 android:textSize="@dimen/font_normal" />
 
             <TextView
+                android:id="@+id/date_Q7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint=""
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/font_normal" />
+
+            <TextView
                 android:id="@+id/txt_Q8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
+                android:hint=""
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/font_normal" />
+
+            <TextView
+                android:id="@+id/date_Q8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint=""
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/font_normal" />
+
+            <TextView
+                android:id="@+id/txt_Q9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:hint=""
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/font_normal" />
+
+            <TextView
+                android:id="@+id/date_Q9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint=""
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/font_normal" />
+
+            <TextView
+                android:id="@+id/txt_Q10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:hint=""
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/font_normal" />
+
+            <TextView
+                android:id="@+id/date_Q10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint=""
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/font_normal" />
+
+            <TextView
+                android:id="@+id/txt_Q11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:hint=""
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/font_normal" />
+
+            <TextView
+                android:id="@+id/date_Q11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:hint=""
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/font_normal" />

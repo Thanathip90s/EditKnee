@@ -39,6 +39,31 @@ public class Tab4History extends Fragment {
         weight.setText(String.format(getString(R.string.txtWeight), person.getWeight() + " กก."));
         height.setText(String.format(getString(R.string.txtHeight), person.getHeight() + " ซม."));
 
+        TextView Bmi = (TextView) rootView.findViewById(R.id.txt_BMI);
+        double intBmi, Change;
+        String BMI;
+        double int1 = Integer.parseInt(person.getWeight());
+        double int2 = Integer.parseInt(person.getHeight());
+        Change = int2 / 100;
+        intBmi = int1 / (Change * Change);
+        BMI = String.valueOf(intBmi);
+        //Bmi.setText(BMI);
+        if (intBmi < 18.5) {
+            Bmi.setText("ค่า BMI : ผอม");
+        }
+        if (intBmi >= 18.5 && intBmi < 23) {
+            Bmi.setText("ค่า BMI : ปกติ");
+        }
+        if (intBmi >= 23.0 && intBmi < 25) {
+            Bmi.setText("ค่า BMI : ท้วม");
+        }
+        if (intBmi >= 25.0 && intBmi < 30) {
+            Bmi.setText("ค่า BMI : อ้วนปานกลาง");
+        }
+        if (intBmi >= 30.0) {
+            Bmi.setText("ค่า BMI : อ้วนมาก");
+        }
+
         Button editHistory = (Button) rootView.findViewById(R.id.edit_Personal);
         editHistory.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,10 +84,22 @@ public class Tab4History extends Fragment {
         TextView q3 = (TextView) rootView.findViewById(R.id.txt_Q3);
         TextView dateQ3 = (TextView) rootView.findViewById(R.id.date_Q3);
         TextView q4 = (TextView) rootView.findViewById(R.id.txt_Q4);
+        TextView dateQ4 = (TextView) rootView.findViewById(R.id.date_Q4);
         TextView q5 = (TextView) rootView.findViewById(R.id.txt_Q5);
+        TextView dateQ5 = (TextView) rootView.findViewById(R.id.date_Q5);
         TextView q6 = (TextView) rootView.findViewById(R.id.txt_Q6);
+        TextView dateQ6 = (TextView) rootView.findViewById(R.id.date_Q6);
         TextView q7 = (TextView) rootView.findViewById(R.id.txt_Q7);
+        TextView dateQ7 = (TextView) rootView.findViewById(R.id.date_Q7);
         TextView q8 = (TextView) rootView.findViewById(R.id.txt_Q8);
+        TextView dateQ8 = (TextView) rootView.findViewById(R.id.date_Q8);
+        TextView q9 = (TextView) rootView.findViewById(R.id.txt_Q9);
+        TextView dateQ9 = (TextView) rootView.findViewById(R.id.date_Q9);
+        TextView q10 = (TextView) rootView.findViewById(R.id.txt_Q10);
+        TextView dateQ10 = (TextView) rootView.findViewById(R.id.date_Q10);
+        TextView q11 = (TextView) rootView.findViewById(R.id.txt_Q11);
+        TextView dateQ11 = (TextView) rootView.findViewById(R.id.date_Q11);
+
 
         DatabaseManager databaseManager2 = new DatabaseManager(getActivity());
         DetailPerson detailPerson = databaseManager2.getDetailPerson();
@@ -79,13 +116,24 @@ public class Tab4History extends Fragment {
             q3.setVisibility(View.GONE);
             dateQ3.setVisibility(View.GONE);
             q4.setVisibility(View.GONE);
+            dateQ4.setVisibility(View.GONE);
             q5.setVisibility(View.GONE);
+            dateQ5.setVisibility(View.GONE);
             q6.setVisibility(View.GONE);
+            dateQ6.setVisibility(View.GONE);
             q7.setVisibility(View.GONE);
+            dateQ7.setVisibility(View.GONE);
             q8.setVisibility(View.GONE);
+            dateQ8.setVisibility(View.GONE);
+            q9.setVisibility(View.GONE);
+            dateQ9.setVisibility(View.GONE);
+            q10.setVisibility(View.GONE);
+            dateQ10.setVisibility(View.GONE);
+            q11.setVisibility(View.GONE);
+            dateQ11.setVisibility(View.GONE);
         } else {
             if (detailPerson.getQ1() == null) {
-                q1.setText("1. จองคิวนัดวันผ่า (แพทย์จะทำการผ่าตัดทุกวันจันทร์)" + " [X]");
+                q1.setText("จองคิวนัดวันผ่า" + " [X]");
                 dateQ1.setVisibility(View.GONE);
             } else {
                 q1.setText(String.format(getString(R.string.txtQ1), detailPerson.getQ1()));
@@ -93,7 +141,7 @@ public class Tab4History extends Fragment {
             }
 
             if (detailPerson.getQ2() == null) {
-                q2.setText("2. นัดหมายการตรวจร่างกายก่อนเข้ารับการผ่าตัดและปรึกษาเรื่องค่าใช้จ่ายในการผ่าตัดซึ่งขึ้นอยู่กับชนิดข้อที่ใช้และหอผู้ป่วย" + " [X]");
+                q2.setText("ครั้งที่ 1 : ตรวจเลือด-ปัสสาวะ (ห้องเจาะเลือด ตึกพยาธิวิทยาชั้น 3)" + " [X]");
                 dateQ2.setVisibility(View.GONE);
             } else {
                 q2.setText(String.format(getString(R.string.txtQ2), detailPerson.getQ2()));
@@ -101,41 +149,72 @@ public class Tab4History extends Fragment {
             }
 
             if (detailPerson.getQ3() == null) {
-                q3.setText("3. จองห้องนอนโรงพยาบาล" + " [X]");
+                q3.setText("ครั้งที่ 1 : ตรวจโรคประจำตัว (คลินิกอายุรกรรมทั่วไป คลินิกเบาหวาน คลินิกหัวใจ)" + " [X]");
                 dateQ3.setVisibility(View.GONE);
             } else {
                 q3.setText(String.format(getString(R.string.txtQ3), detailPerson.getQ3()));
-                dateQ3.setText(String.format(getString(R.string.txtdateQ1), detailPerson.getDateQ3()+ " [✓]"));
+                dateQ3.setText(String.format(getString(R.string.txtdateQ1), detailPerson.getDateQ3() + " [✓]"));
             }
 
             if (detailPerson.getQ4() == null) {
-                q4.setText("4. รับใบนัดและรับยา" + " [X]");
+                q4.setText("ครั้งที่ 1 : ตรวจคลื่นไฟฟ้าหัวใจ (คลินิกหัวใจ ตึกเพชรรัตน์ชั้น 2)" + " [X]");
+                dateQ4.setVisibility(View.GONE);
             } else {
                 q4.setText(String.format(getString(R.string.txtQ4), detailPerson.getQ4() + " [✓]"));
+                dateQ4.setText(String.format(getString(R.string.txtdateQ1), detailPerson.getDateQ4() + " [✓]"));
             }
 
             if (detailPerson.getQ5() == null) {
-                q5.setText("5. ตรวจเลือด-ปัสสาวะ (คลินิคอายุรกรรม)" + " [X]");
+                q5.setText("ครั้งที่ 1 : เอกซเรย์ปอดเเละข้อเข่า (ห้องเอกซเรย์ ตึกมหาวชิราวุธชั้น 1)" + " [X]");
+                dateQ5.setVisibility(View.GONE);
             } else {
                 q5.setText(String.format(getString(R.string.txtQ5), detailPerson.getQ5() + " [✓]"));
+                dateQ5.setText(String.format(getString(R.string.txtdateQ1), detailPerson.getDateQ5() + " [✓]"));
             }
 
             if (detailPerson.getQ6() == null) {
-                q6.setText("6. ตรวจโรคประจำตัว เช่น ความดันโลหิต เบาหวาน เป็นต้น (คลินิคอายุรกรรม)" + " [X]");
+                q6.setText("ครั้งที่ 2 : ติดตามผลการตรวจร่างกาย (คลินิกออร์โธปิดิกส์)" + " [X]");
+                dateQ6.setVisibility(View.GONE);
             } else {
                 q6.setText(String.format(getString(R.string.txtQ6), detailPerson.getQ6() + " [✓]"));
+                dateQ6.setText(String.format(getString(R.string.txtdateQ1), detailPerson.getDateQ6() + " [✓]"));
             }
 
             if (detailPerson.getQ7() == null) {
-                q7.setText("7. เอกซเรย์ปอดและข้อเข่า" + " [X]");
+                q7.setText("ครั้งที่ 3 : เข้านอนโรงพยาบาล (คลินิกออร์โธปิดิกส์)" + " [X]");
+                dateQ7.setVisibility(View.GONE);
             } else {
                 q7.setText(String.format(getString(R.string.txtQ7), detailPerson.getQ7() + " [✓]"));
+                dateQ7.setText(String.format(getString(R.string.txtdateQ1), detailPerson.getDateQ7() + " [✓]"));
             }
 
             if (detailPerson.getQ8() == null) {
-                q8.setText("8. ตรวจคลื่นไฟฟ้าหัวใจ" + " [X]");
+                q8.setText("ครั้งที่ 4 : ความเรียบร้อยของแผลผ่าตัด (คลินิกออร์โธปิดิกส์)" + " [X]");
+                dateQ8.setVisibility(View.GONE);
             } else {
                 q8.setText(String.format(getString(R.string.txtQ8), detailPerson.getQ8() + " [✓]"));
+                dateQ8.setText(String.format(getString(R.string.txtdateQ1), detailPerson.getDateQ8() + " [✓]"));
+            }
+            if (detailPerson.getQ9() == null) {
+                q9.setText("ครั้งที่ 5 : ประเมินองศาและการใช้งานข้อเข่า (คลินิกออร์โธปิดิกส์)" + " [X]");
+                dateQ9.setVisibility(View.GONE);
+            } else {
+                q9.setText(String.format(getString(R.string.txtQ9), detailPerson.getQ9() + " [✓]"));
+                dateQ9.setText(String.format(getString(R.string.txtdateQ1), detailPerson.getDateQ9() + " [✓]"));
+            }
+            if (detailPerson.getQ10() == null) {
+                q10.setText("ครั้งที่ 6 : ประเมินองศาและการใช้งานข้อเข่า (คลินิกออร์โธปิดิกส์)" + " [X]");
+                dateQ10.setVisibility(View.GONE);
+            } else {
+                q10.setText(String.format(getString(R.string.txtQ10), detailPerson.getQ10() + " [✓]"));
+                dateQ10.setText(String.format(getString(R.string.txtdateQ1), detailPerson.getDateQ10() + " [✓]"));
+            }
+            if (detailPerson.getQ11() == null) {
+                q11.setText("ครั้งที่ 7 : ประเมินองศาและการใช้งานข้อเข่า (คลินิกออร์โธปิดิกส์)" + " [X]");
+                dateQ11.setVisibility(View.GONE);
+            } else {
+                q11.setText(String.format(getString(R.string.txtQ11), detailPerson.getQ11() + " [✓]"));
+                dateQ11.setText(String.format(getString(R.string.txtdateQ1), detailPerson.getDateQ11() + " [✓]"));
             }
 
             Button editHistory2 = (Button) rootView.findViewById(R.id.edit_detailPersonal);

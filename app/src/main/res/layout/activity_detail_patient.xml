@@ -20,7 +20,7 @@
                 android:id="@+id/checkQ1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="จองคิวนัดวันผ่า (แพทย์จะทำการผ่าตัดทุกวันจันทร์)"
+                android:text="จองคิวนัดวันผ่า"
                 android:textSize="15sp" />
 
             <EditText
@@ -40,8 +40,7 @@
                 android:id="@+id/checkQ2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="นัดหมายการตรวจร่างกายก่อนเข้ารับการผ่าตัดและปรึกษาเรื่องค่าใช้จ่ายในการผ่าตัดซึ่งขึ้นอยู่กับชนิดข้อที่ใช้และหอผู้ป่วย"
+                android:text="ครั้งที่ 1 : ตรวจเลือด-ปัสสาวะ (ห้องเจาะเลือด ตึกพยาธิวิทยาชั้น 3)"
                 android:textSize="15sp" />
 
             <EditText
@@ -61,8 +60,7 @@
                 android:id="@+id/checkQ3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="จองห้องนอนโรงพยาบาล"
+                android:text="ครั้งที่ 1 : ตรวจโรคประจำตัว (คลินิกอายุรกรรมทั่วไป คลินิกเบาหวาน คลินิกหัวใจ)"
                 android:textSize="15sp" />
 
             <EditText
@@ -73,46 +71,165 @@
 
         </LinearLayout>
 
-        <CheckBox
-            android:id="@+id/checkQ4"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="รับใบนัดและรับยา"
-            android:textSize="15sp" />
+            android:orientation="vertical">
 
-        <CheckBox
+            <CheckBox
+                android:id="@+id/checkQ4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ครั้งที่ 1 : ตรวจคลื่นไฟฟ้าหัวใจ (คลินิกหัวใจ ตึกเพชรรัตน์ชั้น 2)"
+                android:textSize="15sp" />
 
-            android:id="@+id/checkQ5"
+            <EditText
+                android:id="@+id/chooseDate4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="เลือกวันที่" />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="ตรวจเลือด-ปัสสาวะ (คลินิคอายุรกรรม)"
-            android:textSize="15sp" />
+            android:orientation="vertical">
 
-        <CheckBox
-            android:id="@+id/checkQ6"
+            <CheckBox
+                android:id="@+id/checkQ5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ครั้งที่ 1 : เอกซเรย์ปอดเเละข้อเข่า (ห้องเอกซเรย์ ตึกมหาวชิราวุธชั้น 1)"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/chooseDate5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="เลือกวันที่" />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="ตรวจโรคประจำตัว เช่น ความดันโลหิต เบาหวาน เป็นต้น (คลินิคอายุรกรรม)"
-            android:textSize="15sp" />
+            android:orientation="vertical">
 
-        <CheckBox
-            android:id="@+id/checkQ7"
+            <CheckBox
+                android:id="@+id/checkQ6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ครั้งที่ 2 : ติดตามผลการตรวจร่างกาย (คลินิกออร์โธปิดิกส์)"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/chooseDate6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="เลือกวันที่" />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="เอกซเรย์ปอดและข้อเข่า"
-            android:textSize="15sp" />
+            android:orientation="vertical">
 
-        <CheckBox
-            android:id="@+id/checkQ8"
+            <CheckBox
+                android:id="@+id/checkQ7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ครั้งที่ 3 : เข้านอนโรงพยาบาล (คลินิกออร์โธปิดิกส์)"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/chooseDate7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="เลือกวันที่" />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="ตรวจคลื่นไฟฟ้าหัวใจ"
-            android:textSize="15sp" />
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/checkQ8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ครั้งที่ 4 : ความเรียบร้อยของแผลผ่าตัด (คลินิกออร์โธปิดิกส์)"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/chooseDate8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="เลือกวันที่" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/checkQ9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ครั้งที่ 5 : ประเมินองศาและการใช้งานข้อเข่า (คลินิกออร์โธปิดิกส์)"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/chooseDate9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="เลือกวันที่" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/checkQ10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ครั้งที่ 6 : ประเมินองศาและการใช้งานข้อเข่า (คลินิกออร์โธปิดิกส์)"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/chooseDate10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="เลือกวันที่" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/checkQ11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ครั้งที่ 7 : ประเมินองศาและการใช้งานข้อเข่า (คลินิกออร์โธปิดิกส์)"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/chooseDate11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="เลือกวันที่" />
+
+        </LinearLayout>
 
         <Button
             android:id="@+id/btn_saveHistory"
@@ -127,3 +244,4 @@
 
     </LinearLayout>
 </ScrollView>
+

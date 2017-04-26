@@ -13,7 +13,7 @@
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:textColorHint="@android:color/black">
 
             <EditText
@@ -31,7 +31,7 @@
         <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp">
+            android:layout_marginTop="10dp">
 
             <TextView
                 android:layout_width="match_parent"
@@ -62,8 +62,8 @@
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:textColorHint="@android:color/black">
+            android:textColorHint="@android:color/black"
+            android:layout_marginTop="10dp">
 
             <EditText
                 android:id="@+id/ET_editBirthday"
@@ -77,8 +77,8 @@
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:textColorHint="@android:color/black">
+            android:textColorHint="@android:color/black"
+            android:layout_marginTop="10dp">
 
             <EditText
                 android:id="@+id/ET_editWeight"
@@ -92,8 +92,8 @@
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:textColorHint="@android:color/black">
+            android:textColorHint="@android:color/black"
+            android:layout_marginTop="10dp">
 
             <EditText
                 android:id="@+id/ET_editHeight"
