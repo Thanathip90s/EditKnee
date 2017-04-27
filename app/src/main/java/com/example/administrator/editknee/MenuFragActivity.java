@@ -104,29 +104,6 @@ public class MenuFragActivity extends AppCompatActivity {
         super.attachBaseContext(CalligraphyContextWrapper.wrap(base));
     }
 
-    /*@Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_menu, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        switch (id) {
-            case R.id.action_settings:
-                //startEditActivity();
-                return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
-    private void startEditActivity() {
-        Intent i = new Intent(this, EditPerson.class);
-        startActivity(i);
-    }*/
-
     /**
      * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
      * one of the sections/tabs/pages.

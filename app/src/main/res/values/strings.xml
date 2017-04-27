@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Health @Osteoarthritis</string>
+    <string name="app_name">My Health@Osteoarthritis</string>
     <string name="title_activity_phase2_2">Phase2_2</string>
     <string name="title_activity_menu">Menu</string>
     <string name="action_settings">Settings</string>
@@ -124,7 +124,7 @@
     <string name="txt_Explain6_6">เดิน</string>
     <string name="txt_Explain">คำอธิบาย :</string>
     <string name="title_activity_menu2">MenuActivity2</string>
-    <string name="title_activity_menu_frag"></string>
+    <string name="title_activity_menu_frag">My Health@Osteoarthritis</string>
     <string name="txt_edithis">แก้ไขประวัติ</string>
     <string name="format_IdCount">ครั้งที่ : %d</string>
     <string name="date1">%s</string>
@@ -210,5 +210,6 @@
     <string name="number6_6">%s</string>
     <string name="note6_6">%s</string>
     <string name="format_IdCount6">ครั้งที่ : %d</string>
+    <string name="title_activity_menu_tab">MenuTab</string>
 
 </resources>
